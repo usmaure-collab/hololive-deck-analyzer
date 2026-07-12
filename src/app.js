@@ -60,6 +60,43 @@
     console.warn("No se pudieron cargar cartas personalizadas de localStorage", error);
   }
 
+  // Lupa de princesa (Princess Lens SVG)
+  const getPrincessLens = (size = 24) => `
+    <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 100 100" class="princess-lens" style="transition: transform 0.3s ease;">
+      <defs>
+        <linearGradient id="lensEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#38bded"/>
+          <stop offset="50%" stop-color="#ffffff"/>
+          <stop offset="100%" stop-color="#ff3366"/>
+        </linearGradient>
+        <radialGradient id="lensGlass" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
+          <stop offset="50%" stop-color="rgba(137,207,240,0.4)"/>
+          <stop offset="100%" stop-color="rgba(255,51,102,0.2)"/>
+        </radialGradient>
+        <linearGradient id="goldStaff" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffe259"/>
+          <stop offset="100%" stop-color="#ffa751"/>
+        </linearGradient>
+      </defs>
+      <!-- Handle -->
+      <path d="M 58 58 L 82 82" stroke="url(#goldStaff)" stroke-width="8" stroke-linecap="round"/>
+      <!-- Handle gem -->
+      <circle cx="82" cy="82" r="6" fill="#ff3366"/>
+      <circle cx="84" cy="80" r="2" fill="#fff"/>
+      <!-- Bow -->
+      <path d="M 58 58 Q 50 35 75 40 Q 80 55 58 58 Z" fill="#ff3366" opacity="0.9"/>
+      <path d="M 58 58 Q 35 50 40 75 Q 55 80 58 58 Z" fill="#38bded" opacity="0.9"/>
+      <circle cx="58" cy="58" r="5" fill="#ffe259"/>
+      <!-- Lens Frame -->
+      <circle cx="42" cy="42" r="26" fill="url(#lensGlass)" stroke="url(#lensEdge)" stroke-width="6"/>
+      <!-- Sparkles -->
+      <path d="M 18 18 Q 22 25 29 29 Q 22 33 18 40 Q 14 33 7 29 Q 14 25 18 18" fill="#ffe259"/>
+      <circle cx="75" cy="25" r="3" fill="#38bded"/>
+      <circle cx="25" cy="75" r="2" fill="#ff3366"/>
+    </svg>
+  `;
+
   const tabs = [
     ["dashboard", "Panel"],
     ["library", "Cartas"],
@@ -1323,16 +1360,15 @@
         </div>
         <aside class="panel ${state.ui.catalogDetailMinimized ? 'minimized' : ''}" ${state.ui.catalogDetailMinimized ? 'data-action="toggle-catalog-detail"' : ''}>
           ${state.ui.catalogDetailMinimized 
-            ? `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; height: 100%; opacity: 0.8;">
-                 <button class="btn icon-btn" data-action="toggle-catalog-detail" style="pointer-events: none;">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                 </button>
-                 <span style="writing-mode: vertical-rl; text-orientation: mixed; font-weight: bold; letter-spacing: 2px;">DETALLES</span>
+            ? `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                 <div style="pointer-events: none; transform: scale(1); transition: transform 0.3s ease;" class="princess-lens-wrapper">
+                   ${getPrincessLens(65)}
+                 </div>
                </div>`
             : `<div style="display: flex; justify-content: flex-end; margin-bottom: -15px; position: relative; z-index: 2;">
-                 <button class="btn small outline" data-action="toggle-catalog-detail" style="padding: 4px 10px; font-size: 0.8em; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                 <button class="btn small outline" data-action="toggle-catalog-detail" style="padding: 4px 12px; font-size: 0.85em; cursor: pointer; display: flex; align-items: center; gap: 8px; border-radius: 20px;">
                    <span>Minimizar</span>
-                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+                   ${getPrincessLens(20)}
                  </button>
                </div>
                ${renderCardDetail(selected)}`
