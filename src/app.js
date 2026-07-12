@@ -1321,7 +1321,7 @@
         <div id="catalog-card-grid" class="card-grid">
           ${cards.map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`}
         </div>
-        <aside class="panel ${state.ui.catalogDetailMinimized ? "minimized" : ""}" ${state.ui.catalogDetailMinimized ? 'onclick="document.querySelector(\'[data-action=toggle-catalog-detail]\').click()"' : ""}>
+        <aside class="panel ${state.ui.catalogDetailMinimized ? 'minimized' : ''}" ${state.ui.catalogDetailMinimized ? 'data-action="toggle-catalog-detail"' : ''}>
           ${state.ui.catalogDetailMinimized 
             ? `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; height: 100%; opacity: 0.8;">
                  <button class="btn icon-btn" data-action="toggle-catalog-detail" style="pointer-events: none;">
@@ -1436,6 +1436,11 @@
       <div class="detail-grid">
         <div class="detail-card-image rarity-${rClass}">
           <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" />
+          <div class="card-fallback-frame" style="display: none;">
+            <span>${escapeHtml(card.rarity.split(" ")[0])}</span>
+            <strong>${escapeHtml(card.name)}</strong>
+            <span>${escapeHtml(card.number.replace(/^h/, ""))}</span>
+          </div>
         </div>
         <div class="grid">
           <div>

@@ -12881,8 +12881,8 @@ window.HOCG_DATA = {
     "market": []
   },
   {
-    "id": "hY03-005",
-    "number": "hY03-005",
+    "id": "hY03-004",
+    "number": "hY03-004",
     "name": "Red Cheer",
     "type": "Cheer",
     "color": "Red",
@@ -12915,8 +12915,8 @@ window.HOCG_DATA = {
     "market": []
   },
   {
-    "id": "hY05-005",
-    "number": "hY05-005",
+    "id": "hY05-004",
+    "number": "hY05-004",
     "name": "Purple Cheer",
     "type": "Cheer",
     "color": "Purple",
