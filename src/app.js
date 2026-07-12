@@ -683,15 +683,22 @@
     if (num === "hBP01-132") num = "hY06-001";
     if (num === "hBP01-133") num = "hY01-001"; // Fallback para colorless
     
-    // Mapeo de Cheers alternos (ej. hY01-003, hY02-002) a su base hY0X-001
-    if (num.match(/^hY0[1-6]-00[2-9]$/)) {
-      num = num.substring(0, 5) + "001";
-    }
-    
     const parts = num.split("-");
     if (parts.length < 2) return [];
     
-    const set = parts[0];
+    let folder = parts[0];
+    
+    // Si la carta es tipo Cheer (hY) pero pertenece a un Booster/Starter, su imagen suele estar en esa carpeta
+    if (folder.startsWith("hY") && card.set) {
+      if (card.set.includes("Booster Pack 1")) folder = "hBP01";
+      else if (card.set.includes("Booster Pack 2")) folder = "hBP02";
+      else if (card.set.includes("Booster Pack 3")) folder = "hBP03";
+      else if (card.set.includes("Booster Pack 4")) folder = "hBP04";
+      else if (card.set.includes("Start Deck 1")) folder = "hSD01";
+      else if (card.set.includes("Start Deck 2")) folder = "hSD02";
+      else if (card.set.includes("Start Deck 3")) folder = "hSD03";
+    }
+    
     let declaredRarity = String(card.rarity || "C").split("/")[0].trim();
     if (card.variants && card.variants[artIndex]) {
       declaredRarity = String(card.variants[artIndex].rarity || declaredRarity).split("/")[0].trim();
@@ -706,7 +713,7 @@
     // 1. Probar en subdominio inglés (EN_), carpeta de set
     uniqueSuffixes.forEach(s => {
       const suffixStr = s ? `_${s}` : "";
-      urls.push(`https://en.hololive-official-cardgame.com/wp-content/images/cardlist/${set}/EN_${num}${suffixStr}.png`);
+      urls.push(`https://en.hololive-official-cardgame.com/wp-content/images/cardlist/${folder}/EN_${num}${suffixStr}.png`);
     });
     
     // 2. Probar en subdominio inglés (EN_), carpeta COMMON
@@ -718,7 +725,7 @@
     // 3. Probar en sitio japonés (sin EN_), carpeta de set
     uniqueSuffixes.forEach(s => {
       const suffixStr = s ? `_${s}` : "";
-      urls.push(`https://hololive-official-cardgame.com/wp-content/images/cardlist/${set}/${num}${suffixStr}.png`);
+      urls.push(`https://hololive-official-cardgame.com/wp-content/images/cardlist/${folder}/${num}${suffixStr}.png`);
     });
     
     // 4. Probar en sitio japonés (sin EN_), carpeta COMMON
