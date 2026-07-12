@@ -487,14 +487,31 @@ a:hover {
 }
 
 /* Panel lateral flotante en catálogo y otras vistas */
+@keyframes magicalFloat {
+  0% { transform: translateY(0px); box-shadow: 0 8px 32px rgba(137, 207, 240, 0.1); }
+  50% { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(137, 207, 240, 0.3), 0 0 20px rgba(137, 207, 240, 0.2); }
+  100% { transform: translateY(0px); box-shadow: 0 8px 32px rgba(137, 207, 240, 0.1); }
+}
+
+@keyframes magicalPulse {
+  from { box-shadow: 0 0 10px rgba(56, 189, 237, 0.3); }
+  to { box-shadow: 0 0 25px rgba(56, 189, 237, 0.6), 0 0 10px rgba(255, 51, 102, 0.2); }
+}
+
 .grid.sidebar-grid > aside.panel {
   position: sticky;
   top: 90px; /* Separación del top */
   max-height: calc(100vh - 120px); /* Evitar que el panel sea más alto que la pantalla */
   overflow-y: auto; /* Permitir scroll interno si el contenido es largo */
   overflow-x: hidden;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: right top;
+}
+
+.grid.sidebar-grid > aside.panel:not(.minimized) {
+  animation: magicalFloat 6s ease-in-out infinite;
+  border: 1px solid rgba(137, 207, 240, 0.5);
+  box-shadow: 0 0 20px rgba(137, 207, 240, 0.2), inset 0 0 15px rgba(137, 207, 240, 0.05);
 }
 
 /* Panel minimizado */
@@ -504,11 +521,14 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100px;
+  min-height: 120px;
   cursor: pointer;
-  background: rgba(30, 25, 55, 0.85);
+  background: linear-gradient(135deg, rgba(30, 25, 55, 0.9), rgba(56, 189, 237, 0.2));
+  border: 1px solid rgba(56, 189, 237, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  animation: magicalPulse 2s infinite alternate;
+  border-radius: 20px;
 }
 
 .panel.minimized:hover {
