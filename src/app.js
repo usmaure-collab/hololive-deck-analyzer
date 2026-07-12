@@ -20,7 +20,7 @@
       if (fallbacks && fallbacks.length > 0) {
         const nextUrl = fallbacks.shift();
         img.dataset.fallbacks = JSON.stringify(fallbacks);
-        img.src = nextUrl;
+        img.src = `https://images.weserv.nl/?url=${encodeURIComponent(nextUrl)}`;
       } else {
         img.style.display = 'none';
         if (img.nextElementSibling) {
@@ -662,7 +662,10 @@
   function getCardImageUrl(card, artIndex = 0) {
     if (card.imageUrl) return card.imageUrl;
     const fallbacks = getCardImageFallbacks(card, artIndex);
-    return fallbacks.length > 0 ? fallbacks[0] : "";
+    if (fallbacks.length > 0) {
+      return `https://images.weserv.nl/?url=${encodeURIComponent(fallbacks[0])}`;
+    }
+    return "";
   }
 
   function getCardImageFallbacks(card, artIndex = 0) {
@@ -1065,25 +1068,25 @@
         
         <div class="home-menu">
           <button class="home-btn suisei-preview" data-action="tab" data-id="dashboard">
-            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-007.png" alt="Suisei" class="idol-portrait">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-007_OSR.png" alt="Suisei" class="idol-portrait">
             <span class="btn-text">Panel</span>
             <span class="btn-idol">☄️ Suisei</span>
           </button>
           
           <button class="home-btn calliope-preview" data-action="tab" data-id="library">
-            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP02/EN_hBP02-007.png" alt="Calliope" class="idol-portrait" onerror="this.onerror=null; this.src='https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP02/hBP02-007.png'">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP02/EN_hBP02-007_OSR.png" alt="Calliope" class="idol-portrait">
             <span class="btn-text">Catálogo</span>
             <span class="btn-idol">💀 Calliope</span>
           </button>
           
           <button class="home-btn ayame-preview" data-action="tab" data-id="builder">
-            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hSD02/EN_hSD02-009.png" alt="Ayame" class="idol-portrait">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP02/EN_hSD02-009_SR.png" alt="Ayame" class="idol-portrait">
             <span class="btn-text">Constructor</span>
             <span class="btn-idol">👹 Ayame</span>
           </button>
           
           <button class="home-btn raora-preview" data-action="tab" data-id="analysis">
-            <img src="https://hololive.hololivepro.com/wp-content/uploads/2024/06/Raora_Panthera_pr-img_01.png" alt="Raora" class="idol-portrait" onerror="this.onerror=null; this.src='https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-039.png'">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-006_OSR.png" alt="Raora" class="idol-portrait">
             <span class="btn-text">Análisis</span>
             <span class="btn-idol">🐆 Raora</span>
           </button>
