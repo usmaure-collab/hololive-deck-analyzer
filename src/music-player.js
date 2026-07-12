@@ -17,8 +17,8 @@
 
   window.onYouTubeIframeAPIReady = function() {
     ytPlayer = new YT.Player('yt-player-container', {
-      height: '0',
-      width: '0',
+      height: '10',
+      width: '10',
       videoId: YOUTUBE_VIDEO_ID,
       playerVars: {
         'autoplay': 0,
@@ -75,7 +75,7 @@
           // Seek to a random time to give a radio feel
           // Video is about 40 minutes long (2400 seconds)
           const randomStart = Math.floor(Math.random() * 2000);
-          ytPlayer.seekTo(randomStart);
+          ytPlayer.seekTo(randomStart, true);
           hasStarted = true;
         }
         ytPlayer.playVideo();
