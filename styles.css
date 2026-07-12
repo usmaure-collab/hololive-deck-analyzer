@@ -1350,15 +1350,27 @@ table tr:hover td,
   stroke: #ffffff;
 }
 
-.deadbeat-slider-slim {
+.music-controls input[type="range"].deadbeat-slider-slim {
   -webkit-appearance: none;
-  background: #334155 !important;
-  height: 2px !important;
+  background: #334155;
+  height: 2px;
   border-radius: 2px;
   border: none;
   outline: none;
   margin: 0 8px;
   flex: 1;
+}
+
+.music-controls input[type="range"].deadbeat-slider-slim::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+  height: 2px;
+}
+
+.music-controls input[type="range"].deadbeat-slider-slim::-moz-range-track {
+  background: transparent;
+  border: none;
+  height: 2px;
 }
 
 .deadbeat-slider-slim::-webkit-slider-thumb {
