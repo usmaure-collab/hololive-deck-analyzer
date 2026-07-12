@@ -12658,5 +12658,295 @@ window.HOCG_DATA = {
     "text": "Arts: Cotton Candy's Delicious 10",
     "market": []
   }
+,
+{
+    "id": "hY01-003",
+    "number": "hY01-003",
+    "name": "White Cheer",
+    "type": "Cheer",
+    "color": "White",
+    "rarity": "SY",
+    "set": "Booster Pack 2 (Quintet Spectrum)",
+    "release": "2025-10-17 EN",
+    "tags": [
+      "Cheer",
+      "Shirakami Fubuki"
+    ],
+    "text": "Produce 1 Cheer blanco.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY02-002",
+    "number": "hY02-002",
+    "name": "Green Cheer",
+    "type": "Cheer",
+    "color": "Green",
+    "rarity": "SY",
+    "set": "Booster Pack 2 (Quintet Spectrum)",
+    "release": "2025-10-17 EN",
+    "tags": [
+      "Cheer",
+      "Ookami Mio"
+    ],
+    "text": "Produce 1 Cheer verde.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY03-002",
+    "number": "hY03-002",
+    "name": "Red Cheer",
+    "type": "Cheer",
+    "color": "Red",
+    "rarity": "SY",
+    "set": "Booster Pack 2 (Quintet Spectrum)",
+    "release": "2025-10-17 EN",
+    "tags": [
+      "Cheer",
+      "Houshou Marine"
+    ],
+    "text": "Produce 1 Cheer rojo.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY04-002",
+    "number": "hY04-002",
+    "name": "Blue Cheer",
+    "type": "Cheer",
+    "color": "Blue",
+    "rarity": "SY",
+    "set": "Booster Pack 2 (Quintet Spectrum)",
+    "release": "2025-10-17 EN",
+    "tags": [
+      "Cheer",
+      "Sakamata Chloe"
+    ],
+    "text": "Produce 1 Cheer azul.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY05-002",
+    "number": "hY05-002",
+    "name": "Purple Cheer",
+    "type": "Cheer",
+    "color": "Purple",
+    "rarity": "SY",
+    "set": "Booster Pack 2 (Quintet Spectrum)",
+    "release": "2025-10-17 EN",
+    "tags": [
+      "Cheer",
+      "Murasaki Shion"
+    ],
+    "text": "Produce 1 Cheer morado.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY01-004",
+    "number": "hY01-004",
+    "name": "White Cheer",
+    "type": "Cheer",
+    "color": "White",
+    "rarity": "SY",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Cheer",
+      "Himemori Luna"
+    ],
+    "text": "Produce 1 Cheer blanco.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY02-003",
+    "number": "hY02-003",
+    "name": "Green Cheer",
+    "type": "Cheer",
+    "color": "Green",
+    "rarity": "SY",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Cheer",
+      "Kazama Iroha"
+    ],
+    "text": "Produce 1 Cheer verde.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY03-003",
+    "number": "hY03-003",
+    "name": "Red Cheer",
+    "type": "Cheer",
+    "color": "Red",
+    "rarity": "SY",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Cheer",
+      "Sakura Miko"
+    ],
+    "text": "Produce 1 Cheer rojo.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY04-003",
+    "number": "hY04-003",
+    "name": "Blue Cheer",
+    "type": "Cheer",
+    "color": "Blue",
+    "rarity": "SY",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Cheer",
+      "Hoshimachi Suisei"
+    ],
+    "text": "Produce 1 Cheer azul.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY05-003",
+    "number": "hY05-003",
+    "name": "Purple Cheer",
+    "type": "Cheer",
+    "color": "Purple",
+    "rarity": "SY",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Cheer",
+      "Tokoyami Towa"
+    ],
+    "text": "Produce 1 Cheer morado.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY06-002",
+    "number": "hY06-002",
+    "name": "Yellow Cheer",
+    "type": "Cheer",
+    "color": "Yellow",
+    "rarity": "SY",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Cheer",
+      "Tsunomaki Watame"
+    ],
+    "text": "Produce 1 Cheer amarillo.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY01-006",
+    "number": "hY01-006",
+    "name": "White Cheer",
+    "type": "Cheer",
+    "color": "White",
+    "rarity": "SY",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Cheer",
+      "Hakui Koyori"
+    ],
+    "text": "Produce 1 Cheer blanco.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY02-005",
+    "number": "hY02-005",
+    "name": "Green Cheer",
+    "type": "Cheer",
+    "color": "Green",
+    "rarity": "SY",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Cheer",
+      "Aki Rosenthal"
+    ],
+    "text": "Produce 1 Cheer verde.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY03-005",
+    "number": "hY03-005",
+    "name": "Red Cheer",
+    "type": "Cheer",
+    "color": "Red",
+    "rarity": "SY",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Cheer",
+      "Mikodanyee"
+    ],
+    "text": "Produce 1 Cheer rojo.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY04-005",
+    "number": "hY04-005",
+    "name": "Blue Cheer",
+    "type": "Cheer",
+    "color": "Blue",
+    "rarity": "SY",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Cheer",
+      "Yukihana Lamy"
+    ],
+    "text": "Produce 1 Cheer azul.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY05-005",
+    "number": "hY05-005",
+    "name": "Purple Cheer",
+    "type": "Cheer",
+    "color": "Purple",
+    "rarity": "SY",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Cheer",
+      "Yuzuki Choco"
+    ],
+    "text": "Produce 1 Cheer morado.",
+    "variants": [],
+    "market": []
+  },
+  {
+    "id": "hY06-004",
+    "number": "hY06-004",
+    "name": "Yellow Cheer",
+    "type": "Cheer",
+    "color": "Yellow",
+    "rarity": "SY",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Cheer",
+      "Oozora Subaru"
+    ],
+    "text": "Produce 1 Cheer amarillo.",
+    "variants": [],
+    "market": []
+  }
   ]
 };
