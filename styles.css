@@ -1211,6 +1211,16 @@ table tr:hover td,
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 150px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 700;
+  color: #7b1e28;
+  background: #ffe6eb;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid #d4a3b3;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .music-controls {
@@ -1298,32 +1308,34 @@ table tr:hover td,
 
 .deadbeat-slider-slim {
   -webkit-appearance: none;
-  background: rgba(255, 51, 102, 0.2) !important;
+  background: rgba(255, 51, 102, 0.4) !important;
+  height: 2px !important;
+  border-radius: 2px;
 }
 
 .deadbeat-slider-slim::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20,45 C20,15 80,15 80,45 L80,70 C80,85 70,85 70,85 L70,95 L55,95 L55,85 L45,85 L45,95 L30,95 L30,85 C30,85 20,85 20,70 Z' fill='%23ff99cc'/%3E%3Cpath d='M15,45 L45,45 L40,60 L20,60 Z M55,45 L85,45 L80,60 L60,60 Z' fill='%231a1a1a'/%3E%3Crect x='45' y='48' width='10' height='4' fill='%231a1a1a'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%231a0505' stroke='%23ff3366' stroke-width='4'/><circle cx='50' cy='50' r='22' fill='%23ffffff' /><path d='M 38 40 L 44 32 L 56 32 L 62 40 Z' fill='%23000000' /><circle cx='44' cy='42' r='4' fill='%23000000' /><circle cx='56' cy='42' r='4' fill='%23000000' /><path d='M 46 52 Q 50 55 54 52' fill='transparent' stroke='%23000000' stroke-width='2' stroke-linecap='round' /></svg>");
   background-size: cover;
   cursor: pointer;
-  filter: drop-shadow(0 0 3px rgba(0,0,0,0.8));
+  filter: drop-shadow(0 0 4px #ff3366);
   transition: transform 0.1s;
 }
 
 .deadbeat-slider-slim::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20,45 C20,15 80,15 80,45 L80,70 C80,85 70,85 70,85 L70,95 L55,95 L55,85 L45,85 L45,95 L30,95 L30,85 C30,85 20,85 20,70 Z' fill='%23ff99cc'/%3E%3Cpath d='M15,45 L45,45 L40,60 L20,60 Z M55,45 L85,45 L80,60 L60,60 Z' fill='%231a1a1a'/%3E%3Crect x='45' y='48' width='10' height='4' fill='%231a1a1a'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%231a0505' stroke='%23ff3366' stroke-width='4'/><circle cx='50' cy='50' r='22' fill='%23ffffff' /><path d='M 38 40 L 44 32 L 56 32 L 62 40 Z' fill='%23000000' /><circle cx='44' cy='42' r='4' fill='%23000000' /><circle cx='56' cy='42' r='4' fill='%23000000' /><path d='M 46 52 Q 50 55 54 52' fill='transparent' stroke='%23000000' stroke-width='2' stroke-linecap='round' /></svg>");
   background-size: cover;
   cursor: pointer;
-  filter: drop-shadow(0 0 3px rgba(0,0,0,0.8));
+  filter: drop-shadow(0 0 4px #ff3366);
 }
 
 .deadbeat-slider-slim::-webkit-slider-thumb:hover {

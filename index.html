@@ -15,17 +15,14 @@
     <!-- Music Player Widget -->
     <div id="yt-player-container" style="position: absolute; left: -9999px; width: 10px; height: 10px; pointer-events: none; opacity: 0;"></div>
     <div id="music-widget" class="music-widget calliope-theme" onclick="if(this.classList.contains('minimized') && window.MusicPlayer) window.MusicPlayer.toggleMinimize()">
-      <button class="music-widget-toggle" onclick="event.stopPropagation(); if(window.MusicPlayer) window.MusicPlayer.toggleMinimize()" title="Minimizar">
-        <!-- Default text when open -->
-        <span class="toggle-text">💀</span>
-        <!-- Death Sensei SVG when minimized -->
-        <svg class="death-sensei-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="display:none; width: 24px; height: 24px;">
-          <!-- Basic Death Sensei face -->
-          <circle cx="50" cy="50" r="40" fill="#fff" stroke="#ff3366" stroke-width="4"/>
-          <circle cx="35" cy="45" r="10" fill="#000" />
-          <circle cx="65" cy="45" r="10" fill="#000" />
-          <path d="M 40 70 Q 50 80 60 70" fill="transparent" stroke="#000" stroke-width="4"/>
-          <path d="M 10 50 L 30 20 L 70 20 L 90 50" fill="#000" />
+      <button class="music-widget-toggle" onclick="event.stopPropagation(); if(window.MusicPlayer) window.MusicPlayer.toggleMinimize()" title="Alternar Música">
+        <svg class="death-sensei-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="width: 24px; height: 24px; filter: drop-shadow(0 0 2px #ff3366);">
+          <circle cx="50" cy="50" r="42" fill="#1a0505" stroke="#ff3366" stroke-width="4"/>
+          <circle cx="50" cy="50" r="22" fill="#ffffff" />
+          <path d="M 38 40 L 44 32 L 56 32 L 62 40 Z" fill="#000000" />
+          <circle cx="44" cy="42" r="4" fill="#000000" />
+          <circle cx="56" cy="42" r="4" fill="#000000" />
+          <path d="M 46 52 Q 50 55 54 52" fill="transparent" stroke="#000000" stroke-width="2" stroke-linecap="round" />
         </svg>
       </button>
       <div class="music-info">
@@ -38,9 +35,8 @@
             <polygon points="25,15 75,45 25,75" fill="#ffffff" stroke="#ffffff" stroke-linejoin="round" stroke-width="10" />
           </svg>
         </button>
-        <span class="deadbeat-icon" style="font-size: 0.9rem;">💀</span>
         <input type="range" id="music-volume-slider" class="deadbeat-slider-slim" min="0" max="100" value="50" oninput="if(window.MusicPlayer) window.MusicPlayer.setVolume(this.value)" onclick="event.stopPropagation()">
-        <span class="volume-pct" id="volume-pct" style="font-size: 0.75rem; min-width: 28px; text-align: right;">50%</span>
+        <span class="volume-pct" id="volume-pct" style="font-size: 0.75rem; min-width: 28px; text-align: right; color: var(--muted); font-family: monospace;">50%</span>
       </div>
     </div>
 
