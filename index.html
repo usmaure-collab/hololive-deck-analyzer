@@ -11,7 +11,22 @@
     <div id="app" class="app-shell">
       <noscript>Esta aplicacion necesita JavaScript local del navegador para funcionar.</noscript>
     </div>
-    <script src="src/data.js" defer></script>
-    <script src="src/app.js" defer></script>
+    
+    <!-- Music Player Widget -->
+    <div id="yt-player-container"></div>
+    <div id="music-widget" class="music-widget">
+      <div class="music-info">
+        <span class="music-title">lo-fi & chill mix II</span>
+      </div>
+      <div class="music-controls">
+        <button id="music-play-btn" class="icon-btn" onclick="if(window.MusicPlayer) window.MusicPlayer.toggle()">▶️</button>
+        <input type="range" id="music-volume-slider" min="0" max="100" value="50" oninput="if(window.MusicPlayer) window.MusicPlayer.setVolume(this.value)">
+      </div>
+    </div>
+
+    <script src="src/data.js"></script>
+    <script src="src/sfx.js"></script>
+    <script src="src/music-player.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>

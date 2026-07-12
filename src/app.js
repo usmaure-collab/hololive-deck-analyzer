@@ -89,6 +89,18 @@
     if (!target) return;
 
     const action = target.dataset.action;
+    
+    // Play SFX if available
+    if (window.SFX) {
+      if (action === "add-card") {
+        window.SFX.playCardAdd();
+      } else if (action === "select-card") {
+        window.SFX.playCardReveal();
+      } else {
+        window.SFX.playClick();
+      }
+    }
+
     const id = target.dataset.id;
     const zone = target.dataset.zone;
     const artIndex = Number(target.dataset.art || "0");
