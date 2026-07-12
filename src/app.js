@@ -70,6 +70,26 @@
     ["audit", "Cambios"],
   ];
 
+  const tabThemes = {
+    dashboard: "suisei",
+    library: "calliope",
+    builder: "ayame",
+    analysis: "raora",
+    compare: "hololive",
+    importer: "hololive",
+    audit: "hololive",
+  };
+
+  const tabLabels = {
+    dashboard: "Panel — Hoshimachi Suisei ☄️",
+    library: "Catálogo — Mori Calliope 💀",
+    builder: "Constructor — Nakiri Ayame 👹",
+    analysis: "Análisis — Raora Panthera 🐆",
+    compare: "Comparar Mazos",
+    importer: "Importar Cartas",
+    audit: "Registro de Cambios",
+  };
+
   const colorMap = {
     White: "#1e293b",
     Red: "#7f1d1d",
@@ -1029,12 +1049,12 @@
         <div class="home-hero">
           <div class="home-logo">
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-              <rect width='100' height='100' rx='25' fill='#171334' stroke='#38bded' stroke-width='6'/>
+              <rect width='100' height='100' rx='25' fill='#0a0a0a' stroke='#e8af44' stroke-width='4'/>
               <text x='50' y='75' font-family='sans-serif' font-size='65' font-weight='900' fill='url(#grad-home)' text-anchor='middle'>h</text>
               <defs>
                 <linearGradient id='grad-home' x1='0%' y1='0%' x2='100%' y2='0%'>
-                  <stop offset='0%' stop-color='#534B88'/>
-                  <stop offset='100%' stop-color='#38bded'/>
+                  <stop offset='0%' stop-color='#e8af44'/>
+                  <stop offset='100%' stop-color='#ffffff'/>
                 </linearGradient>
               </defs>
             </svg>
@@ -1044,20 +1064,35 @@
         </div>
         
         <div class="home-menu">
-          <button class="home-btn primary-glow" data-action="tab" data-id="builder">
-            <span class="btn-icon">🔨</span>
-            <span class="btn-text">Constructor de Mazo</span>
-          </button>
-          
-          <button class="home-btn cyan-glow" data-action="tab" data-id="library">
-            <span class="btn-icon">📚</span>
-            <span class="btn-text">Catálogo de Cartas</span>
-          </button>
-          
-          <button class="home-btn purple-glow" data-action="tab" data-id="dashboard">
+          <button class="home-btn suisei-preview" data-action="tab" data-id="dashboard">
             <span class="btn-icon">📊</span>
-            <span class="btn-text">Mis Mazos</span>
+            <span class="btn-text">Panel</span>
+            <span class="btn-idol">☄️ Suisei</span>
           </button>
+          
+          <button class="home-btn calliope-preview" data-action="tab" data-id="library">
+            <span class="btn-icon">📚</span>
+            <span class="btn-text">Catálogo</span>
+            <span class="btn-idol">💀 Calliope</span>
+          </button>
+          
+          <button class="home-btn ayame-preview" data-action="tab" data-id="builder">
+            <span class="btn-icon">🔨</span>
+            <span class="btn-text">Constructor</span>
+            <span class="btn-idol">👹 Ayame</span>
+          </button>
+          
+          <button class="home-btn raora-preview" data-action="tab" data-id="analysis">
+            <span class="btn-icon">📈</span>
+            <span class="btn-text">Análisis</span>
+            <span class="btn-idol">🐆 Raora</span>
+          </button>
+        </div>
+        
+        <div class="home-secondary">
+          <button class="home-link" data-action="tab" data-id="compare">⚖️ Comparar</button>
+          <button class="home-link" data-action="tab" data-id="importer">📥 Importar</button>
+          <button class="home-link" data-action="tab" data-id="audit">📋 Cambios</button>
         </div>
       </div>
     `;
@@ -1096,29 +1131,23 @@
 
     const deck = activeDeck();
     const stats = deckStats(deck);
+    const theme = tabThemes[state.tab] || "hololive";
+    const pageLabel = tabLabels[state.tab] || state.tab;
     app.innerHTML = `
-      ${renderHeader(deck, stats)}
-      <div class="layout">
-        <aside class="sidebar">
-          <nav class="nav-list" aria-label="Secciones">
-            ${tabs
-              .map(
-                ([id, label]) => `
-                  <button class="tab-button ${state.tab === id ? "active" : ""}" data-action="tab" data-id="${id}">
-                    <span>${escapeHtml(label)}</span>
-                    <span>${tabBadge(id, stats)}</span>
-                  </button>
-                `,
-              )
-              .join("")}
-          </nav>
-          <div class="sidebar-note">
-            Datos offline. Los links de mercado y oficiales se abren solo cuando tu haces clic.
-          </div>
-        </aside>
-        <main class="main">
+      <div class="page-view" data-theme="${theme}">
+        <header class="page-header">
+          <button class="home-btn-nav" data-action="tab" data-id="home" title="Volver al inicio">
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+              <polygon points='35,20 85,50 35,80' fill='#e8af44' stroke='#e8af44' stroke-linejoin='round' stroke-width='8' />
+              <polygon points='25,12 75,42 25,72' fill='#ffffff' stroke='#ffffff' stroke-linejoin='round' stroke-width='8' />
+            </svg>
+          </button>
+          <h2 class="page-title">${escapeHtml(pageLabel)}</h2>
+          <span class="deck-indicator">🎴 ${escapeHtml(deck.name)} — ${stats.mainTotal}/50 main · ${stats.cheerTotal}/20 cheer</span>
+        </header>
+        <div class="page-content">
           ${renderTab(deck, stats)}
-        </main>
+        </div>
       </div>
     `;
 

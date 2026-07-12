@@ -38,13 +38,17 @@
 
   function onPlayerReady(event) {
     const savedVol = localStorage.getItem('hocg_music_volume');
+    const volSlider = document.getElementById('music-volume-slider');
+    const volPct = document.getElementById('volume-pct');
+    
+    let vol = 50;
     if (savedVol !== null) {
-      ytPlayer.setVolume(Number(savedVol));
-      const volSlider = document.getElementById('music-volume-slider');
-      if (volSlider) volSlider.value = savedVol;
-    } else {
-      ytPlayer.setVolume(50);
+      vol = Number(savedVol);
     }
+    
+    ytPlayer.setVolume(vol);
+    if (volSlider) volSlider.value = vol;
+    if (volPct) volPct.textContent = `${vol}%`;
   }
 
   function onPlayerStateChange(event) {
@@ -90,20 +94,28 @@
       if (!ytPlayer || !ytPlayer.setVolume) return;
       ytPlayer.setVolume(vol);
       localStorage.setItem('hocg_music_volume', vol);
+      const volPct = document.getElementById('volume-pct');
+      if (volPct) volPct.textContent = `${vol}%`;
     },
     
     toggleMinimize() {
       const widget = document.getElementById('music-widget');
+      if (!widget) return;
+      
+      const toggleText = widget.querySelector('.toggle-text');
+      const deathSenseiSvg = widget.querySelector('.death-sensei-svg');
       const toggleBtn = widget.querySelector('.music-widget-toggle');
-      if (widget) {
-        widget.classList.toggle('minimized');
-        if (widget.classList.contains('minimized')) {
-          toggleBtn.textContent = '🎵';
-          toggleBtn.title = 'Expandir Música';
-        } else {
-          toggleBtn.textContent = '➖';
-          toggleBtn.title = 'Minimizar Música';
-        }
+      
+      widget.classList.toggle('minimized');
+      
+      if (widget.classList.contains('minimized')) {
+        if (toggleText) toggleText.style.display = 'none';
+        if (deathSenseiSvg) deathSenseiSvg.style.display = 'block';
+        if (toggleBtn) toggleBtn.title = 'Expandir Música';
+      } else {
+        if (toggleText) toggleText.style.display = 'inline';
+        if (deathSenseiSvg) deathSenseiSvg.style.display = 'none';
+        if (toggleBtn) toggleBtn.title = 'Minimizar Música';
       }
     }
   };
