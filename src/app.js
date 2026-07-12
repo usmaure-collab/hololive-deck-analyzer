@@ -1065,34 +1065,46 @@
         
         <div class="home-menu">
           <button class="home-btn suisei-preview" data-action="tab" data-id="dashboard">
-            <span class="btn-icon">📊</span>
+            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01-007_en.png" alt="Suisei" class="idol-portrait">
             <span class="btn-text">Panel</span>
             <span class="btn-idol">☄️ Suisei</span>
           </button>
           
           <button class="home-btn calliope-preview" data-action="tab" data-id="library">
-            <span class="btn-icon">📚</span>
+            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP02-007_en.png" alt="Calliope" class="idol-portrait">
             <span class="btn-text">Catálogo</span>
             <span class="btn-idol">💀 Calliope</span>
           </button>
           
           <button class="home-btn ayame-preview" data-action="tab" data-id="builder">
-            <span class="btn-icon">🔨</span>
+            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hSD02-009_en.png" alt="Ayame" class="idol-portrait">
             <span class="btn-text">Constructor</span>
             <span class="btn-idol">👹 Ayame</span>
           </button>
           
           <button class="home-btn raora-preview" data-action="tab" data-id="analysis">
-            <span class="btn-icon">📈</span>
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2024/06/Raora-Panthera_list_thumb.png" alt="Raora" class="idol-portrait" onerror="this.src='https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01-039_en.png'">
             <span class="btn-text">Análisis</span>
             <span class="btn-idol">🐆 Raora</span>
           </button>
-        </div>
-        
-        <div class="home-secondary">
-          <button class="home-link" data-action="tab" data-id="compare">⚖️ Comparar</button>
-          <button class="home-link" data-action="tab" data-id="importer">📥 Importar</button>
-          <button class="home-link" data-action="tab" data-id="audit">📋 Cambios</button>
+          
+          <button class="home-btn generic-preview" data-action="tab" data-id="compare">
+            <span class="btn-icon">⚖️</span>
+            <span class="btn-text">Comparar</span>
+            <span class="btn-idol">Mazos</span>
+          </button>
+          
+          <button class="home-btn generic-preview" data-action="tab" data-id="importer">
+            <span class="btn-icon">📥</span>
+            <span class="btn-text">Importar</span>
+            <span class="btn-idol">Cartas</span>
+          </button>
+          
+          <button class="home-btn generic-preview" data-action="tab" data-id="audit">
+            <span class="btn-icon">📋</span>
+            <span class="btn-text">Cambios</span>
+            <span class="btn-idol">Registro</span>
+          </button>
         </div>
       </div>
     `;
