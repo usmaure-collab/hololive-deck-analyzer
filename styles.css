@@ -1354,11 +1354,20 @@ table tr:hover td,
   -webkit-appearance: none;
   background: #334155;
   height: 2px;
-  border-radius: 2px;
+  min-height: 0;
+  padding: 0;
   border: none;
+  border-radius: 2px;
   outline: none;
   margin: 0 8px;
   flex: 1;
+}
+
+.music-controls input[type="range"].deadbeat-slider-slim:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background: transparent; /* Keep dynamic gradient background */
 }
 
 .music-controls input[type="range"].deadbeat-slider-slim::-webkit-slider-runnable-track {
