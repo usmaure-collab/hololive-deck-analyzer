@@ -60,7 +60,11 @@
   function updateUI() {
     const playBtn = document.getElementById('music-play-btn');
     if (playBtn) {
-      playBtn.textContent = isPlaying ? "⏸" : "▶️";
+      if (isPlaying) {
+        playBtn.innerHTML = `<img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="30" y="25" width="15" height="50" fill="%2338bded" rx="5"/><rect x="55" y="25" width="15" height="50" fill="%2338bded" rx="5"/></svg>' alt="Pause">`;
+      } else {
+        playBtn.innerHTML = `<img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="35,25 85,55 35,85" fill="%2338bded" stroke="%2338bded" stroke-linejoin="round" stroke-width="10" /><polygon points="25,15 75,45 25,75" fill="%23ffffff" stroke="%23ffffff" stroke-linejoin="round" stroke-width="10" /></svg>' alt="Play">`;
+      }
     }
   }
 
