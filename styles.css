@@ -1168,6 +1168,50 @@ table tr:hover td,
   display: none;
 }
 
+/* Draggable & Docking overrides */
+.music-widget.docked-left, .music-widget.docked-right {
+  cursor: grab !important;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.music-widget.docked-left:active, .music-widget.docked-right:active {
+  cursor: grabbing !important;
+}
+
+/* Slide in from left edge on hover */
+.music-widget.docked-left:hover {
+  left: 10px !important;
+}
+.music-widget.docked-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #ff3366;
+  box-shadow: 0 0 10px #ff3366;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Slide in from right edge on hover */
+.music-widget.docked-right:hover {
+  left: calc(100vw - 215px) !important;
+}
+.music-widget.minimized.docked-right:hover {
+  left: calc(100vw - 50px) !important;
+}
+.music-widget.docked-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #ff3366;
+  box-shadow: 0 0 10px #ff3366;
+  border-radius: 4px 0 0 4px;
+}
+
 .music-widget-toggle {
   position: absolute;
   top: 4px;
@@ -1308,7 +1352,7 @@ table tr:hover td,
 
 .deadbeat-slider-slim {
   -webkit-appearance: none;
-  background: rgba(255, 51, 102, 0.4) !important;
+  background: #334155 !important;
   height: 2px !important;
   border-radius: 2px;
   border: none;
