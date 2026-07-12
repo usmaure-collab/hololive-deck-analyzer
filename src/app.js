@@ -507,7 +507,7 @@
   function loadState() {
     const fallbackDeck = demoDeck();
     const base = {
-      tab: "dashboard",
+      tab: "home",
       activeDeckId: fallbackDeck.id,
       decks: [fallbackDeck],
       selectedCard: data.cards[0]?.id || "",
@@ -532,6 +532,7 @@
       return {
         ...base,
         ...parsed,
+        tab: "home",
         ui: parsed.ui || base.ui,
         decks,
         activeDeckId: decks.some((deck) => deck.id === parsed.activeDeckId)
@@ -1022,6 +1023,46 @@
     if (title) title.textContent = activeDeck().name;
   }
 
+  function renderHome() {
+    return `
+      <div class="home-container">
+        <div class="home-hero">
+          <div class="home-logo">
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+              <rect width='100' height='100' rx='25' fill='#171334' stroke='#38bded' stroke-width='6'/>
+              <text x='50' y='75' font-family='sans-serif' font-size='65' font-weight='900' fill='url(#grad-home)' text-anchor='middle'>h</text>
+              <defs>
+                <linearGradient id='grad-home' x1='0%' y1='0%' x2='100%' y2='0%'>
+                  <stop offset='0%' stop-color='#534B88'/>
+                  <stop offset='100%' stop-color='#38bded'/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h1 class="home-title">Analista de Decks</h1>
+          <p class="home-subtitle">Hololive Official Card Game</p>
+        </div>
+        
+        <div class="home-menu">
+          <button class="home-btn primary-glow" data-action="tab" data-id="builder">
+            <span class="btn-icon">🔨</span>
+            <span class="btn-text">Constructor de Mazo</span>
+          </button>
+          
+          <button class="home-btn cyan-glow" data-action="tab" data-id="library">
+            <span class="btn-icon">📚</span>
+            <span class="btn-text">Catálogo de Cartas</span>
+          </button>
+          
+          <button class="home-btn purple-glow" data-action="tab" data-id="dashboard">
+            <span class="btn-icon">📊</span>
+            <span class="btn-text">Mis Mazos</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
   function render() {
     // Preservar foco y cursor antes de redibujar
     const activeEl = document.activeElement;
@@ -1046,6 +1087,11 @@
       } catch (e) {
         // Ignorar para tipos de inputs que no soportan seleccion
       }
+    }
+
+    if (state.tab === "home") {
+      app.innerHTML = renderHome();
+      return;
     }
 
     const deck = activeDeck();

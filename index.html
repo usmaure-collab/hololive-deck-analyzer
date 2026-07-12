@@ -14,13 +14,14 @@
     
     <!-- Music Player Widget -->
     <div id="yt-player-container" style="position: absolute; left: -9999px; width: 10px; height: 10px; pointer-events: none; opacity: 0;"></div>
-    <div id="music-widget" class="music-widget">
+    <div id="music-widget" class="music-widget" onclick="if(this.classList.contains('minimized') && window.MusicPlayer) window.MusicPlayer.toggleMinimize()">
+      <button class="music-widget-toggle" onclick="event.stopPropagation(); if(window.MusicPlayer) window.MusicPlayer.toggleMinimize()" title="Minimizar">➖</button>
       <div class="music-info">
         <span class="music-title">lo-fi & chill mix II</span>
       </div>
       <div class="music-controls">
-        <button id="music-play-btn" class="icon-btn" onclick="if(window.MusicPlayer) window.MusicPlayer.toggle()">▶️</button>
-        <input type="range" id="music-volume-slider" min="0" max="100" value="50" oninput="if(window.MusicPlayer) window.MusicPlayer.setVolume(this.value)">
+        <button id="music-play-btn" class="icon-btn" onclick="event.stopPropagation(); if(window.MusicPlayer) window.MusicPlayer.toggle()">▶️</button>
+        <input type="range" id="music-volume-slider" min="0" max="100" value="50" oninput="if(window.MusicPlayer) window.MusicPlayer.setVolume(this.value)" onclick="event.stopPropagation()">
       </div>
     </div>
 

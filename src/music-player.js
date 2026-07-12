@@ -86,6 +86,21 @@
       if (!ytPlayer || !ytPlayer.setVolume) return;
       ytPlayer.setVolume(vol);
       localStorage.setItem('hocg_music_volume', vol);
+    },
+    
+    toggleMinimize() {
+      const widget = document.getElementById('music-widget');
+      const toggleBtn = widget.querySelector('.music-widget-toggle');
+      if (widget) {
+        widget.classList.toggle('minimized');
+        if (widget.classList.contains('minimized')) {
+          toggleBtn.textContent = '🎵';
+          toggleBtn.title = 'Expandir Música';
+        } else {
+          toggleBtn.textContent = '➖';
+          toggleBtn.title = 'Minimizar Música';
+        }
+      }
     }
   };
 })();
