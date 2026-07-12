@@ -479,28 +479,46 @@ a:hover {
 .grid.sidebar-grid {
   grid-template-columns: minmax(0, 1.45fr) minmax(350px, 0.75fr);
   align-items: start;
+  transition: grid-template-columns 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.grid.sidebar-grid:has(> aside.panel.minimized) {
+  grid-template-columns: minmax(0, 1fr) 50px;
 }
 
 /* Panel lateral flotante en catálogo y otras vistas */
 .grid.sidebar-grid > aside.panel {
   position: sticky;
-  top: 80px; /* Separación del top */
-  max-height: calc(100vh - 100px); /* Evitar que el panel sea más alto que la pantalla */
+  top: 90px; /* Separación del top */
+  max-height: calc(100vh - 120px); /* Evitar que el panel sea más alto que la pantalla */
   overflow-y: auto; /* Permitir scroll interno si el contenido es largo */
+  overflow-x: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: right top;
 }
 
 /* Panel minimizado */
 .grid.sidebar-grid > aside.panel.minimized {
-  max-height: max-content;
-  padding: 15px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+  justify-content: flex-start;
+  min-height: 100px;
+  cursor: pointer;
+  background: rgba(30, 25, 55, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.panel.minimized .detail-grid {
+.panel.minimized:hover {
+  background: rgba(56, 189, 237, 0.2);
+  border-color: rgba(56, 189, 237, 0.5);
+  transform: scale(1.05);
+}
+
+.panel.minimized .detail-grid,
+.panel.minimized .section-title {
   display: none; /* Ocultamos el contenido del detalle */
 }
 

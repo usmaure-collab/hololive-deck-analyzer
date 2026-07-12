@@ -1321,12 +1321,19 @@
         <div id="catalog-card-grid" class="card-grid">
           ${cards.map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`}
         </div>
-        <aside class="panel ${state.ui.catalogDetailMinimized ? "minimized" : ""}">
+        <aside class="panel ${state.ui.catalogDetailMinimized ? "minimized" : ""}" ${state.ui.catalogDetailMinimized ? 'onclick="document.querySelector(\'[data-action=toggle-catalog-detail]\').click()"' : ""}>
           ${state.ui.catalogDetailMinimized 
-            ? `<button class="btn primary outline" data-action="toggle-catalog-detail">Expandir Detalles</button>
-               ${selected ? `<h3 style="margin-top: 10px; font-size: 0.9em; text-align: center;">${escapeHtml(selected.name)}</h3>` : ""}`
+            ? `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; height: 100%; opacity: 0.8;">
+                 <button class="btn icon-btn" data-action="toggle-catalog-detail" style="pointer-events: none;">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                 </button>
+                 <span style="writing-mode: vertical-rl; text-orientation: mixed; font-weight: bold; letter-spacing: 2px;">DETALLES</span>
+               </div>`
             : `<div style="display: flex; justify-content: flex-end; margin-bottom: -15px; position: relative; z-index: 2;">
-                 <button class="btn small outline" data-action="toggle-catalog-detail" style="padding: 4px 10px; font-size: 0.8em; cursor: pointer;">Minimizar Panel</button>
+                 <button class="btn small outline" data-action="toggle-catalog-detail" style="padding: 4px 10px; font-size: 0.8em; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                   <span>Minimizar</span>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+                 </button>
                </div>
                ${renderCardDetail(selected)}`
           }
