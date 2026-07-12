@@ -1065,25 +1065,25 @@
         
         <div class="home-menu">
           <button class="home-btn suisei-preview" data-action="tab" data-id="dashboard">
-            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01-007_en.png" alt="Suisei" class="idol-portrait">
+            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-007.png" alt="Suisei" class="idol-portrait">
             <span class="btn-text">Panel</span>
             <span class="btn-idol">☄️ Suisei</span>
           </button>
           
           <button class="home-btn calliope-preview" data-action="tab" data-id="library">
-            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP02-007_en.png" alt="Calliope" class="idol-portrait">
+            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP02/EN_hBP02-007.png" alt="Calliope" class="idol-portrait" onerror="this.src='https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP02/hBP02-007.png'">
             <span class="btn-text">Catálogo</span>
             <span class="btn-idol">💀 Calliope</span>
           </button>
           
           <button class="home-btn ayame-preview" data-action="tab" data-id="builder">
-            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hSD02-009_en.png" alt="Ayame" class="idol-portrait">
+            <img src="https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hSD02/EN_hSD02-009.png" alt="Ayame" class="idol-portrait">
             <span class="btn-text">Constructor</span>
             <span class="btn-idol">👹 Ayame</span>
           </button>
           
           <button class="home-btn raora-preview" data-action="tab" data-id="analysis">
-            <img src="https://hololive.hololivepro.com/wp-content/uploads/2024/06/Raora-Panthera_list_thumb.png" alt="Raora" class="idol-portrait" onerror="this.src='https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01-039_en.png'">
+            <img src="https://hololive.hololivepro.com/wp-content/uploads/2024/06/Raora_Panthera_pr-img_01.png" alt="Raora" class="idol-portrait" onerror="this.src='https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-039.png'">
             <span class="btn-text">Análisis</span>
             <span class="btn-idol">🐆 Raora</span>
           </button>

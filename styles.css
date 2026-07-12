@@ -1311,31 +1311,35 @@ table tr:hover td,
   background: rgba(255, 51, 102, 0.4) !important;
   height: 2px !important;
   border-radius: 2px;
+  border: none;
+  outline: none;
+  margin: 0 8px;
+  flex: 1;
 }
 
 .deadbeat-slider-slim::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border: none;
   background-color: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%231a0505' stroke='%23ff3366' stroke-width='4'/><circle cx='50' cy='50' r='22' fill='%23ffffff' /><path d='M 38 40 L 44 32 L 56 32 L 62 40 Z' fill='%23000000' /><circle cx='44' cy='42' r='4' fill='%23000000' /><circle cx='56' cy='42' r='4' fill='%23000000' /><path d='M 46 52 Q 50 55 54 52' fill='transparent' stroke='%23000000' stroke-width='2' stroke-linecap='round' /></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M 70 15 Q 10 10 15 60 Q 25 100 75 80 Q 55 85 45 65 Q 25 35 70 20 Q 80 40 90 40 Q 95 20 70 15 Z' fill='%234e4362' stroke='%23fff' stroke-width='4' stroke-linejoin='round'/><path d='M 35 45 Q 35 30 50 30 Q 65 30 65 45 L 60 65 L 40 65 Z' fill='%23e8e8e8'/><path d='M 28 42 Q 40 38 50 43 Q 60 38 72 42 Q 68 55 52 50 Q 48 50 32 55 Z' fill='%23232323'/><line x1='45' y1='60' x2='45' y2='65' stroke='%23444' stroke-width='2'/><line x1='50' y1='60' x2='50' y2='65' stroke='%23444' stroke-width='2'/><line x1='55' y1='60' x2='55' y2='65' stroke='%23444' stroke-width='2'/><path d='M 75 80 Q 95 60 80 40 L 85 45 Q 100 65 80 85 Z' fill='%23a09ea1' stroke='%23fff' stroke-width='2'/></svg>");
   background-size: cover;
   cursor: pointer;
-  filter: drop-shadow(0 0 4px #ff3366);
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.4));
   transition: transform 0.1s;
 }
 
 .deadbeat-slider-slim::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border: none;
   background-color: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%231a0505' stroke='%23ff3366' stroke-width='4'/><circle cx='50' cy='50' r='22' fill='%23ffffff' /><path d='M 38 40 L 44 32 L 56 32 L 62 40 Z' fill='%23000000' /><circle cx='44' cy='42' r='4' fill='%23000000' /><circle cx='56' cy='42' r='4' fill='%23000000' /><path d='M 46 52 Q 50 55 54 52' fill='transparent' stroke='%23000000' stroke-width='2' stroke-linecap='round' /></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M 70 15 Q 10 10 15 60 Q 25 100 75 80 Q 55 85 45 65 Q 25 35 70 20 Q 80 40 90 40 Q 95 20 70 15 Z' fill='%234e4362' stroke='%23fff' stroke-width='4' stroke-linejoin='round'/><path d='M 35 45 Q 35 30 50 30 Q 65 30 65 45 L 60 65 L 40 65 Z' fill='%23e8e8e8'/><path d='M 28 42 Q 40 38 50 43 Q 60 38 72 42 Q 68 55 52 50 Q 48 50 32 55 Z' fill='%23232323'/><line x1='45' y1='60' x2='45' y2='65' stroke='%23444' stroke-width='2'/><line x1='50' y1='60' x2='50' y2='65' stroke='%23444' stroke-width='2'/><line x1='55' y1='60' x2='55' y2='65' stroke='%23444' stroke-width='2'/><path d='M 75 80 Q 95 60 80 40 L 85 45 Q 100 65 80 85 Z' fill='%23a09ea1' stroke='%23fff' stroke-width='2'/></svg>");
   background-size: cover;
   cursor: pointer;
-  filter: drop-shadow(0 0 4px #ff3366);
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.4));
 }
 
 .deadbeat-slider-slim::-webkit-slider-thumb:hover {

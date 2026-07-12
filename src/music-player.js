@@ -102,19 +102,13 @@
       const widget = document.getElementById('music-widget');
       if (!widget) return;
       
-      const toggleText = widget.querySelector('.toggle-text');
-      const deathSenseiSvg = widget.querySelector('.death-sensei-svg');
       const toggleBtn = widget.querySelector('.music-widget-toggle');
       
       widget.classList.toggle('minimized');
       
       if (widget.classList.contains('minimized')) {
-        if (toggleText) toggleText.style.display = 'none';
-        if (deathSenseiSvg) deathSenseiSvg.style.display = 'block';
         if (toggleBtn) toggleBtn.title = 'Expandir Música';
       } else {
-        if (toggleText) toggleText.style.display = 'inline';
-        if (deathSenseiSvg) deathSenseiSvg.style.display = 'none';
         if (toggleBtn) toggleBtn.title = 'Minimizar Música';
       }
     }
