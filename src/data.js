@@ -6133,5 +6133,3234 @@ window.HOCG_DATA = {
       ],
       "market": []
     }
+,
+{
+    "id": "hBP03-001",
+    "number": "hBP03-001",
+    "name": "Himemori Luna",
+    "type": "Oshi",
+    "color": "White",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] I Know How to Use a Computew! [1/Turn]Reveal 1 item with \"PC\" in its card name from your deck, and add it to hand. Then, shuffle the deck. / SP Oshi Skill: [holo Power：-2] Lu-knights, Assemble [1/Game]Usable if your center holomem is 〈Himemori Luna〉:Reveal 1~4 〈Lu-knights〉 from your deck, and attach them divided as you choose to your holomem. Then, shuffle the deck.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-002",
+    "number": "hBP03-002",
+    "name": "Shishiro Botan",
+    "type": "Oshi",
+    "color": "Green",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] poi [1/Turn]Send 1 cheer from your archive to your back holomem 〈Shishiro Botan〉. / SP Oshi Skill: [holo Power：-2] Sniping [1/Game]Usable if your center holomem is green:Deal 100 special damage to your opponent's center holomem other than Debut.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-003",
+    "number": "hBP03-003",
+    "name": "Sakura Miko",
+    "type": "Oshi",
+    "color": "Red",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Are 35P Making a Comeback?! [1/Turn]You may roll a die once:If it is 1, 2, 4 or 6, return 1 〈35P〉 from your archive to hand. If it is 3 or 5, return 2 〈35P〉 from your archive to hand. / SP Oshi Skill: [holo Power：-2] The Strength to not Give Up [1/Game]Usable if your center holomem is red:Choose any number of cards from your hand and return them to the bottom of the deck in any order. Then, draw cards until your hand has 5 cards.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-004",
+    "number": "hBP03-004",
+    "name": "FUWAMOCO",
+    "type": "Oshi",
+    "color": "Blue",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-3] Moco-chan! [1/Turn]Send the top card of your cheer deck to your 1st holomem 〈Mococo Abyssgard〉. / SP Oshi Skill: [holo Power：-2] BAU BAU! [1/Game]Choose 1 of your holomem with #Advent. During this turn, you may also target your opponent's back holomem with the chosen holomem's Arts.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-005",
+    "number": "hBP03-005",
+    "name": "Tokoyami Towa",
+    "type": "Oshi",
+    "color": "Purple",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Devil's Voice [1/Turn]During this turn, your [center holomem and collab holomem] with #Singing get Arts+20. / SP Oshi Skill: [holo Power：-2] Diabolical Deeds [1/Game]During your opponent's turn, usable when your 〈Tokoyami Towa〉 is downed:Return 2 cheers each from your opponent's center holomem and collab holomem to the bottom of the cheer deck in any order.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-006",
+    "number": "hBP03-006",
+    "name": "Inugami Korone",
+    "type": "Oshi",
+    "color": "Yellow",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Infinite Stamina [1/Turn]Set 1 of your resting 〈Inugami Korone〉 to active. / SP Oshi Skill: [holo Power：-3] Wow Wow Wow Wow [1/Game]Usable when your yellow holomem is downed:Reattach 1 of that holomem's cheers to your other holomem, and return 1 card from among the stacked holomem including that downed holomem to hand.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-007",
+    "number": "hBP03-007",
+    "name": "Tsunomaki Watame",
+    "type": "Oshi",
+    "color": "Yellow",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Welcome to the Member Sheep! [1/Turn]Reveal 1 fan from your deck, and add it to hand. Then, shuffle the deck. / SP Oshi Skill: [holo Power：-2] Watame isn't at fault, right? [1/Game]Send the top 2 cards of your cheer deck to 1 of your 〈Tsunomaki Watame〉.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-008",
+    "number": "hBP03-008",
+    "name": "Ayunda Risu",
+    "type": "Oshi",
+    "color": "Yellow",
+    "rarity": "OSR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] hololive ID Family [1/Turn]Usable when your holomem with #ID Gen 1 is downed:Draw 1 card. / SP Oshi Skill: [holo Power：-2] Ganbari Risu~! [1/Game]During this turn, all 〈Ayunda Risu〉 on your stage get Arts+50.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP03-009",
+    "number": "hBP03-009",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: Are you there, Everyone? 10 If you do not have a holomem with 〈Lu-knights〉 attached, reveal 1 〈Lu-knights〉 from your deck, and attach it to your holomem. Then, shuffle the deck. / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-010",
+    "number": "hBP03-010",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: Do you Want Candy? 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-011",
+    "number": "hBP03-011",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Otsu-Luna 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-012",
+    "number": "hBP03-012",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 120,
+    "text": "Arts: It's a Promise! 40",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-013",
+    "number": "hBP03-013",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 110,
+    "text": "Arts: Moon Galaxy 20 You may attach 1 〈Lu-knights〉 from your archive to your 〈Himemori Luna〉.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-014",
+    "number": "hBP03-014",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby"
+    ],
+    "bloom": "2nd",
+    "hp": 180,
+    "text": "Arts: Good Work Today 100+ If 〈Lu-knights〉 is attached to this holomen, this Arts gets +50.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-015",
+    "number": "hBP03-015",
+    "name": "Todoroki Hajime",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Baby"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: This is the Power of this Badass 110+ If you have 4 or more back holomem with #ReGLOSS, this holomem gets Arts+40.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-016",
+    "number": "hBP03-016",
+    "name": "Shishiro Botan",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Kemomimi",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: La-lion♪ 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-017",
+    "number": "hBP03-017",
+    "name": "Shishiro Botan",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Kemomimi",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: Bo. 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-018",
+    "number": "hBP03-018",
+    "name": "Shishiro Botan",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Kemomimi",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: If Botan became an Idol… 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-019",
+    "number": "hBP03-019",
+    "name": "Shishiro Botan",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Kemomimi",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Slurp 30 Reveal 1 〈Tsunomaki Watame〉 from your hand, and you may return it to the bottom of the deck:Restore 20 HP to this holomem.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-020",
+    "number": "hBP03-020",
+    "name": "Shishiro Botan",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Kemomimi",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 110,
+    "text": "Arts: Arrived in a Shopping Cart 50",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-021",
+    "number": "hBP03-021",
+    "name": "Shishiro Botan",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Kemomimi",
+      "Shooter"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: God-Tier Aim 110 If your Oshi holomem is 〈Shishiro Botan〉, you may archive 1 cheer from your back holomem:Deal 40 special damage to your opponent's center holomem or collab holomem.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-022",
+    "number": "hBP03-022",
+    "name": "Aki Rosenthal",
+    "type": "Buzz holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 250,
+    "text": "Arts: Passionate Belly Dancer 50 If your Oshi holomem is 〈Aki Rosenthal〉, restore 10 HP to all of your holomem with a tool attached. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-023",
+    "number": "hBP03-023",
+    "name": "Usada Pekora",
+    "type": "Buzz holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+3",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 230,
+    "text": "Arts: Time to Play Cards Peko 80+ If a die was rolled once or more by the ability of your 〈Usada Pekora〉 this turn, this Arts gets +40. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-024",
+    "number": "hBP03-024",
+    "name": "Kazama Iroha",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "holoX"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Kazama Attacc 100+ If 2 or more non-green cheers are attached to this holomem, this Arts gets +50.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-025",
+    "number": "hBP03-025",
+    "name": "Sakura Miko",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Baby"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Nya-hello~ 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-026",
+    "number": "hBP03-026",
+    "name": "Sakura Miko",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Baby"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: Cherry Blossom Season 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-027",
+    "number": "hBP03-027",
+    "name": "Sakura Miko",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Elite Swimsuit 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-028",
+    "number": "hBP03-028",
+    "name": "Sakura Miko",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Give me your Support 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-029",
+    "number": "hBP03-029",
+    "name": "Sakura Miko",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Commemorative Photo with 35P 30+ If 〈35P〉 is attached to this holomem, this Arts gets +30.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-030",
+    "number": "hBP03-030",
+    "name": "Sakura Miko",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Baby"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Elite Shrine Maiden 120+ This Arts gets +20 for each 〈35P〉 attached to this holomem.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-031",
+    "number": "hBP03-031",
+    "name": "Akai Haato",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Cooking"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Good Morning-Rouge! 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-032",
+    "number": "hBP03-032",
+    "name": "Akai Haato",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Cooking"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: Good Job-Rouge! 60",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-033",
+    "number": "hBP03-033",
+    "name": "Akai Haato",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Cooking"
+    ],
+    "bloom": "1st",
+    "hp": 120,
+    "text": "Arts: Haachama-chama~! 40",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-034",
+    "number": "hBP03-034",
+    "name": "Akai Haato",
+    "type": "Buzz holomem",
+    "color": "Red",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Cooking"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: Red or Rouge 40+ You may roll a die once:If it is odd, deal 20 special damage to your opponent's center holomem and collab holomem. If it is even, this Arts gets +40. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-035",
+    "number": "hBP03-035",
+    "name": "Takane Lui",
+    "type": "Buzz holomem",
+    "color": "Red",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Bird",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: challenger 50 If your Oshi holomem is 〈Takane Lui〉, you may archive 2 cards from your hand:Draw 3 cards. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-036",
+    "number": "hBP03-036",
+    "name": "Takanashi Kiara",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Myth",
+      "Bird"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: Wings of Steel 50",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-037",
+    "number": "hBP03-037",
+    "name": "Mococo Abyssgard",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: I'm not Fuwawa, I'm Mococo 20 If your center holomem is 〈Fuwawa Abyssgard〉, this Arts requires -1 colorless. / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-038",
+    "number": "hBP03-038",
+    "name": "Mococo Abyssgard",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Donut Cooking with Mococo 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-039",
+    "number": "hBP03-039",
+    "name": "Mococo Abyssgard",
+    "type": "Buzz holomem",
+    "color": "Red",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: The Fuzzy One 50+ [Collab Position Only]If your center holomem is 〈Fuwawa Abyssgard〉, this Arts gets +30. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-040",
+    "number": "hBP03-040",
+    "name": "Fuwawa Abyssgard",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: I'm not a Chihuahua, I'm Fuwawa 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-041",
+    "number": "hBP03-041",
+    "name": "Fuwawa Abyssgard",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: The Moodmaker of the Demonic Guard Dogs 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-042",
+    "number": "hBP03-042",
+    "name": "Fuwawa Abyssgard",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: Strolling in the Forest with Fuwawa 50",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-043",
+    "number": "hBP03-043",
+    "name": "Fuwawa Abyssgard",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: I Love Donuts 60",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-044",
+    "number": "hBP03-044",
+    "name": "Hoshimachi Suisei",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Virtual Ghost 40 If your Oshi holomem is 〈Hoshimachi Suisei〉, you may reattach 1 blue cheer from this holomem to your back holomem 〈Hoshimachi Suisei〉.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-045",
+    "number": "hBP03-045",
+    "name": "Kobo Kanaeru",
+    "type": "Buzz holomem",
+    "color": "Blue",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+3"
+    ],
+    "bloom": "1st",
+    "hp": 230,
+    "text": "Arts: Full of energy! 40+ This Arts gets +10 for each of your opponent's back holomem with reduced HP. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-046",
+    "number": "hBP03-046",
+    "name": "Hiodoshi Ao",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Painting"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Did you Mistake me for some Cutesy Girl? 10 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-047",
+    "number": "hBP03-047",
+    "name": "Hiodoshi Ao",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: After the Afternoon Tea Date… 60",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-048",
+    "number": "hBP03-048",
+    "name": "Hiodoshi Ao",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: I'm pretty Cool, right? 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-049",
+    "number": "hBP03-049",
+    "name": "Hiodoshi Ao",
+    "type": "Buzz holomem",
+    "color": "Blue",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 230,
+    "text": "Arts: Leave it to the Handsome One! 50 Deal 10 special damage for each of your back holomem with #ReGLOSS and with different card names to your opponent's center holomem or 1 of their back holomem. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-050",
+    "number": "hBP03-050",
+    "name": "FUWAMOCO",
+    "type": "holomem",
+    "color": "青赤",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Twin Demonic Guard Dogs 40 Reveal 1 [red cheer or blue cheer] from your cheer deck, and send it to your holomem with #Advent. Then, shuffle the cheer deck. / Extra: This holomem is also regarded as 〈Fuwawa Abyssgard〉〈Mococo Abyssgard〉",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-051",
+    "number": "hBP03-051",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 110,
+    "text": "Arts: Suppies! 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-052",
+    "number": "hBP03-052",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: So that's how it is, huh 20 Deal 10 special damage to your opponent's center holomem. If your Oshi holomem is 〈Tokoyami Towa〉, you may archive 1 tool attached to your opponent's [center holomem or collab holomem].",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-053",
+    "number": "hBP03-053",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: Toodlies! 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-054",
+    "number": "hBP03-054",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: I'm gonna make a huge explosion! 30 You may archive 4 purple cheer from this holomem:Return 1 cheer from your opponent's stage to the bottom of the cheer deck.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-055",
+    "number": "hBP03-055",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: You can have a Home Date with Towa 40",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-056",
+    "number": "hBP03-056",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: Breaking Out of the Stereotypes 30 Deal 30 special damage to your opponent's center holomem or collab holomem.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-057",
+    "number": "hBP03-057",
+    "name": "Robocosan",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Hellobo! 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-058",
+    "number": "hBP03-058",
+    "name": "Robocosan",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: Otsu-Robo 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-059",
+    "number": "hBP03-059",
+    "name": "Robocosan",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Give me a Smile 40",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-060",
+    "number": "hBP03-060",
+    "name": "Robocosan",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+0",
+      "Shooter"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Self-Proclaimed 【high-spec】 70+ If your opponent's stage has 7 or more cheers, this Arts gets +70.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-061",
+    "number": "hBP03-061",
+    "name": "Inugami Korone",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi"
+    ],
+    "bloom": "Debut",
+    "hp": 120,
+    "text": "Arts: Ello! 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-062",
+    "number": "hBP03-062",
+    "name": "Inugami Korone",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: This is what you ordered, y'know 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-063",
+    "number": "hBP03-063",
+    "name": "Inugami Korone",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 200,
+    "text": "Arts: Otsu-Koron 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-064",
+    "number": "hBP03-064",
+    "name": "Inugami Korone",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: BrRRAAAAAAAAH!!!!!!!!!!!!!! 40+ This Arts gets +10 for each life reduced from your initial life.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-065",
+    "number": "hBP03-065",
+    "name": "Inugami Korone",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Here ya go~ 30 Send the top card of your cheer deck to your holomem with #GAMERS.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-066",
+    "number": "hBP03-066",
+    "name": "Inugami Korone",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi"
+    ],
+    "bloom": "2nd",
+    "hp": 210,
+    "text": "Arts: The Biggest Disaster 120+ If the target of this Arts is your opponent's 2nd holomem, you may archive 1 1st holomem stacked to this holomem:This Arts gets +50.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-067",
+    "number": "hBP03-067",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "Debut",
+    "hp": 110,
+    "text": "Arts: Hoof, hoof, helloof! 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-068",
+    "number": "hBP03-068",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: Watame's Song 20 If you have a holomem with 〈Watamates〉 attached, you may send 1 cheer from your archive to your yellow holomem.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-069",
+    "number": "hBP03-069",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 190,
+    "text": "Arts: A Healing Moment 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-070",
+    "number": "hBP03-070",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Watch until the end, Watamates! 30 Send the top card of your cheer deck to your back holomem 〈Tsunomaki Watame〉.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-071",
+    "number": "hBP03-071",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: Tsunomaki Rock Paper Scissors 50 You may play rock-paper-scissors with your opponent until there's a winner:If you won, during this turn, this holomem gets Red Critical+30.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-072",
+    "number": "hBP03-072",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Watame Night Fever!! 80+ [Center Position Only]If 6 or more cheers are attached to this holomem, during this turn, this holomem and your collab holomem get Arts+100.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-073",
+    "number": "hBP03-073",
+    "name": "Ayunda Risu",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+1",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "Debut",
+    "hp": 110,
+    "text": "Arts: Kon-Risu 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-074",
+    "number": "hBP03-074",
+    "name": "Ayunda Risu",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+1",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: Connected Wishes 20+ ■If your stage has 〈Airani Iofifteen〉, this Arts gets +10. ■If your stage has 〈Moona Hoshinova〉, this Arts gets +10.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-075",
+    "number": "hBP03-075",
+    "name": "Ayunda Risu",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+1",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: Otsu-Risu 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-076",
+    "number": "hBP03-076",
+    "name": "Ayunda Risu",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+1",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Puru Puru, Otsu-Risu!!! 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-077",
+    "number": "hBP03-077",
+    "name": "Ayunda Risu",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+1",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: Nuts 40",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-078",
+    "number": "hBP03-078",
+    "name": "Ayunda Risu",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "ID",
+      "ID+Gen+1",
+      "Kemomimi",
+      "Singing"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: Squirrel Girl from the Magical Forest 50+ ■If a green cheer is attached to this holomem, this Arts gets +50. ■If a blue cheer is attached to this holomem, this Arts gets +50.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-079",
+    "number": "hBP03-079",
+    "name": "Shiranui Flare",
+    "type": "Buzz holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "JP",
+      "Gen+3",
+      "Half-Elf"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: Sunrise Cheer 50+ If 3 or more cheers are attached to this holomem, this Arts gets +30. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-080",
+    "number": "hBP03-080",
+    "name": "Otonose Kanade",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Singing"
+    ],
+    "bloom": "Debut",
+    "hp": 130,
+    "text": "Arts: Do-Re-Mi-Fa-So-La-Si-Do! 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP03-081",
+    "number": "hBP03-081",
+    "name": "Otonose Kanade",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 180,
+    "text": "Arts: Tomorrow is Monday~♪ 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-082",
+    "number": "hBP03-082",
+    "name": "Otonose Kanade",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: I'm not squishy! 60",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-083",
+    "number": "hBP03-083",
+    "name": "Otonose Kanade",
+    "type": "Buzz holomem",
+    "color": "Yellow",
+    "rarity": "R",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 250,
+    "text": "Arts: Songstress, Otonose Kanade 120 / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-084",
+    "number": "hBP03-084",
+    "name": "Gorgeous PC",
+    "type": "Support・Item・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-085",
+    "number": "hBP03-085",
+    "name": "Super PC",
+    "type": "Support・Item・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-086",
+    "number": "hBP03-086",
+    "name": "Dual-Monitor PC",
+    "type": "Support・Item・LIMITED",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-087",
+    "number": "hBP03-087",
+    "name": "Call and Response",
+    "type": "Support・Event",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-088",
+    "number": "hBP03-088",
+    "name": "Totsumachi",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-089",
+    "number": "hBP03-089",
+    "name": "Fan Meeting",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-090",
+    "number": "hBP03-090",
+    "name": "Can You Do the hololive?",
+    "type": "Support・Event",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-091",
+    "number": "hBP03-091",
+    "name": "hololive Indonesia Gen 1",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-092",
+    "number": "hBP03-092",
+    "name": "hololive Gen 0",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-093",
+    "number": "hBP03-093",
+    "name": "hololive Gen 4",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-094",
+    "number": "hBP03-094",
+    "name": "FPS Stream",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-095",
+    "number": "hBP03-095",
+    "name": "holoCap",
+    "type": "Support・Tool",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-096",
+    "number": "hBP03-096",
+    "name": "Rifle",
+    "type": "Support・Tool",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-097",
+    "number": "hBP03-097",
+    "name": "Recorder",
+    "type": "Support・Tool",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-098",
+    "number": "hBP03-098",
+    "name": "Kintoki",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-099",
+    "number": "hBP03-099",
+    "name": "Maguchi",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-100",
+    "number": "hBP03-100",
+    "name": "Pero",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-101",
+    "number": "hBP03-101",
+    "name": "Bibi",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-102",
+    "number": "hBP03-102",
+    "name": "Futoinu",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-103",
+    "number": "hBP03-103",
+    "name": "Hosoinu",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-104",
+    "number": "hBP03-104",
+    "name": "Riscot",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-105",
+    "number": "hBP03-105",
+    "name": "Lu-knights",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-106",
+    "number": "hBP03-106",
+    "name": "SSRB",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-107",
+    "number": "hBP03-107",
+    "name": "35P",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-108",
+    "number": "hBP03-108",
+    "name": "Haaton",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "tags": [
+      "Shirakami's+Character"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-109",
+    "number": "hBP03-109",
+    "name": "Ruffians",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-110",
+    "number": "hBP03-110",
+    "name": "Roboser",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-111",
+    "number": "hBP03-111",
+    "name": "Koronesky",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-112",
+    "number": "hBP03-112",
+    "name": "Watamates",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP03-113",
+    "number": "hBP03-113",
+    "name": "Risuners",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hY01-001",
+    "number": "hY01-001",
+    "name": "White Cheer",
+    "type": "Cheer",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hY02-001",
+    "number": "hY02-001",
+    "name": "Green Cheer",
+    "type": "Cheer",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hY03-001",
+    "number": "hY03-001",
+    "name": "Red Cheer",
+    "type": "Cheer",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hY04-001",
+    "number": "hY04-001",
+    "name": "Blue Cheer",
+    "type": "Cheer",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hY05-001",
+    "number": "hY05-001",
+    "name": "Purple Cheer",
+    "type": "Cheer",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hY06-001",
+    "number": "hY06-001",
+    "name": "Yellow Cheer",
+    "type": "Cheer",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 3 (Elite Spark)",
+    "release": "2026-04 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  }
   ]
 };
