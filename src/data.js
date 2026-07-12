@@ -9362,5 +9362,3301 @@ window.HOCG_DATA = {
     "text": "",
     "market": []
   }
+,
+{
+    "id": "hBP02-084",
+    "number": "hBP02-084",
+    "name": "Mikkorone 24",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "U",
+        "artIndex": 1,
+        "note": "U Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP03-093",
+    "number": "hBP03-093",
+    "name": "hololive Gen 4",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-001",
+    "number": "hBP04-001",
+    "name": "Hakui Koyori",
+    "type": "Oshi",
+    "color": "White",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Koyori Experimenting [1/Turn]During this turn, 1 of your 〈Hakui Koyori〉 that has a support card with #KOYO LABO attached gets Arts+30. / SP Oshi Skill: [holo Power：-2] Assistants, mmmwah! [1/Game]Usable if your 〈Hakui Koyori〉 with 〈Koyori's Assistants〉 attached would take damage from the opponent during the opponent's turn:1 of those holomem takes -100 damage.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-002",
+    "number": "hBP04-002",
+    "name": "Juufuutei Raden",
+    "type": "Oshi",
+    "color": "Green",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] ReGLOSS's Elegant Girl [1/Turn]Send 1 cheer from your archive to your holomem with #ReGLOSS. / SP Oshi Skill: [holo Power：-2] With the Extra Time, Round and Round [1/Game]Return 1~4 events with #Mushroom from your archive to hand. Then, draw 1 card for every 2 cards returned to hand.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-003",
+    "number": "hBP04-003",
+    "name": "Ichijou Ririka",
+    "type": "Oshi",
+    "color": "Red",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-3] Reach the Top! [1/Turn]If your center holomem has #ReGLOSS, deal 50 special damage to your opponent's collab holomem. / SP Oshi Skill: [holo Power：-1] Cute! Positive! Genius! [1/Game]Usable when your 〈Ichijou Ririka〉 is downed during the opponent's turn:Reveal 1 [〈Ichijou Ririka〉 and/or 〈Struggle Meal〉] each from your deck, and add them to hand. Then, shuffle the deck.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-004",
+    "number": "hBP04-004",
+    "name": "Yukihana Lamy",
+    "type": "Oshi",
+    "color": "Blue",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-1] I Love You [1/Turn]Usable when your holomem is downed during the opponent's turn:Return 1 fan attached to that holomem to hand. / SP Oshi Skill: [holo Power：-3] Vroom, Bari Bari Bari Bari [1/Game]Choose 1 of your 〈Yukihana Lamy〉. During this turn, the chosen holomem deals +100 special damage to 1 of your opponent's holomem, and if the chosen holomem downed an opponent's holomem, draw 2 cards.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-005",
+    "number": "hBP04-005",
+    "name": "La+ Darknesss",
+    "type": "Oshi",
+    "color": "Purple",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Leader's Work [1/Turn]During this turn, if you would roll a die 3 times for 1 ability of your holomem, regard all numbers on the faces of that die as 5. / SP Oshi Skill: [holo Power：-3] We Are Secret Society holoX! [1/Game]Choose 1 of your holomem with #holoX. During this turn, the chosen holomem's Arts may be used without cheer requirements.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-006",
+    "number": "hBP04-006",
+    "name": "Oozora Subaru",
+    "type": "Oshi",
+    "color": "Yellow",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Mental! Physical! Passion! [1/Turn]Usable if your 〈Oozora Subaru〉 would take damage from the opponent during the opponent's turn:All of your 〈Oozora Subaru〉 take -30 damage. / SP Oshi Skill: [holo Power：-2] Comedic Reactions [1/Game]Usable if your life is 3 or less:During this turn, your center holomem 〈Oozora Subaru〉 gets Arts+100.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      },
+      {
+        "rarity": "SEC",
+        "artIndex": 2,
+        "note": "Secret Rare (Alt Art/Signed)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-007",
+    "number": "hBP04-007",
+    "name": "Anya Melfissa",
+    "type": "Oshi",
+    "color": "Yellow",
+    "rarity": "OSR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "text": "Oshi Skill: [holo Power：-2] Mystical Ritual [1/Turn]Reveal 1 〈Ancient Weapon〉 from your deck, and attach it to your holomem. Then, shuffle the deck. / SP Oshi Skill: [holo Power：-2] Those Who Think about Life Win [1/Game]Send 1 cheer each from your archive to all of your holomem with 〈Ancient Weapon〉 attached.",
+    "variants": [
+      {
+        "rarity": "OSR",
+        "artIndex": 0,
+        "note": "Oshi Super Rare"
+      },
+      {
+        "rarity": "OUR",
+        "artIndex": 1,
+        "note": "Oshi Ultra Rare (Alt Art)"
+      }
+    ],
+    "market": [],
+    "life": 5
+  },
+  {
+    "id": "hBP04-008",
+    "number": "hBP04-008",
+    "name": "Hakui Koyori",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Kemomimi"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Konkoyo~ 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-009",
+    "number": "hBP04-009",
+    "name": "Hakui Koyori",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Kemomimi"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Oh, You Poor Souls Lost within an Eternal Cycle 20 Look at the top 3 cards of your deck. Reveal 1 [Debut holomem with #holoX or support card with #KOYO LABO] from among them, and add it to hand. Then, return the remaining cards to the bottom of the deck in any order.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-010",
+    "number": "hBP04-010",
+    "name": "Hakui Koyori",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: Assistants~ Are You Tired? 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-011",
+    "number": "hBP04-011",
+    "name": "Hakui Koyori",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: Assistants, Pay Attention! 30 You may attach 1 〈Koyori's Assistants〉 from your archive to your other 〈Hakui Koyori〉.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-012",
+    "number": "hBP04-012",
+    "name": "Hakui Koyori",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Kemomimi"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: Koyo and Her Assistants Will Always Be Together! 30 If 〈Koyori's Assistants〉 is attached to this holomem, draw 1 card.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-013",
+    "number": "hBP04-013",
+    "name": "Hakui Koyori",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Kemomimi"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Koyori's Awakening 160 If a support card with #KOYO LABO is attached to this holomem, reveal 1 support card with #KOYO LABO from your deck, and add it to hand. Then, shuffle the deck.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-014",
+    "number": "hBP04-014",
+    "name": "Shirakami Fubuki",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "GAMERS",
+      "Kemomimi",
+      "Painting"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: My Precious One 100+ If your stage has a holomem with #GAMERS other than 〈Shirakami Fubuki〉, this Arts gets +50.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-015",
+    "number": "hBP04-015",
+    "name": "IRyS",
+    "type": "Buzz holomem",
+    "color": "White",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Promise",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 230,
+    "text": "Arts: The Race Queen 30+ This Arts gets +10 for each holomem with #Promise on your stage. However, only up to 4 holomem are counted. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-016",
+    "number": "hBP04-016",
+    "name": "Raora Panthera",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Kemomimi",
+      "Painting"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Ciaora 10 If your stage has 5 or less holomem, reveal 1 Spot holomem with #Justice from your deck, and you may place it on stage. Then, shuffle the deck. / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-017",
+    "number": "hBP04-017",
+    "name": "Raora Panthera",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Kemomimi",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Pink Panther of Justice 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-018",
+    "number": "hBP04-018",
+    "name": "Raora Panthera",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Kemomimi",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: Information Gathering Is My Specialty 50",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-019",
+    "number": "hBP04-019",
+    "name": "Raora Panthera",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Kemomimi",
+      "Painting"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: Art Streamer 70+ [Collab Position Only]If your center holomem has #Painting, this Arts gets +80.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-020",
+    "number": "hBP04-020",
+    "name": "Juufuutei Raden",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Alcohol"
+    ],
+    "bloom": "Debut",
+    "hp": 110,
+    "text": "Arts: The Juufuutei Family Are Still Apprentice Curtain Raisers! 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-021",
+    "number": "hBP04-021",
+    "name": "Juufuutei Raden",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Alcohol"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: Raden Standby 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-022",
+    "number": "hBP04-022",
+    "name": "Juufuutei Raden",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: Knowledgeable Clapback 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-023",
+    "number": "hBP04-023",
+    "name": "Juufuutei Raden",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Jokester 40",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-024",
+    "number": "hBP04-024",
+    "name": "Juufuutei Raden",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: Reminiscing Applause 30 You may send 1 cheer from your archive to this holomem.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-025",
+    "number": "hBP04-025",
+    "name": "Juufuutei Raden",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Alcohol"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Looks Like the Next Act Is Ready 140+ If your Oshi holomem is 〈Juufuutei Raden〉, you may reattach 2 cheers from this holomem each to 2 of your back holomem:This Arts gets +30.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-026",
+    "number": "hBP04-026",
+    "name": "Ookami Mio",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "GAMERS",
+      "Kemomimi",
+      "Cooking"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: Wait, I Belong to Fubuki? 100+ If your stage has a holomem with #GAMERS other than 〈Ookami Mio〉, this Arts gets +50.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-027",
+    "number": "hBP04-027",
+    "name": "Pavolia Reine",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Bird",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Terima Kasih 30",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-028",
+    "number": "hBP04-028",
+    "name": "Cecilia Immergreen",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Language"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Melody of Justice 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-029",
+    "number": "hBP04-029",
+    "name": "Cecilia Immergreen",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: An Ancient Automaton 60",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-030",
+    "number": "hBP04-030",
+    "name": "Cecilia Immergreen",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Would You Like to Listen? 50",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-031",
+    "number": "hBP04-031",
+    "name": "Cecilia Immergreen",
+    "type": "holomem",
+    "color": "Green",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Language"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Multilingual 80 Choose 1 of your back holomem with #Language. Reveal 1 cheer from your cheer deck with the same color as the chosen holomem, and send it to the chosen holomem. Then, shuffle the cheer deck.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-032",
+    "number": "hBP04-032",
+    "name": "Ichijou Ririka",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Cooking",
+      "Language"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Kon-Riri 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-033",
+    "number": "hBP04-033",
+    "name": "Ichijou Ririka",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Cooking",
+      "Language"
+    ],
+    "bloom": "Debut",
+    "hp": 120,
+    "text": "Arts: Ririka Standby 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-034",
+    "number": "hBP04-034",
+    "name": "Ichijou Ririka",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Cooking",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: Let's Dance 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-035",
+    "number": "hBP04-035",
+    "name": "Ichijou Ririka",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Cooking",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Entrepreneur Punch 50 Deal 20 special damage to your opponent's collab holomem.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-036",
+    "number": "hBP04-036",
+    "name": "Ichijou Ririka",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Cooking",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: Heehee 30 If the target of this Arts is your opponent's collab holomem, draw 1 card.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-037",
+    "number": "hBP04-037",
+    "name": "Ichijou Ririka",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "DEV_IS",
+      "ReGLOSS",
+      "Cooking",
+      "Language"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Oh? Wanna Fight? 80 Deal 50 special damage to your opponent's center holomem. If you used 〈Struggle Meal〉 this turn, deal 30 special damage to your opponent's center holomem or collab holomem.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-038",
+    "number": "hBP04-038",
+    "name": "Houshou Marine",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+3",
+      "Painting",
+      "Sea"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Perv♥♥ 50+ This Arts gets +20 for each holomem that is stacked to this holomem.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-039",
+    "number": "hBP04-039",
+    "name": "Kaela Kovalskia",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+3"
+    ],
+    "bloom": "Debut",
+    "hp": 120,
+    "text": "Arts: Oha-Ela 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-040",
+    "number": "hBP04-040",
+    "name": "Kaela Kovalskia",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+3"
+    ],
+    "bloom": "1st",
+    "hp": 170,
+    "text": "Arts: When Life is Hard 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-041",
+    "number": "hBP04-041",
+    "name": "Kaela Kovalskia",
+    "type": "holomem",
+    "color": "Red",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+3"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Silent Laugh 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-042",
+    "number": "hBP04-042",
+    "name": "Kaela Kovalskia",
+    "type": "Buzz holomem",
+    "color": "Red",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+3"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: holoh3ro 30 If your stage has other holomem with #ID Gen 3, draw 1 card. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-043",
+    "number": "hBP04-043",
+    "name": "Yukihana Lamy",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: Lamyoohoo 20 Deal 10 special damage to 1 of your opponent's holomem. However, your opponent's life does not reduce even if downed. / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-044",
+    "number": "hBP04-044",
+    "name": "Yukihana Lamy",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "Debut",
+    "hp": 80,
+    "text": "Arts: Ugh… 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-045",
+    "number": "hBP04-045",
+    "name": "Yukihana Lamy",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Lamy Later 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-046",
+    "number": "hBP04-046",
+    "name": "Yukihana Lamy",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: I'll Work Very Hard! 30 If you have a holomem with a fan attached, deal 10 special damage to 1 of your opponent's holomem.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-047",
+    "number": "hBP04-047",
+    "name": "Yukihana Lamy",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "1st",
+    "hp": 120,
+    "text": "Arts: Bouquet of Shimmering Snow 50",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-048",
+    "number": "hBP04-048",
+    "name": "Yukihana Lamy",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Half-Elf",
+      "Alcohol"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: May Today Be a Blessed Day 130 You may archive 1 cheer from this holomem:Deal 30 special damage to 1 of your opponent's center holomem or back holomem.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-049",
+    "number": "hBP04-049",
+    "name": "Moona Hoshinova",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+1",
+      "Singing"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: Stage of Moon and Stars 50",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-050",
+    "number": "hBP04-050",
+    "name": "Shiori Novella",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent"
+    ],
+    "bloom": "Debut",
+    "hp": 110,
+    "text": "Arts: Shiori~n! 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-051",
+    "number": "hBP04-051",
+    "name": "Shiori Novella",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Don't You Think That's a Wonderful Story? 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-052",
+    "number": "hBP04-052",
+    "name": "Shiori Novella",
+    "type": "holomem",
+    "color": "Blue",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent"
+    ],
+    "bloom": "1st",
+    "hp": 120,
+    "text": "Arts: Fascinating Story 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-053",
+    "number": "hBP04-053",
+    "name": "Shiori Novella",
+    "type": "Buzz holomem",
+    "color": "Blue",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent"
+    ],
+    "bloom": "1st",
+    "hp": 230,
+    "text": "Arts: Bookmark of a Memory 70 You may reveal the top card of your holo Power:If the revealed card is a holomem with #EN, deal 20 special damage to 1 of your opponent's holomem. Then, return the revealed card to the bottom of the holo Power face down. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-054",
+    "number": "hBP04-054",
+    "name": "La+ Darknesss",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: See Me, Hear Me, All of You!! 30 / Extra: You may include any number of this holomem in the deck",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-055",
+    "number": "hBP04-055",
+    "name": "La+ Darknesss",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: We Who Rule the Star of Eden! 30+ This Arts gets +10 for each of your opponent's resting holomem.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-056",
+    "number": "hBP04-056",
+    "name": "La+ Darknesss",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: I Love Strawberries! 40",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-057",
+    "number": "hBP04-057",
+    "name": "La+ Darknesss",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: I'll Show You the Best Stage Ever!! 40",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-058",
+    "number": "hBP04-058",
+    "name": "La+ Darknesss",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 140,
+    "text": "Arts: You Dare Challenge Me? 30",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-059",
+    "number": "hBP04-059",
+    "name": "La+ Darknesss",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "holoX",
+      "Shooter"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Legend of My Supremacy 120 Deal 10 special damage to your opponent's center holomem for each time a die was rolled by your abilities this turn.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-060",
+    "number": "hBP04-060",
+    "name": "Murasaki Shion",
+    "type": "Buzz holomem",
+    "color": "Purple",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: Game Streaming 40 Deal 10 special damage to your opponent's center holomem and collab holomem for each of your opponent's center holomem's cheers. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-061",
+    "number": "hBP04-061",
+    "name": "Kureiji Ollie",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: HOLORO Soul 80+ This Arts gets +20 for each 2nd holomem with #ID Gen 2 on your stage other than this holomem.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-062",
+    "number": "hBP04-062",
+    "name": "Mori Calliope",
+    "type": "Buzz holomem",
+    "color": "Purple",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Myth",
+      "Singing"
+    ],
+    "bloom": "1st",
+    "hp": 240,
+    "text": "Arts: One Final Drink 50 Look at the top 2 cards of your deck. Archive 1 card from among them. Then, return the rest to the top of the deck. / Extra: If this holomem is downed, you get life-2",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-063",
+    "number": "hBP04-063",
+    "name": "Koseki Bijou",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Baby"
+    ],
+    "bloom": "Debut",
+    "hp": 110,
+    "text": "Arts: Bon-Bijou! 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-064",
+    "number": "hBP04-064",
+    "name": "Koseki Bijou",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 180,
+    "text": "Arts: Shining Jewel 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-065",
+    "number": "hBP04-065",
+    "name": "Koseki Bijou",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Baby"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: The Ore and the Miner 30+ If your archive has a Red cheer, this Arts gets +20.",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-066",
+    "number": "hBP04-066",
+    "name": "Koseki Bijou",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Advent",
+      "Baby"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: I Hope You'll Feel My Radiance! 80+ This Arts gets +10 for each cheer in your opponent's archive.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-067",
+    "number": "hBP04-067",
+    "name": "Oozora Subaru",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2",
+      "Bird"
+    ],
+    "bloom": "Debut",
+    "hp": 130,
+    "text": "Arts: Ajimaru! Ajimaru! 20 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-068",
+    "number": "hBP04-068",
+    "name": "Oozora Subaru",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2",
+      "Bird"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: From Subaru to You! 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-069",
+    "number": "hBP04-069",
+    "name": "Oozora Subaru",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2",
+      "Bird"
+    ],
+    "bloom": "1st",
+    "hp": 190,
+    "text": "Arts: Good Morning Subaru 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-070",
+    "number": "hBP04-070",
+    "name": "Oozora Subaru",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2",
+      "Bird"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: Give Us All Your Support and Have Fun! 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-071",
+    "number": "hBP04-071",
+    "name": "Oozora Subaru",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2",
+      "Bird"
+    ],
+    "bloom": "1st",
+    "hp": 160,
+    "text": "Arts: Shuba! 20 Send the top card of your cheer deck to this holomem.",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-072",
+    "number": "hBP04-072",
+    "name": "Oozora Subaru",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+2",
+      "Singing",
+      "Bird"
+    ],
+    "bloom": "2nd",
+    "hp": 190,
+    "text": "Arts: Sunshine Girl 100+ This Arts gets +10 for each cheer on both players' stage. However, only up to 8 cheers are counted.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-073",
+    "number": "hBP04-073",
+    "name": "Anya Melfissa",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Good Day! 30 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-074",
+    "number": "hBP04-074",
+    "name": "Anya Melfissa",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "Debut",
+    "hp": 120,
+    "text": "Arts: Do You Want to Sit Beside Me? 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-075",
+    "number": "hBP04-075",
+    "name": "Anya Melfissa",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 180,
+    "text": "Arts: Devil's Invitation 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-076",
+    "number": "hBP04-076",
+    "name": "Anya Melfissa",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 150,
+    "text": "Arts: Please Cheer for Me! 30",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-077",
+    "number": "hBP04-077",
+    "name": "Anya Melfissa",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "1st",
+    "hp": 180,
+    "text": "Arts: Yellow Rose 50",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "R",
+        "artIndex": 1,
+        "note": "R Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-078",
+    "number": "hBP04-078",
+    "name": "Anya Melfissa",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "ID",
+      "IDGen+2",
+      "Language"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Dungeon Adventure 160",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-079",
+    "number": "hBP04-079",
+    "name": "Natsuiro Matsuri",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Shooter"
+    ],
+    "bloom": "Debut",
+    "hp": 120,
+    "text": "Arts: hololive's Symbol of Purity 10 / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-080",
+    "number": "hBP04-080",
+    "name": "Natsuiro Matsuri",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 180,
+    "text": "Arts: Natsuiro Supporters 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-081",
+    "number": "hBP04-081",
+    "name": "Natsuiro Matsuri",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Shooter"
+    ],
+    "bloom": "1st",
+    "hp": 120,
+    "text": "Arts: Sing with All My Heart!! 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-082",
+    "number": "hBP04-082",
+    "name": "Natsuiro Matsuri",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+1",
+      "Shooter"
+    ],
+    "bloom": "2nd",
+    "hp": 180,
+    "text": "Arts: Found a Favorite 60+ This Arts gets +20 for each of this holomem's cheers.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-083",
+    "number": "hBP04-083",
+    "name": "Momosuzu Nene",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Singing",
+      "Painting"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: Kon-Nene~ 10 If your stage has 5 or less holomem, reveal 1 Debut holomem with #Gen 5 from your deck, and you may place it on stage. Then, shuffle the deck. / Extra: You may include any number of this holomem in the deck",
+    "market": []
+  },
+  {
+    "id": "hBP04-084",
+    "number": "hBP04-084",
+    "name": "Momosuzu Nene",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Singing",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 190,
+    "text": "Arts: HAAAN 30",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-085",
+    "number": "hBP04-085",
+    "name": "Momosuzu Nene",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Singing",
+      "Painting"
+    ],
+    "bloom": "1st",
+    "hp": 130,
+    "text": "Arts: I’m Gonna Do My Best!!!!! 20",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-086",
+    "number": "hBP04-086",
+    "name": "Momosuzu Nene",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+5",
+      "Singing",
+      "Painting"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Lots of Husbands 50",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      },
+      {
+        "rarity": "SR",
+        "artIndex": 1,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "UR",
+        "artIndex": 2,
+        "note": "UR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-087",
+    "number": "hBP04-087",
+    "name": "Elizabeth Rose Bloodflame",
+    "type": "holomem",
+    "color": "◇",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice",
+      "Singing"
+    ],
+    "bloom": "Spot",
+    "hp": 140,
+    "text": "Arts: ERB 20 / Extra: This holomem cannot bloom",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-088",
+    "number": "hBP04-088",
+    "name": "Gigi Murin",
+    "type": "holomem",
+    "color": "◇",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "EN",
+      "Justice"
+    ],
+    "bloom": "Spot",
+    "hp": 130,
+    "text": "Arts: Don't Get Mad at Me! 10 / Extra: This holomem cannot bloom",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-089",
+    "number": "hBP04-089",
+    "name": "Two-Tone PC",
+    "type": "Support・Item・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-090",
+    "number": "hBP04-090",
+    "name": "Work PC",
+    "type": "Support・Item・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-091",
+    "number": "hBP04-091",
+    "name": "Struggle Meal",
+    "type": "Support・Event",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Food"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-092",
+    "number": "hBP04-092",
+    "name": "NePoLaBo",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-093",
+    "number": "hBP04-093",
+    "name": "hololive Gen 2",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-094",
+    "number": "hBP04-094",
+    "name": "Maitake Dance",
+    "type": "Support・Event",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Mushroom"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-095",
+    "number": "hBP04-095",
+    "name": "Mascot Catcher",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-096",
+    "number": "hBP04-096",
+    "name": "Advent",
+    "type": "Support・Event・LIMITED",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "SR",
+        "artIndex": 0,
+        "note": "SR Rarity"
+      },
+      {
+        "rarity": "U",
+        "artIndex": 1,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 2,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-097",
+    "number": "hBP04-097",
+    "name": "Green Test Tube",
+    "type": "Support・Tool",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "KOYO+LABO"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-098",
+    "number": "hBP04-098",
+    "name": "Smithing Hammer",
+    "type": "Support・Tool",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "Kaela's+Arms"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-099",
+    "number": "hBP04-099",
+    "name": "Ancient Weapon",
+    "type": "Support・Tool",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "U",
+        "artIndex": 0,
+        "note": "U Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-100",
+    "number": "hBP04-100",
+    "name": "Kokoro",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "KOYO+LABO"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-101",
+    "number": "hBP04-101",
+    "name": "Daifuku",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-102",
+    "number": "hBP04-102",
+    "name": "Yamena",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-103",
+    "number": "hBP04-103",
+    "name": "Karasu",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "variants": [
+      {
+        "rarity": "C",
+        "artIndex": 0,
+        "note": "C Rarity"
+      },
+      {
+        "rarity": "S",
+        "artIndex": 1,
+        "note": "S Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hBP04-104",
+    "number": "hBP04-104",
+    "name": "Subaru Duck",
+    "type": "Support・Mascot",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP04-105",
+    "number": "hBP04-105",
+    "name": "Koyori's Assistants",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "KOYO+LABO"
+    ],
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hBP04-106",
+    "number": "hBP04-106",
+    "name": "Yukimin",
+    "type": "Support・Fan",
+    "color": "",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hSD01-016",
+    "number": "hSD01-016",
+    "name": "Harusaki Nodoka",
+    "type": "Support・Staff・LIMITED",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hSD01-017",
+    "number": "hSD01-017",
+    "name": "Manager-chan",
+    "type": "Support・Staff・LIMITED",
+    "color": "",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "bloom": "",
+    "hp": "",
+    "text": "",
+    "market": []
+  },
+  {
+    "id": "hSD08-002",
+    "number": "hSD08-002",
+    "name": "Amane Kanata",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "U",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Summer"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: I Look Good in a Yukata, Right? 20",
+    "market": []
+  },
+  {
+    "id": "hSD08-003",
+    "number": "hSD08-003",
+    "name": "Amane Kanata",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "R",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing"
+    ],
+    "bloom": "2nd",
+    "hp": 200,
+    "text": "Arts: Everyone's Super Darling 100+ This Arts gets +10 for each holomem with #Summer on your stage.",
+    "market": []
+  },
+  {
+    "id": "hSD08-004",
+    "number": "hSD08-004",
+    "name": "Amane Kanata",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "RR",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing"
+    ],
+    "bloom": "2nd",
+    "hp": 180,
+    "text": "Arts: So that I Can Catch Up to You 120 [1/Turn]When this Arts downed your opponent's center holomem, deal 40 special damage to 1 of your opponent's 2nd holomem.",
+    "variants": [
+      {
+        "rarity": "RR",
+        "artIndex": 0,
+        "note": "RR Rarity"
+      }
+    ],
+    "market": []
+  },
+  {
+    "id": "hSD08-005",
+    "number": "hSD08-005",
+    "name": "Himemori Luna",
+    "type": "holomem",
+    "color": "White",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Baby",
+      "Summer"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: It's a Festival 30",
+    "market": []
+  },
+  {
+    "id": "hSD08-006",
+    "number": "hSD08-006",
+    "name": "Tokoyami Towa",
+    "type": "holomem",
+    "color": "Purple",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Singing",
+      "Shooter",
+      "Summer"
+    ],
+    "bloom": "Debut",
+    "hp": 90,
+    "text": "Arts: Have You Fallen for Towa? 20",
+    "market": []
+  },
+  {
+    "id": "hSD08-007",
+    "number": "hSD08-007",
+    "name": "Tsunomaki Watame",
+    "type": "holomem",
+    "color": "Yellow",
+    "rarity": "C",
+    "set": "Booster Pack 4 (Curious Universe)",
+    "release": "2026-07 EN",
+    "tags": [
+      "JP",
+      "Gen+4",
+      "Kemomimi",
+      "Singing",
+      "Summer"
+    ],
+    "bloom": "Debut",
+    "hp": 100,
+    "text": "Arts: Cotton Candy's Delicious 10",
+    "market": []
+  }
   ]
 };
