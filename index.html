@@ -21,7 +21,10 @@
       </div>
       <div class="music-controls">
         <button id="music-play-btn" class="icon-btn holo-play" onclick="event.stopPropagation(); if(window.MusicPlayer) window.MusicPlayer.toggle()">
-          <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="35,25 85,55 35,85" fill="%2338bded" stroke="%2338bded" stroke-linejoin="round" stroke-width="10" /><polygon points="25,15 75,45 25,75" fill="%23ffffff" stroke="%23ffffff" stroke-linejoin="round" stroke-width="10" /></svg>' alt="Play">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24">
+            <polygon points="35,25 85,55 35,85" fill="#38bded" stroke="#38bded" stroke-linejoin="round" stroke-width="10" />
+            <polygon points="25,15 75,45 25,75" fill="#ffffff" stroke="#ffffff" stroke-linejoin="round" stroke-width="10" />
+          </svg>
         </button>
         <input type="range" id="music-volume-slider" class="deadbeat-slider" min="0" max="100" value="50" oninput="if(window.MusicPlayer) window.MusicPlayer.setVolume(this.value)" onclick="event.stopPropagation()">
       </div>
