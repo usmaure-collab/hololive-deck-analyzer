@@ -1,0 +1,1025 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap");
+
+:root {
+  /* Paleta de Colores Oficiales Hololive OCG */
+  --hl-purple: #534B88;
+  --hl-purple-light: #6a60b0;
+  --hl-cyan: #38bded;
+  --hl-cyan-glow: rgba(56, 189, 237, 0.3);
+  --hl-pink: #dd7d7d;
+  --hl-blue: #6a8fd5;
+  --hl-gold: #e8af44;
+  
+  /* Colores de Fondo de Escenario de Alta Fidelidad */
+  --bg: #0f0b24;
+  --panel: #171334;
+  --panel-light: #231d4d;
+  --panel-glass: rgba(23, 19, 52, 0.9);
+  --ink: #f4f3fa;
+  --muted: #a39cc6;
+  --line: #302863;
+  --line-strong: #453c87;
+
+  /* Colores de cartas tradicionales */
+  --teal: var(--hl-cyan);
+  --rose: #e15b88;
+  --gold: var(--hl-gold);
+  --green: #48c78e;
+  --blue: var(--hl-blue);
+  --purple: var(--hl-purple-light);
+  --red: #ee5b5b;
+  --yellow: #f1c40f;
+  --neutral: #78709e;
+  
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  
+  font-family: "Zen Kaku Gothic New", "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  /* Decoraciones geométricas oficiales de fondo de Hololive */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(83, 75, 136, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(56, 189, 237, 0.18) 0%, transparent 45%),
+    linear-gradient(135deg, rgba(83, 75, 136, 0.05) 0%, rgba(56, 189, 237, 0.05) 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  overflow-y: scroll;
+}
+
+/* Scrollbars temáticas oscuras */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hl-purple);
+}
+
+/* Botones Ovalados Oficiales (Píldora) */
+button,
+.button,
+.tab-button {
+  border: 1px solid var(--line-strong);
+  background: var(--panel-light);
+  color: var(--ink);
+  border-radius: 50px; /* Estilo píldora oficial */
+  min-height: 42px;
+  padding: 8px 24px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button:hover,
+.button:hover,
+.tab-button:hover {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(56, 189, 237, 0.25);
+}
+
+button:active,
+.button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Enlaces estilo Hololive */
+a {
+  color: var(--hl-cyan);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--hl-cyan);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* Topbar estilizada como el Header Oficial */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 36px;
+  background: var(--panel-glass);
+  border-bottom: 2px solid var(--hl-purple);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+/* Deco de barra superior */
+.topbar::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 4px;
+  background: var(--hl-cyan);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--hl-cyan);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--hl-cyan);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hl-purple) 0%, var(--bg) 100%);
+  color: var(--hl-cyan);
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 0 15px var(--hl-cyan-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-family: "Hanken Grotesk", sans-serif;
+  background: linear-gradient(90deg, #fff 0%, var(--hl-cyan) 60%, var(--hl-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.top-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  padding: 6px 18px;
+  color: var(--ink);
+  background: var(--panel);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hl-cyan);
+  box-shadow: 0 0 10px var(--hl-cyan);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: calc(100vh - 80px);
+}
+
+/* Sidebar rediseñado */
+.sidebar {
+  border-right: 1px solid var(--line);
+  background: rgba(15, 11, 36, 0.95);
+  padding: 28px 18px;
+}
+
+.nav-list {
+  display: grid;
+  gap: 12px;
+}
+
+/* Pestañas de Navegación */
+.tab-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  text-align: left;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 50px;
+  box-shadow: none;
+}
+
+.tab-button.active {
+  background: var(--hl-purple);
+  border-color: var(--hl-purple);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(83, 75, 136, 0.4);
+  transform: translateX(4px);
+}
+
+.tab-button.active:hover {
+  background: var(--hl-purple-light);
+  color: #fff;
+  border-color: var(--hl-purple-light);
+  box-shadow: 0 6px 20px rgba(83, 75, 136, 0.5);
+}
+
+.sidebar-badge {
+  background: rgba(255,255,255,0.08);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 10px;
+  border-radius: 50px;
+  border: 1px solid var(--line);
+}
+
+.tab-button.active .sidebar-badge {
+  background: var(--hl-cyan);
+  color: var(--bg);
+  border-color: var(--hl-cyan);
+}
+
+.sidebar-note {
+  margin-top: 32px;
+  padding: 18px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: rgba(23, 19, 52, 0.3);
+}
+
+.main {
+  padding: 32px;
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}
+
+/* Encapsulados de Título Temáticos de Hololive (.txtarea-Ttl) */
+.section-title, .txtarea-Ttl {
+  background: linear-gradient(90deg, var(--hl-purple), var(--hl-cyan));
+  border-radius: 100px;
+  padding: 14px 32px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  margin-top: 10px;
+  border: 1px solid var(--line-strong);
+  position: relative;
+}
+
+/* Deco circular interna de títulos */
+.section-title::before, .txtarea-Ttl::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #fff;
+}
+
+.section-title h2, .txtarea-Ttl h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: "Hanken Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.section-title p, .txtarea-Ttl p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.sidebar-grid {
+  grid-template-columns: minmax(0, 1.45fr) minmax(350px, 0.75fr);
+  align-items: start;
+}
+
+/* Panel lateral flotante en catálogo y otras vistas */
+.grid.sidebar-grid > aside.panel {
+  position: sticky;
+  top: 80px; /* Separación del top */
+  max-height: calc(100vh - 100px); /* Evitar que el panel sea más alto que la pantalla */
+  overflow-y: auto; /* Permitir scroll interno si el contenido es largo */
+}
+
+/* Panel minimizado */
+.grid.sidebar-grid > aside.panel.minimized {
+  max-height: max-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.panel.minimized .detail-grid {
+  display: none; /* Ocultamos el contenido del detalle */
+}
+
+/* Paneles con curvas amplias de 20px */
+.panel,
+.card,
+.source-row,
+.deck-line,
+.change-row {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 20px; /* Bordes de 20px de Hololive */
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.panel {
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.panel.tight {
+  padding: 20px;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.metric {
+  min-height: 110px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--hl-cyan);
+  background: var(--panel);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.metric:hover {
+  transform: translateY(-3px);
+  border-color: var(--hl-purple);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5), 0 0 10px var(--hl-cyan-glow);
+}
+
+.metric b {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #fff;
+}
+
+.metric span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.toolbar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  background: rgba(23, 19, 52, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.field.grow {
+  flex: 1 1 300px;
+}
+
+label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* Campos de Formulario Redondeados con Iconos */
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  min-height: 44px;
+  padding: 10px 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--hl-cyan);
+  box-shadow: 0 0 0 3px var(--hl-cyan-glow);
+  background: #0d0a22;
+}
+
+/* Cartas de Hololive en Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 18px;
+  min-height: 180px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animación Holográfica Oficial */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -150%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.25, 1);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.card:hover::before {
+  left: 220%;
+}
+
+.card:hover {
+  border-color: var(--card-border-glow, var(--hl-cyan));
+  box-shadow: 
+    0 16px 36px rgba(0, 0, 0, 0.6), 
+    0 0 20px var(--card-glow, var(--hl-cyan-glow));
+  transform: translateY(-4px);
+}
+
+.card-frame {
+  width: 100px;
+  height: 140px;
+  border: 2px solid #060512;
+  border-radius: 10px;
+  background: var(--card-color, #231d4d);
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.card-fallback-frame {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Títulos de Sección Estilo Encabezado Punteado Oficial (h3) */
+h3, .product_List_Ttl {
+  position: relative;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted var(--hl-purple); /* Borde punteado oficial */
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h3::before, .product_List_Ttl::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--hl-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--hl-cyan);
+}
+
+/* Etiquetas y Tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 14px;
+  border-radius: 50px; /* Ovaladas */
+  background: var(--panel-light);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.tag.red { color: #ff8a8a; background: rgba(238, 91, 91, 0.15); border-color: rgba(238, 91, 91, 0.3); }
+.tag.white { color: #fdfdfd; background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
+.tag.blue { color: #8cb4ff; background: rgba(106, 143, 213, 0.15); border-color: rgba(106, 143, 213, 0.3); }
+.tag.green { color: #7cf1bc; background: rgba(72, 199, 142, 0.15); border-color: rgba(72, 199, 142, 0.3); }
+.tag.yellow { color: #f7e07a; background: rgba(232, 175, 68, 0.15); border-color: rgba(232, 175, 68, 0.3); }
+.tag.purple { color: #d0bfff; background: rgba(106, 96, 176, 0.15); border-color: rgba(106, 96, 176, 0.3); }
+.tag.neutral { color: #bfb8df; background: rgba(120, 112, 158, 0.15); border-color: rgba(120, 112, 158, 0.3); }
+
+/* Botones Ovalados Modificadores */
+.button.primary, button.primary {
+  background: linear-gradient(135deg, var(--hl-cyan) 0%, var(--hl-blue) 100%);
+  border-color: var(--hl-cyan);
+  color: #0f0b24;
+  font-weight: 800;
+}
+
+.button.primary:hover, button.primary:hover {
+  background: linear-gradient(135deg, #5fe4ff 0%, #89b3ff 100%);
+  border-color: #5fe4ff;
+  box-shadow: 0 0 15px rgba(56, 189, 237, 0.5);
+}
+
+.button.warn, button.warn {
+  background: rgba(232, 175, 68, 0.1);
+  border-color: var(--hl-gold);
+  color: var(--hl-gold);
+}
+
+.button.warn:hover, button.warn:hover {
+  background: var(--hl-gold);
+  color: #0f0b24;
+}
+
+.button.danger, button.danger {
+  background: rgba(221, 125, 125, 0.1);
+  border-color: var(--hl-pink);
+  color: var(--hl-pink);
+}
+
+.button.danger:hover, button.danger:hover {
+  background: var(--hl-pink);
+  color: #0f0b24;
+}
+
+.deck-line {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border-color: var(--line);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.deck-line + .deck-line {
+  margin-top: 12px;
+}
+
+.qty {
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #090718;
+  font-weight: 900;
+  border: 1px solid var(--line);
+  color: var(--hl-cyan);
+}
+
+.warning-list li {
+  border-left: 4px solid var(--hl-gold);
+  background: rgba(232, 175, 68, 0.06);
+  padding: 14px 18px;
+  border-radius: 12px;
+  color: var(--hl-gold);
+  border: 1px solid rgba(232, 175, 68, 0.12);
+  border-left-width: 4px;
+  font-weight: 700;
+}
+
+.success-box {
+  border-left: 4px solid var(--green);
+  background: rgba(72, 199, 142, 0.06);
+  padding: 14px 18px;
+  border-radius: 12px;
+  color: var(--green);
+  border: 1px solid rgba(72, 199, 142, 0.12);
+  border-left-width: 4px;
+  font-weight: 700;
+}
+
+.codebox {
+  border-radius: 16px;
+  background: #05030e;
+  border: 1px solid var(--line);
+  color: #00ffc4;
+}
+
+/* Gráficos Estilo Visual OCG */
+.chart-card {
+  border-radius: 20px;
+}
+
+.bar-chart-fill-bg {
+  height: 20px;
+  border-radius: 8px;
+}
+
+.bar-chart-fill {
+  background: linear-gradient(90deg, var(--hl-purple), var(--hl-cyan));
+  box-shadow: 0 0 8px var(--hl-cyan-glow);
+}
+
+.stack-bar {
+  border-radius: 10px;
+  height: 30px;
+}
+
+/* Premium Table Styles */
+table,
+.compare-table,
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  background: var(--panel-light);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+table th,
+table td,
+.compare-table th,
+.compare-table td,
+.preview-table th,
+.preview-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+table th,
+.compare-table th,
+.preview-table th {
+  background: var(--panel-light);
+  font-weight: 800;
+  color: var(--hl-cyan);
+  font-family: "Hanken Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--hl-purple);
+}
+
+table tr:last-child td,
+.compare-table tr:last-child td,
+.preview-table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td,
+.compare-table tr:hover td,
+.preview-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Card actions styling */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card-actions button {
+  min-height: 32px;
+  padding: 4px 14px;
+  font-size: 0.75rem;
+}
+
+/* Detalle Ficha Tipo Perfil Oficial de Talento */
+.detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-card-image {
+  background: rgba(9, 7, 24, 0.6);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.detail-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 1060px) {
+  .layout,
+  .grid.sidebar-grid,
+  .grid.two,
+  .grid.three,
+  .metric-row,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(4, minmax(110px, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .nav-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Drag and Drop Drop-Zones */
+.drop-zone {
+  border: 2px dashed var(--line);
+  background: rgba(23, 19, 52, 0.15);
+  border-radius: 16px;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 14px;
+}
+
+.drop-zone.drag-over {
+  border-color: var(--hl-cyan);
+  background: var(--hl-cyan-glow);
+  box-shadow: 0 0 18px var(--hl-cyan-glow);
+  transform: scale(1.01);
+}
+
+/* Metatags layout */
+.meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+/* Builder Quick Catalog panel */
+.quick-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 10px;
+  max-height: 230px;
+  overflow-y: auto;
+  padding: 12px;
+  background: rgba(9, 7, 24, 0.55);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
+}
+
+/* Quick Card styling */
+.quick-card-item {
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.quick-card-item:active {
+  cursor: grabbing;
+}
+
+.quick-card-item:hover {
+  transform: translateY(-2px) scale(1.08);
+}
+
+.quick-card-frame {
+  width: 64px;
+  height: 90px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--card-color, #231d4d);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.45);
+}
+
+.quick-card-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bordes de rareza oficiales */
+.card-frame.rarity-bronze {
+  border: 2px solid #8e5229; /* Bronze */
+  box-shadow: 0 4px 10px rgba(142, 82, 41, 0.4);
+}
+
+.card-frame.rarity-silver {
+  border: 2px solid #a6a6a6; /* Silver */
+  box-shadow: 0 4px 10px rgba(166, 166, 166, 0.4);
+}
+
+.card-frame.rarity-gold {
+  border: 2px solid #d4af37; /* Gold */
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
+}
+
+.card-frame.rarity-platinum {
+  border: 2px solid #e5e4e2; /* Platinum */
+  box-shadow: 0 4px 14px rgba(229, 228, 226, 0.6);
+}
+
+.card-frame.rarity-rainbow {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#171334, #171334), linear-gradient(135deg, #ff007f, #7f00ff, #00ffff, #00ff7f, #ff007f);
+  background-size: 100% 100%, 300% 300%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 16px rgba(127, 0, 255, 0.7);
+  animation: rainbow-border-move 4s ease infinite;
+}
+
+/* Detail Card rarity borders */
+.detail-card-image.rarity-bronze {
+  border: 4px solid #8e5229;
+  box-shadow: 0 8px 24px rgba(142, 82, 41, 0.3);
+}
+
+.detail-card-image.rarity-silver {
+  border: 4px solid #a6a6a6;
+  box-shadow: 0 8px 24px rgba(166, 166, 166, 0.3);
+}
+
+.detail-card-image.rarity-gold {
+  border: 4px solid #d4af37;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+}
+
+.detail-card-image.rarity-platinum {
+  border: 4px solid #e5e4e2;
+  box-shadow: 0 8px 32px rgba(229, 228, 226, 0.5);
+}
+
+.detail-card-image.rarity-rainbow {
+  border: 4px solid transparent;
+  background-image: linear-gradient(#090718, #090718), linear-gradient(135deg, #ff007f, #7f00ff, #00ffff, #00ff7f, #ff007f);
+  background-size: 100% 100%, 300% 300%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 12px 36px rgba(127, 0, 255, 0.6);
+  animation: rainbow-border-move 4s ease infinite;
+}
+
+/* Quick card list frame borders */
+.quick-card-frame.rarity-bronze { border-color: #8e5229; }
+.quick-card-frame.rarity-silver { border-color: #a6a6a6; }
+.quick-card-frame.rarity-gold { border-color: #d4af37; }
+.quick-card-frame.rarity-platinum { border-color: #e5e4e2; }
+.quick-card-frame.rarity-rainbow {
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(#171334, #171334), linear-gradient(135deg, #ff007f, #7f00ff, #00ffff, #00ff7f, #ff007f);
+  background-size: 100% 100%, 300% 300%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: rainbow-border-move 4s ease infinite;
+}
+
+@keyframes rainbow-border-move {
+  0% { background-position: 0% 0%, 0% 50%; }
+  50% { background-position: 0% 0%, 100% 50%; }
+  100% { background-position: 0% 0%, 0% 50%; }
+}
