@@ -104,6 +104,7 @@
     ["analysis", "Analisis"],
     ["compare", "Comparar"],
     ["importer", "Importar"],
+    ["gacha", "Sobres"],
     ["audit", "Cambios"],
   ];
 
@@ -114,6 +115,7 @@
     analysis: "raora",
     compare: "hololive",
     importer: "hololive",
+    gacha: "pekoradom",
     audit: "hololive",
   };
 
@@ -124,6 +126,7 @@
     analysis: "Análisis — Raora Panthera 🐆",
     compare: "Comparar Mazos",
     importer: "Importar Cartas",
+    gacha: "Gacha Simulator — Usada Pekora 👯‍♀️",
     audit: "Registro de Cambios",
   };
 
@@ -164,6 +167,20 @@
 
     if (action === "tab") {
       state.tab = id;
+      render();
+      return;
+    }
+
+    if (action === "open-pack") {
+      const setId = target.dataset.set;
+      const amount = parseInt(target.dataset.amount, 10);
+      openGachaPack(setId, amount);
+      return;
+    }
+
+    if (action === "clear-gacha") {
+      state.gacha.results = [];
+      saveState();
       render();
       return;
     }
@@ -457,6 +474,18 @@
     const target = event.target;
     const action = target.dataset.change;
 
+    if (action === "toggle-collection-filter") {
+      state.gacha.filterCollection = target.checked;
+      saveState();
+      
+      // Update quick card list without full render
+      const listEl = document.getElementById("builder-quick-cards");
+      if (listEl) {
+        listEl.innerHTML = renderQuickCardItems(state.builderSearch || "");
+      }
+      return;
+    }
+
     if (target.classList.contains("preview-edit-input")) {
       const idx = Number(target.dataset.idx);
       const field = target.dataset.field;
@@ -579,6 +608,13 @@
       importerMessage: "",
       parsedCards: [],
       builderSearch: "",
+      collection: {}, // id: quantity
+      gacha: {
+        selectedPack: "hBP01",
+        opening: false,
+        results: [],
+        filterCollection: false,
+      }
     };
 
     try {
@@ -597,6 +633,8 @@
           : decks[0].id,
         compareA: decks.some((deck) => deck.id === parsed.compareA) ? parsed.compareA : decks[0].id,
         compareB: decks.some((deck) => deck.id === parsed.compareB) ? parsed.compareB : decks[0].id,
+        collection: parsed.collection || {},
+        gacha: parsed.gacha || base.gacha,
       };
     } catch (error) {
       console.warn("No se pudo leer localStorage; se inicia limpio.", error);
@@ -788,6 +826,20 @@
     const deck = activeDeck();
     const card = getCard(number);
     const key = cardKey(number, artIndex);
+
+    // Limit check if collection filter is active
+    if (state.gacha && state.gacha.filterCollection) {
+      const owned = state.collection[card.id] || 0;
+      let inDeck = 0;
+      if (zone === "main") inDeck = deck.main[key] || 0;
+      else if (zone === "cheer") inDeck = deck.cheer[key] || 0;
+      else if (zone === "oshi") inDeck = deck.oshi && deck.oshi.number === number ? 1 : 0;
+      
+      if (inDeck >= owned) {
+        state.importMessage = `Solo tienes ${owned} copias de ${card.name} en tu colección.`;
+        return;
+      }
+    }
 
     if (zone === "oshi") {
       if (card.type !== "Oshi" && card.type !== "Unknown") {
@@ -1262,6 +1314,7 @@
     if (state.tab === "compare") return renderCompare();
     if (state.tab === "importer") return renderImporter();
     if (state.tab === "audit") return renderAudit();
+    if (state.tab === "gacha") return renderGacha();
     return renderDashboard(deck, stats);
   }
 
@@ -1585,8 +1638,12 @@
         <aside class="panel">
           <h2>Buscador Rápido (Arrastrar)</h2>
           <p style="font-size:12px; color:var(--muted); margin-bottom:8px;">Busca y arrastra cartas directamente a tu mazo.</p>
-          <div class="field" style="margin-bottom: 12px;">
-            <input type="text" data-input="builder-search" placeholder="Escribe para buscar..." style="min-height: 36px;" />
+          <div class="field" style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+            <input type="text" data-input="builder-search" placeholder="Escribe para buscar..." style="min-height: 36px; flex: 1;" />
+            <label style="display:flex; align-items:center; gap:5px; font-size:12px; cursor:pointer;" title="Mostrar solo cartas obtenidas en los sobres">
+              <input type="checkbox" data-change="toggle-collection-filter" ${state.gacha.filterCollection ? "checked" : ""}> 
+              Solo Colección
+            </label>
           </div>
           <div class="quick-card-list" id="builder-quick-cards" style="margin-bottom: 20px;">
             ${renderQuickCardItems(state.builderSearch || "")}
@@ -1804,6 +1861,162 @@
         )
         .join("") || `<div class="empty">Sin diferencias por carta/artIndex.</div>`
     );
+  }
+
+  function generateBoosterPack(setId) {
+    const packCards = [];
+    // Filtrar cartas de la expansion elegida
+    const setCards = data.cards.filter(c => c.number.startsWith(setId));
+    if (!setCards.length) return packCards;
+
+    // Agrupar por rareza
+    const pool = {
+      C: setCards.filter(c => c.rarity === "C"),
+      U: setCards.filter(c => c.rarity === "U"),
+      R: setCards.filter(c => c.rarity === "R"),
+      RR: setCards.filter(c => c.rarity === "RR"),
+      SR: setCards.filter(c => c.rarity === "SR"),
+      UR: setCards.filter(c => c.rarity === "UR"),
+      SEC: setCards.filter(c => c.rarity === "SEC"),
+      OSR: setCards.filter(c => c.rarity === "OSR"),
+      OUR: setCards.filter(c => c.rarity === "OUR"),
+    };
+
+    // Probabilidades (basadas en una caja de 12 sobres)
+    // - UR: ~2 por case (144 sobres) = 1.38%
+    // - OSR: ~1 por caja (12 sobres) = 8.33%
+    // - OUR: ~1 por 40 cajas (480 sobres) = 0.2%
+    // - SEC: ~1 por 80 cajas (960 sobres) = 0.1%
+    // - SR: ~3-4 por caja = 25-33%
+    // - RR: ~6 por caja = 50%
+    // Cada sobre tiene 8 cartas. Usualmente: 4 C, 2 U, 1 Cheer/Special, 1 R o superior.
+
+    const rand = () => Math.random() * 100;
+    const getRandomCard = (rarity) => {
+      const p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards);
+      return p[Math.floor(Math.random() * p.length)];
+    };
+
+    // 4 Comunes
+    for (let i = 0; i < 4; i++) packCards.push(getRandomCard("C"));
+    // 2 Uncommons
+    for (let i = 0; i < 2; i++) packCards.push(getRandomCard("U"));
+    
+    // 1 Slot para Cheer u otra carta baja (aqui ponemos C o U extra por simplicidad)
+    packCards.push(Math.random() > 0.5 ? getRandomCard("C") : getRandomCard("U"));
+
+    // 1 Slot de Rareza Alta
+    const roll = rand();
+    let hitRarity = "R";
+    if (roll < 0.1) hitRarity = "SEC";
+    else if (roll < 0.3) hitRarity = "OUR";
+    else if (roll < 1.68) hitRarity = "UR";
+    else if (roll < 10.0) hitRarity = "OSR";
+    else if (roll < 40.0) hitRarity = "SR";
+    else if (roll < 90.0) hitRarity = "RR";
+    
+    // Si la rareza no existe en la expansion, baja a R
+    if (!pool[hitRarity] || !pool[hitRarity].length) hitRarity = "R";
+    
+    packCards.push(getRandomCard(hitRarity));
+
+    // Mezclar el sobre
+    return packCards.sort(() => Math.random() - 0.5);
+  }
+
+  function openGachaPack(setId, amount = 1) {
+    if (state.gacha.opening) return;
+    state.gacha.opening = true;
+    state.gacha.results = [];
+    render();
+
+    setTimeout(() => {
+      let results = [];
+      for (let i = 0; i < amount; i++) {
+        const pack = generateBoosterPack(setId);
+        results = results.concat(pack);
+        // Add to collection
+        pack.forEach(card => {
+          if (!state.collection[card.id]) state.collection[card.id] = 0;
+          state.collection[card.id]++;
+        });
+      }
+      state.gacha.results = results;
+      state.gacha.opening = false;
+      saveState();
+      render();
+    }, 1500); // Simulando tiempo de apertura
+  }
+
+  function renderGacha() {
+    const packs = [
+      { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "https://en.hololive-official-cardgame.com/wp-content/images/products/hBP01/hBP01_pack.png" },
+      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "https://en.hololive-official-cardgame.com/wp-content/images/products/hBP02/hBP02_pack.png" }
+    ];
+
+    let content = "";
+    if (state.gacha.opening) {
+      content = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; gap: 20px;">
+          <div class="gacha-pack-opening"></div>
+          <h2 class="magical-text">Abriendo sobre...</h2>
+        </div>
+      `;
+    } else if (state.gacha.results.length > 0) {
+      content = `
+        <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+          <h2 class="magical-text">¡Nuevas Cartas Obtenidas!</h2>
+          <button class="btn outline" onclick="document.querySelector('[data-action=clear-gacha]').click()">Volver a los sobres</button>
+          <button style="display:none;" data-action="clear-gacha"></button>
+        </div>
+        <div class="card-grid">
+          ${state.gacha.results.map(card => {
+            const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(card.rarity);
+            return `
+              <div class="card-item ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite;">
+                <img src="${card.variants && card.variants.length > 0 ? getCardImage(card, card.variants[0].artIndex) : getCardImage(card)}" alt="${escapeHtml(card.name)}" loading="lazy" />
+                <div class="card-info">
+                  <div class="card-name">${escapeHtml(card.name)}</div>
+                  <div class="card-rarity">${card.rarity}</div>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      `;
+    } else {
+      content = `
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+          ${packs.map(p => `
+            <div class="gacha-pack-card" style="background: linear-gradient(145deg, #1e1e2f, #151520); border: 2px solid ${p.bg}; border-radius: 20px; padding: 20px; text-align: center; width: 300px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+              <h3 style="color: ${p.bg}; margin-top: 0;">${p.name}</h3>
+              <div style="height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <img src="${p.img}" style="max-height: 100%; max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" alt="${p.name}"/>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <button class="btn primary" style="background: ${p.bg}; color: #fff;" data-action="open-pack" data-set="${p.id}" data-amount="1">Abrir 1 Sobre</button>
+                <button class="btn outline" style="border-color: ${p.bg}; color: ${p.bg};" data-action="open-pack" data-set="${p.id}" data-amount="10">Abrir 10 Sobres</button>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+        <div style="margin-top: 50px; text-align: center; color: var(--text-muted);">
+          <p>Total de cartas en tu colección: <b>${Object.values(state.collection).reduce((a,b)=>a+b, 0)}</b></p>
+        </div>
+      `;
+    }
+
+    return `
+      <section>
+        <div class="section-title">
+          <div>
+            <h2>Gacha Simulator</h2>
+            <p>¡Abre sobres virtuales y consigue cartas para tu colección local!</p>
+          </div>
+        </div>
+        ${content}
+      </section>
+    `;
   }
 
   function renderAudit() {
@@ -2447,9 +2660,10 @@ Text ...
 
   function renderQuickCardItems(query = "") {
     const q = query.trim().toLowerCase();
-    const filtered = data.cards.filter(c => 
-      !q || [c.name, c.number, c.type, c.color].join(" ").toLowerCase().includes(q)
-    ).slice(0, 24);
+    const filtered = data.cards.filter(c => {
+      if (state.gacha.filterCollection && !state.collection[c.id]) return false;
+      return !q || [c.name, c.number, c.type, c.color].join(" ").toLowerCase().includes(q);
+    }).slice(0, 24);
     
     if (filtered.length === 0) {
       return `<div class="empty" style="grid-column: 1/-1; padding: 12px; font-size:12px;">Sin resultados.</div>`;
@@ -2469,6 +2683,7 @@ Text ...
               <strong>${escapeHtml(card.name.slice(0,8))}</strong>
               <span>${escapeHtml(card.number)}</span>
             </div>
+            ${state.gacha.filterCollection && state.collection[card.id] ? `<div style="position:absolute; bottom:-5px; right:-5px; background:#e8af44; color:#000; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:10px; z-index:10; border:2px solid #000;">x${state.collection[card.id]}</div>` : ''}
           </div>
         </div>
       `;
