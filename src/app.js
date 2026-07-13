@@ -1187,6 +1187,12 @@
             <span class="btn-idol">🐆 Raora</span>
           </button>
           
+          <button class="home-btn pekora-preview" data-action="tab" data-id="gacha">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-103_OSR.png" alt="Pekora" class="idol-portrait">
+            <span class="btn-text">Sobres</span>
+            <span class="btn-idol">👯‍♀️ Pekora</span>
+          </button>
+          
           <button class="home-btn generic-preview" data-action="tab" data-id="compare">
             <span class="btn-icon">⚖️</span>
             <span class="btn-text">Comparar</span>

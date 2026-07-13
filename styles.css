@@ -1581,6 +1581,9 @@ table tr:hover td,
 .home-btn.raora-preview::before { background: linear-gradient(to top, rgba(232, 112, 64, 0.6) 0%, transparent 60%); }
 .home-btn.raora-preview:hover { border-color: rgba(232, 112, 64, 0.6); box-shadow: 0 8px 25px rgba(232, 112, 64, 0.2); }
 
+.home-btn.pekora-preview::before { background: linear-gradient(to top, rgba(165, 230, 240, 0.6) 0%, transparent 60%); }
+.home-btn.pekora-preview:hover { border-color: rgba(165, 230, 240, 0.6); box-shadow: 0 8px 25px rgba(165, 230, 240, 0.2); }
+
 .home-btn.generic-preview::before { background: linear-gradient(to top, rgba(255, 255, 255, 0.2) 0%, transparent 60%); }
 .home-btn.generic-preview:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1); }
 
