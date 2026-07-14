@@ -280,6 +280,13 @@
       return;
     }
 
+    if (action === "load-more-catalog") {
+      state.ui.catalogPage = (state.ui.catalogPage || 1) + 1;
+      saveState();
+      render();
+      return;
+    }
+
     if (action === "new-deck") {
       const deck = createDeck("Nuevo deck");
       state.decks.unshift(deck);
@@ -489,9 +496,15 @@
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
         state.filters.search = target.value;
+        state.ui.catalogPage = 1;
         const gridEl = document.getElementById("catalog-card-grid");
         if (gridEl) {
-          gridEl.innerHTML = filteredCards().map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`;
+          const cards = filteredCards();
+          gridEl.innerHTML = cards.slice(0, 50 * state.ui.catalogPage).map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`;
+          // Rerender entirely to update the load more button properly
+          if (state.tab === "catalog") {
+            render();
+          }
         }
       }, 250);
       return;
@@ -572,12 +585,14 @@
 
     if (action === "filter-type") {
       state.filters.type = target.value;
+      state.ui.catalogPage = 1;
       render();
       return;
     }
 
     if (action === "filter-color") {
       state.filters.color = target.value;
+      state.ui.catalogPage = 1;
       render();
       return;
     }
@@ -750,7 +765,7 @@
       decks: [fallbackDeck],
       selectedCard: data.cards[0]?.id || "",
       filters: { search: "", type: "All", color: "All" },
-      ui: { catalogDetailMinimized: false },
+      ui: { catalogDetailMinimized: false, catalogPage: 1 },
       compareA: fallbackDeck.id,
       compareB: fallbackDeck.id,
       importText: "",
@@ -779,7 +794,7 @@
         ...base,
         ...parsed,
         tab: "home",
-        ui: parsed.ui || base.ui,
+        ui: { ...base.ui, ...(parsed.ui || {}) },
         decks,
         activeDeckId: decks.some((deck) => deck.id === parsed.activeDeckId)
           ? parsed.activeDeckId
@@ -1608,8 +1623,13 @@
       </section>
       <section class="grid sidebar-grid">
         <div id="catalog-card-grid" class="card-grid">
-          ${cards.map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`}
+          ${cards.slice(0, 50 * state.ui.catalogPage).map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`}
         </div>
+        ${cards.length > 50 * state.ui.catalogPage ? `
+          <div style="text-align: center; margin-top: 20px; grid-column: 1 / -1;">
+            <button class="btn" data-action="load-more-catalog">Cargar más cartas</button>
+          </div>
+        ` : ''}
         <aside class="panel ${state.ui.catalogDetailMinimized ? 'minimized' : ''}" ${state.ui.catalogDetailMinimized ? 'data-action="toggle-catalog-detail"' : ''}>
           ${state.ui.catalogDetailMinimized 
             ? `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
@@ -1677,7 +1697,7 @@
       <div class="card-3d-wrapper" style="width: 100px; height: 140px;">
         <div class="card-3d-content">
           <div class="card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || colorMap.Neutral}">
-            <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+            <img src="${imgUrl}" alt="${escapeHtml(card.name)}" loading="lazy" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
             <div class="card-fallback-frame" style="display: none;">
               <span>${escapeHtml((overrideRarity || card.rarity).split(" ")[0])}</span>
               <strong>${escapeHtml(card.name)}</strong>
