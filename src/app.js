@@ -597,6 +597,13 @@
       return;
     }
 
+    if (action === "filter-set") {
+      state.filters.set = target.value;
+      state.ui.catalogPage = 1;
+      render();
+      return;
+    }
+
     if (action === "active-deck") {
       state.activeDeckId = target.value;
       if (state.compareA === state.compareB) {
@@ -764,7 +771,7 @@
       activeDeckId: fallbackDeck.id,
       decks: [fallbackDeck],
       selectedCard: data.cards[0]?.id || "",
-      filters: { search: "", type: "All", color: "All" },
+      filters: { search: "", type: "All", color: "All", set: "All" },
       ui: { catalogDetailMinimized: false, catalogPage: 1, detailPosX: null, detailPosY: null },
       compareA: fallbackDeck.id,
       compareB: fallbackDeck.id,
@@ -1619,6 +1626,13 @@
               ${["White", "Green", "Red", "Blue", "Purple", "Yellow", "Neutral"].map((color) => option(color, color, state.filters.color)).join("")}
             </select>
           </div>
+          <div class="field">
+            <label for="set">Expansión</label>
+            <select id="set" data-change="filter-set">
+              ${option("All", "Todas", state.filters.set)}
+              ${[...new Set(data.cards.map(c => c.set))].map((set) => option(set, set, state.filters.set)).join("")}
+            </select>
+          </div>
         </div>
       </section>
       <section class="grid">
@@ -1664,7 +1678,8 @@
           .includes(query);
       const matchesType = state.filters.type === "All" || card.type === state.filters.type;
       const matchesColor = state.filters.color === "All" || card.color === state.filters.color;
-      return matchesQuery && matchesType && matchesColor;
+      const matchesSet = state.filters.set === "All" || card.set === state.filters.set;
+      return matchesQuery && matchesType && matchesColor && matchesSet;
     });
   }
 

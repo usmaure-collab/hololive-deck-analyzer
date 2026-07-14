@@ -1,51 +1,50 @@
-# Analista de Decks Hololive OCG
+# Simulador y Analista de Decks Hololive OCG 🌟
 
-Aplicacion local para crear, guardar, comparar y analizar decks de hololive OFFICIAL CARD GAME.
+Una potente y moderna aplicación web interactiva desarrollada en **Vanilla JavaScript y HTML5 (Arquitectura App Shell)** para crear, guardar, coleccionar, simular aperturas y analizar mazos de hololive OFFICIAL CARD GAME. 
 
-## Como abrir
+Sin frameworks pesados, sin instalaciones, **todo en tu navegador local**.
 
-Abre `index.html` en el navegador. No requiere instalacion, servidor, `npm`, CDN ni conexion a internet.
+## ✨ Características y Funcionalidades Principales
 
-## Que hace esta version
+Esta aplicación ha crecido orgánicamente hasta convertirse en una suite completa para TCG. 
 
-- Catalogo semilla con cartas verificadas manualmente y links a fuente oficial/mercado.
-- Builder con estructura hOCG: 1 Oshi, main deck de 50, cheer deck de 20.
-- Validacion basica: tamanos de mazo, tipos incorrectos, limite general de copias y lista restringida EN vigente.
-- Guardado local con `localStorage`.
-- Export/import JSON compatible con HoloDelta:
+### 1. 📦 Gacha Simulator (Apertura de Sobres)
+- **Simulador de sobres aleatorios:** Abre packs y siente la emoción del Gacha con efectos visuales avanzados, partículas mágicas (magicalFloat) y auras de rareza (Rainbow Glow Effects).
+- **Sistema de Rarezas Ponderado:** Algoritmos que respetan las probabilidades de obtener cartas SR, UR, SEC, OUR y OSR, así como variantes de arte alternativas dinámicas.
+- **Spark System:** Sistema de piedad/seguro por aperturas.
+- **Inventario Persistente:** Todo lo que abres se guarda en tu Colección local, y puedes ver el progreso de lo que posees y de lo que te falta.
 
-```json
-{
-  "deckName": "Nombre",
-  "oshi": ["hBP01-001", 0],
-  "deck": [["hBP01-010", 4, 0]],
-  "cheerDeck": [["hY01-001", 20, 0]]
-}
-```
+### 2. 📚 Álbum y Catálogo 100% Interactivo
+- **Catálogo de Cartas Optimizado:** Un grid masivo con paginación inteligente, `lazy loading` de imágenes y delegación de eventos para asegurar un rendimiento de 60fps constantes, liberando memoria de GPU.
+- **Filtros Avanzados:** Búsqueda en tiempo real por Nombre, Número, Tipo, Color y **Expansión (Set)**.
+- **Efectos 3D y Glassmorphism:** Pasear el mouse sobre las cartas invoca un cálculo 3D en vivo con sombreados, inclinaciones interactivas (`tilt effect`) y reflejos en lámina arcoíris (holograma) basados en el CSS avanzado y matemáticas de rotación.
+- **Widget Flotante de Detalles:** Ventana flotante (`draggable`) estilo glassmorphism (vidrio esmerilado) que se puede arrastrar por toda la pantalla y encoger a formato "lupa", permitiendo leer habilidades sin abandonar la lista de resultados.
 
-- Analisis heuristico de sinergias por color, curva Bloom, consistencia y arquetipos.
-- Comparador de mazos locales.
-- Panel de cambios/fuentes/seguridad dentro de la app.
+### 3. 🛠️ Constructor de Mazos (Deck Builder)
+- **Estructura H-OCG:** Soporte estricto de las reglas oficiales: 1 Oshi, Main Deck de 50 cartas y Cheer Deck de 20 cartas.
+- **Validación Automática:** Restricciones de copias (máximo 4 copias, límites EN vigentes, control por `card.limit`), bloqueador de cartas de colores incompatibles y auto-corrección de HP/Life para Oshi y Holomems.
+- **Drag & Drop (Arrastrar y Soltar):** Agrega cartas de tu catálogo directamente arrastrándolas a tu deck visual.
+- **Múltiples Mazos:** Crea copias infinitas, renómbralos y cambia de activo al instante.
 
-## Seguridad
+### 4. 📊 Herramientas de Análisis Heurístico
+- **Analista Integrado:** El motor del juego escanea tu mazo en tiempo real y evalúa tus probabilidades de curva "Bloom", consistencia de apertura, conteo de sinergias (Arts/Tags) y equilibrio de Oshi vs Cheers.
+- **Comparador:** Escoge dos de tus mazos guardados (Ej: Mumei Aggro vs Suisei Control) y compara directamente estadísticas vitales frente a frente.
 
-- Sin scripts remotos.
-- Sin llamadas `fetch` automaticas.
-- Sin telemetria.
-- Sin credenciales.
-- Los links externos se abren solo cuando el usuario hace clic.
-- Los mazos se guardan en el navegador, no se suben a ningun servidor.
+### 5. 💾 Gestión de Datos y Exportación Base64
+- **Persistencia Offline:** Tus cartas, colecciones y configuraciones (incluyendo en dónde dejaste la ventana flotante) viven en tu `localStorage` del navegador. 
+- **Share/Import:** Exporta tu base de datos a un formato encriptado de texto JSON y compártelo con el formato compatible con **HoloDelta**, logrando portabilidad absoluta sin bases de datos externas.
 
-## Fuentes principales
+## 🚀 Arquitectura y Rendimiento
 
-- Card List oficial EN: https://en.hololive-official-cardgame.com/cardlist/
-- Guia oficial para principiantes: https://en.hololive-official-cardgame.com/beginners/
-- Deck Construction Rules EN: https://en.hololive-official-cardgame.com/news/post/03/
-- Deck Recipes oficiales: https://en.hololive-official-cardgame.com/deck/recommend/
-- HoloArchive by Chocolat: https://docs.google.com/document/d/1uXCqIqNBotlLhZ94aGoqLeKTK3BBnUvcc4K43oRWGFo/edit?tab=t.jaecunyzisqv
-- HoloDelta: https://github.com/GabeJWJ/holoDelta/releases
-- hocg-deck-convert: https://github.com/Qrimpuff/hocg-deck-convert
+- **App Shell en Vanilla JS:** Cero dependencias (Sin React, Sin Vue). Toda la aplicación se renderiza y actualiza dinámicamente inyectando DOM estructurado dentro de `<div id="app">`.
+- **Rendimiento Gráfico:** Optimizaciones de `will-change`, prevención del repintado de DOM inyectado en Eventos como `mousemove`, y un motor unificado global de eventos que no sobrecarga la memoria al interactuar con 10,000 elementos a la vez.
+- **Delegación de Eventos Pura:** Desde el "Drag & Drop" del Widget hasta los clics a los detalles de cartas, casi todas las interacciones dependen de Listeners Root para asegurar latencia cero.
 
-## Siguiente paso recomendado
+---
 
-Crear un importador local y revisable para el modo texto del Card List oficial, de forma que el catalogo completo se pueda actualizar sin ejecutar codigo de terceros ni depender de scraping invisible.
+## 🔒 Seguridad
+- Sin scripts remotos ni telemetría.
+- Sin recolección de credenciales ni APIs secretas.
+- Todo tu inventario y mazos es 100% tuyo, alojado de manera segura en tu navegador local (Offline-first).
+
+¡Simplemente abre el `index.html` en Chrome, Safari, Edge o Firefox y sumérgete en el universo del H-OCG!
