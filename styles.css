@@ -259,6 +259,15 @@ a:hover {
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+.page-header-inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .home-btn-nav {
   width: 40px;
   height: 40px;
@@ -307,6 +316,9 @@ a:hover {
 .page-content {
   flex: 1;
   padding: 24px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* === THEMES === */
