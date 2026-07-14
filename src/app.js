@@ -1593,19 +1593,19 @@
     `;
   }
 
-  function renderCardFrame(card, artIndex = 0) {
+  function renderCardFrame(card, artIndex = 0, overrideRarity = null) {
     const imgUrl = getCardImageUrl(card, artIndex);
     const fallbacks = getCardImageFallbacks(card, artIndex);
     if (fallbacks.length > 0) fallbacks.shift();
     const fallbacksJson = escapeAttr(JSON.stringify(fallbacks));
-    const rClass = rarityClass(card.rarity);
+    const rClass = rarityClass(overrideRarity || card.rarity);
     return `
       <div class="card-3d-wrapper" style="width: 100px; height: 140px;">
         <div class="card-3d-content">
           <div class="card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || colorMap.Neutral}">
             <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
             <div class="card-fallback-frame" style="display: none;">
-              <span>${escapeHtml(card.rarity.split(" ")[0])}</span>
+              <span>${escapeHtml((overrideRarity || card.rarity).split(" ")[0])}</span>
               <strong>${escapeHtml(card.name)}</strong>
               <span>${escapeHtml(card.number.replace(/^h/, ""))}</span>
             </div>
@@ -2185,15 +2185,10 @@
                   return `
                     <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=view-card-gacha][data-id=\\'${card.id}\\']')?.click()">
                       <button style="display:none;" data-action="view-card-gacha" data-id="${card.id}"></button>
-                      <div class="card-3d-wrapper">
-                        <div class="card-3d-content">
-                          <img src="${getCardImageUrl(card, artIndex)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
-                          <div class="card-foil"></div>
-                        </div>
-                      </div>
-                      <div class="card-info">
-                        <div class="card-name">${escapeHtml(card.name)}</div>
-                        <div class="card-rarity">${displayRarity}</div>
+                      ${renderCardFrame(card, artIndex, displayRarity)}
+                      <div class="card-info" style="text-align: center; margin-top: 8px;">
+                        <div class="card-rarity" style="font-size: 12px; color: var(--hl-cyan);">${escapeHtml(displayRarity)}</div>
+                        <div class="card-name" style="font-size: 10px; color: #aaa;">${escapeHtml(card.name)}</div>
                       </div>
                     </div>
                   `;
