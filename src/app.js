@@ -1620,7 +1620,7 @@
 
   function renderLibrary() {
     const cards = filteredCards();
-    const selected = getCard(state.selectedCard || cards[0]?.id || data.cards[0].id);
+    const selected = state.selectedCard ? getCard(state.selectedCard) : null;
     return `
       <section>
         <div class="section-title">
