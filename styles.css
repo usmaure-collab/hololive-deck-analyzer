@@ -680,8 +680,8 @@ textarea:focus {
 
 .gacha-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
   justify-items: center;
 }
 
@@ -1692,8 +1692,7 @@ table tr:hover td,
 
 @media (min-width: 768px) {
   .gacha-result-card {
-    width: 200px !important; 
-    height: 280px !important;
+    /* Let the grid define the width, keeping aspect ratio native */
   }
 }
 
