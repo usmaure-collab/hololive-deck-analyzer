@@ -429,6 +429,8 @@
     }
   });
 
+  let searchTimeout = null;
+
   app.addEventListener("input", (event) => {
     const target = event.target;
     const action = target.dataset.input;
@@ -459,11 +461,14 @@
     if (!action) return;
 
     if (action === "search") {
-      state.filters.search = target.value;
-      const gridEl = document.getElementById("catalog-card-grid");
-      if (gridEl) {
-        gridEl.innerHTML = filteredCards().map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`;
-      }
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        state.filters.search = target.value;
+        const gridEl = document.getElementById("catalog-card-grid");
+        if (gridEl) {
+          gridEl.innerHTML = filteredCards().map(renderCard).join("") || `<div class="empty">No hay cartas con esos filtros.</div>`;
+        }
+      }, 250);
       return;
     }
 
@@ -606,11 +611,21 @@
 
   // --- 3D Tilt Effect Logic ---
   let currentHoveredWrapper = null;
+  let isTicking = false;
 
   document.addEventListener("mousemove", (e) => {
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        handleMouseMove(e);
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  });
+
+  function handleMouseMove(e) {
     const wrapper = e.target.closest('.card-3d-wrapper');
     
-    // Si salimos de una carta que estábamos haciendo hover
     if (wrapper !== currentHoveredWrapper) {
       if (currentHoveredWrapper) {
         const content = currentHoveredWrapper.querySelector('.card-3d-content');
@@ -624,7 +639,7 @@
       currentHoveredWrapper = wrapper;
       if (wrapper) {
          const content = wrapper.querySelector('.card-3d-content');
-         if (content) content.style.transition = 'none'; // Quitar transicion para que sea responsivo al instante
+         if (content) content.style.transition = 'none'; 
       }
     }
 
@@ -639,26 +654,23 @@
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
       
-      // Normalizar a rango -1 a 1
       const normX = (x - centerX) / centerX;
       const normY = (y - centerY) / centerY;
       
-      // Limitar angulo máximo a 15 grados
       const maxDegree = 15;
-      const rotateX = -normY * maxDegree; // Invertir eje Y para que rotateX sea intuitivo
+      const rotateX = -normY * maxDegree;
       const rotateY = normX * maxDegree;
       
       content.style.transform = `perspective(1000px) scale3d(1.05, 1.05, 1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       
       if (foil) {
-        // Mover el gradiente simulando reflejo
         const bgX = (x / rect.width) * 100;
         const bgY = (y / rect.height) * 100;
         foil.style.backgroundPosition = `${bgX}% ${bgY}%`;
         foil.style.opacity = '0.8';
       }
     }
-  });
+  }
 
   // Asegurar que si el ratón sale de la ventana se reinicie
   document.addEventListener("mouseleave", (e) => {
@@ -1588,17 +1600,17 @@
     const fallbacksJson = escapeAttr(JSON.stringify(fallbacks));
     const rClass = rarityClass(card.rarity);
     return `
-      <div class="card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || colorMap.Neutral}">
-        <div class="card-3d-wrapper">
-          <div class="card-3d-content">
-            <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover;" />
-            <div class="card-foil"></div>
+      <div class="card-3d-wrapper" style="width: 100px; height: 140px;">
+        <div class="card-3d-content">
+          <div class="card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || colorMap.Neutral}">
+            <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+            <div class="card-fallback-frame" style="display: none;">
+              <span>${escapeHtml(card.rarity.split(" ")[0])}</span>
+              <strong>${escapeHtml(card.name)}</strong>
+              <span>${escapeHtml(card.number.replace(/^h/, ""))}</span>
+            </div>
           </div>
-        </div>
-        <div class="card-fallback-frame" style="display: none;">
-          <span>${escapeHtml(card.rarity.split(" ")[0])}</span>
-          <strong>${escapeHtml(card.name)}</strong>
-          <span>${escapeHtml(card.number.replace(/^h/, ""))}</span>
+          <div class="card-foil"></div>
         </div>
       </div>
     `;
@@ -2165,7 +2177,7 @@
           ${state.gacha.results.map((pack, index) => `
             <div class="gacha-pack-result" style="background: rgba(255,255,255,0.02); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05);">
               <h3 style="margin-top: 0; color: var(--hl-cyan); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">Sobre ${index + 1}</h3>
-              <div class="card-grid">
+              <div class="gacha-grid">
                 ${pack.map(card => {
                   const displayRarity = card.pulledRarity || card.rarity;
                   const artIndex = card.pulledVariantIndex || 0;
