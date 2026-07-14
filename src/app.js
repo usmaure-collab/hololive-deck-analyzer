@@ -199,6 +199,11 @@
 
     if (action === "tab") {
       state.tab = id;
+      if (id === "gacha") {
+        state.gacha.opening = false;
+        state.gacha.results = [];
+        saveState();
+      }
       render();
       return;
     }
