@@ -1957,23 +1957,95 @@
     return packCards.sort(() => Math.random() - 0.5);
   }
 
+  function generateBoosterBox(setId) {
+    const boxPacks = [];
+    const setCards = data.cards.filter(c => c.number.startsWith(setId));
+    if (!setCards.length) return boxPacks;
+
+    const pool = {
+      C: setCards.filter(c => c.rarity === "C"),
+      U: setCards.filter(c => c.rarity === "U"),
+      R: setCards.filter(c => c.rarity === "R"),
+      RR: setCards.filter(c => c.rarity === "RR"),
+      SR: setCards.filter(c => c.rarity === "SR"),
+      UR: setCards.filter(c => c.rarity === "UR"),
+      SEC: setCards.filter(c => c.rarity === "SEC"),
+      OSR: setCards.filter(c => c.rarity === "OSR"),
+      OUR: setCards.filter(c => c.rarity === "OUR"),
+    };
+
+    const getRandomCard = (rarity) => {
+      const p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards);
+      return p[Math.floor(Math.random() * p.length)];
+    };
+
+    // Box Mapping (12 packs)
+    // - 1 Gran Hit (SEC, OUR, UR, OSR)
+    // - 3-4 SR
+    // - Resto RR
+    const hitPool = ["SEC", "OUR", "UR", "OSR"];
+    let boxHit = "OSR";
+    const boxRoll = Math.random() * 100;
+    if (boxRoll < 1.25) boxHit = "SEC";      // 1/80 boxes
+    else if (boxRoll < 3.75) boxHit = "OUR"; // 1/40 boxes
+    else if (boxRoll < 20.0) boxHit = "UR";  // 1/5 boxes
+    
+    // Distribución de rarezas altas en los 12 sobres
+    const boxRarities = [boxHit];
+    const numSR = Math.random() > 0.5 ? 4 : 3;
+    for (let i = 0; i < numSR; i++) boxRarities.push("SR");
+    while (boxRarities.length < 12) boxRarities.push("RR");
+    
+    // Shuffle the 12 hit rarities
+    boxRarities.sort(() => Math.random() - 0.5);
+
+    for (let p = 0; p < 12; p++) {
+      const packCards = [];
+      for (let i = 0; i < 4; i++) packCards.push(getRandomCard("C"));
+      for (let i = 0; i < 2; i++) packCards.push(getRandomCard("U"));
+      packCards.push(Math.random() > 0.5 ? getRandomCard("C") : getRandomCard("U"));
+      
+      let hitR = boxRarities[p];
+      if (!pool[hitR] || !pool[hitR].length) hitR = "R";
+      packCards.push(getRandomCard(hitR));
+      
+      boxPacks.push(packCards.sort(() => Math.random() - 0.5));
+    }
+
+    return boxPacks;
+  }
+
   function openGachaPack(setId, amount = 1) {
     if (state.gacha.opening) return;
     state.gacha.opening = true;
     state.gacha.results = [];
     render();
 
+    if (amount === 12) {
+      if (window.SFX && window.SFX.playBoxOpen) window.SFX.playBoxOpen();
+    } else {
+      if (window.SFX && window.SFX.playPackOpen) window.SFX.playPackOpen();
+    }
+
     setTimeout(() => {
       let results = [];
-      for (let i = 0; i < amount; i++) {
-        const pack = generateBoosterPack(setId);
-        results = results.concat(pack);
-        // Add to collection
-        pack.forEach(card => {
-          if (!state.collection[card.id]) state.collection[card.id] = 0;
-          state.collection[card.id]++;
-        });
+      if (amount === 12) {
+        // Caja Completa (Box Mapping asegurado)
+        const boxPacks = generateBoosterBox(setId);
+        boxPacks.forEach(pack => results = results.concat(pack));
+      } else {
+        // Sobre suelto (Aleatorio normal o simula sobre suelto)
+        for (let i = 0; i < amount; i++) {
+          results = results.concat(generateBoosterPack(setId));
+        }
       }
+      
+      // Add to collection
+      results.forEach(card => {
+        if (!state.collection[card.id]) state.collection[card.id] = 0;
+        state.collection[card.id]++;
+      });
+
       state.gacha.results = results;
       state.gacha.opening = false;
       saveState();
@@ -1983,8 +2055,8 @@
 
   function renderGacha() {
     const packs = [
-      { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "" },
-      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "" }
+      { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "assets/hbp01_pack.jpg" },
+      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "assets/hbp02_pack.jpg" }
     ];
 
     let content = "";
@@ -1992,7 +2064,7 @@
       content = `
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; gap: 20px;">
           <div class="gacha-pack-opening"></div>
-          <h2 class="magical-text">Abriendo sobre...</h2>
+          <h2 class="magical-text">Abriendo...</h2>
         </div>
       `;
     } else if (state.gacha.results.length > 0) {
@@ -2006,7 +2078,7 @@
           ${state.gacha.results.map(card => {
             const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(card.rarity);
             return `
-              <div class="card-item ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite;">
+              <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite;">
                 <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
                 <div class="card-info">
                   <div class="card-name">${escapeHtml(card.name)}</div>
@@ -2022,10 +2094,11 @@
         <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
           ${packs.map(p => `
             <div class="gacha-pack-card" style="background: linear-gradient(145deg, #1e1e2f, #151520); border: 2px solid ${p.bg}; border-radius: 20px; padding: 20px; text-align: center; width: 300px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-              <div style="background: linear-gradient(135deg, ${p.bg} 0%, #111 100%); width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 2px solid ${p.bg}; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
-                <div style="text-align: center;">
-                  <h3 style="color: #fff; margin-bottom: 5px; font-size: 1.2rem;">${p.id}</h3>
-                  <div style="font-size: 0.8rem; color: #ccc;">Booster Pack</div>
+              <div style="background: url('${p.img}') center/cover no-repeat; width: 100%; height: 350px; display: flex; align-items: flex-end; justify-content: center; border-radius: 10px; border: 2px solid ${p.bg}; box-shadow: 0 5px 15px rgba(0,0,0,0.5); overflow: hidden; position: relative;">
+                <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 40%);"></div>
+                <div style="text-align: center; position: relative; z-index: 10; padding-bottom: 15px;">
+                  <h3 style="color: #fff; margin-bottom: 5px; font-size: 1.5rem; text-shadow: 0 2px 10px #000;">${p.id}</h3>
+                  <div style="font-size: 0.9rem; color: #ddd; text-shadow: 0 1px 5px #000;">${p.name}</div>
                 </div>
               </div>
               <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">

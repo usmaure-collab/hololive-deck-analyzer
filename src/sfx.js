@@ -48,26 +48,76 @@
     playCardAdd() {
       initAudio();
       // Double thud simulating card hitting table
-      const playThud = (timeOffset) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain);
-        gain.connect(masterGain);
-        
-        osc.type = 'triangle';
-        const t = ctx.currentTime + timeOffset;
-        osc.frequency.setValueAtTime(150, t);
-        osc.frequency.exponentialRampToValueAtTime(40, t + 0.1);
-        
-        gain.gain.setValueAtTime(0.7, t);
-        gain.gain.exponentialRampToValueAtTime(0.01, t + 0.1);
-        
-        osc.start(t);
-        osc.stop(t + 0.1);
-      };
+      const t = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(masterGain);
       
-      playThud(0);
-      playThud(0.08); // Slight delay for second thud (rebound)
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(150, t);
+      osc.frequency.exponentialRampToValueAtTime(40, t + 0.1);
+      
+      gain.gain.setValueAtTime(0.6, t);
+      gain.gain.exponentialRampToValueAtTime(0.01, t + 0.1);
+      
+      osc.start(t);
+      osc.stop(t + 0.1);
+    },
+
+    playPackOpen() {
+      initAudio();
+      const t = ctx.currentTime;
+      // White noise for tearing pack
+      const bufferSize = ctx.sampleRate * 0.3; // 0.3 seconds
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = Math.random() * 2 - 1;
+      }
+      
+      const noise = ctx.createBufferSource();
+      noise.buffer = buffer;
+      
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.value = 2000;
+      
+      const gain = ctx.createGain();
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(masterGain);
+      
+      gain.gain.setValueAtTime(0.8, t);
+      gain.gain.exponentialRampToValueAtTime(0.01, t + 0.3);
+      
+      noise.start(t);
+    },
+
+    playBoxOpen() {
+      initAudio();
+      const t = ctx.currentTime;
+      
+      // Box open thump
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(masterGain);
+      
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(100, t);
+      osc.frequency.exponentialRampToValueAtTime(20, t + 0.2);
+      
+      gain.gain.setValueAtTime(1.0, t);
+      gain.gain.exponentialRampToValueAtTime(0.01, t + 0.2);
+      
+      osc.start(t);
+      osc.stop(t + 0.2);
+      
+      // Followed by multiple pack rips
+      for(let i=0; i<3; i++) {
+        setTimeout(() => this.playPackOpen(), 200 + i * 150);
+      }
     },
 
     playCardReveal() {
