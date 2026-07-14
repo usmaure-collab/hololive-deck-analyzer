@@ -810,11 +810,9 @@
         compareB: decks.some((deck) => deck.id === parsed.compareB) ? parsed.compareB : decks[0].id,
         collection: parsed.collection || {},
         gacha: {
-          ...base.gacha,
-          ...parsed.gacha,
-          opening: false,
-          results: [],
-          sparkles: parsed.gacha?.sparkles || 0
+          ...(parsed.gacha || base.gacha), // Recupera configuraciones (sparkles, filtros)
+          opening: false, // FUERZA a que la animación esté apagada
+          results: []     // FUERZA a que el sobre esté vacío al recargar
         }
       };
     } catch (error) {
