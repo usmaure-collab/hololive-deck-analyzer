@@ -277,6 +277,19 @@
       return;
     }
 
+    if (action === "add-card-inventory") {
+      const card = getCard(id);
+      if (card) {
+        let autoZone = "main";
+        if (card.type === "Oshi") autoZone = "oshi";
+        else if (card.type === "Cheer") autoZone = "cheer";
+        addCard(id, autoZone, 0);
+        saveState();
+        render();
+      }
+      return;
+    }
+
     if (action === "qty") {
       changeQuantity(zone, target.dataset.key, Number(target.dataset.delta));
       saveState();
@@ -1038,18 +1051,16 @@
     const card = getCard(number);
     const key = cardKey(number, artIndex);
 
-    // Limit check if collection filter is active
-    if (state.gacha && state.gacha.filterCollection) {
-      const owned = state.collection[card.id] || 0;
-      let inDeck = 0;
-      if (zone === "main") inDeck = deck.main[key] || 0;
-      else if (zone === "cheer") inDeck = deck.cheer[key] || 0;
-      else if (zone === "oshi") inDeck = deck.oshi && deck.oshi.number === number ? 1 : 0;
-      
-      if (inDeck >= owned) {
-        state.importMessage = `Solo tienes ${owned} copias de ${card.name} en tu colección.`;
-        return;
-      }
+    // Limit check always enforces collection limits
+    const owned = state.collection[card.id] || 0;
+    let inDeck = 0;
+    if (zone === "main") inDeck = deck.main[key] || 0;
+    else if (zone === "cheer") inDeck = deck.cheer[key] || 0;
+    else if (zone === "oshi") inDeck = deck.oshi && deck.oshi.number === number ? 1 : 0;
+    
+    if (inDeck >= owned) {
+      state.importMessage = `No tienes más copias (máximo ${owned}) de ${card.name}.`;
+      return;
     }
 
     if (zone === "oshi") {
@@ -1842,37 +1853,43 @@
 
   function renderBuilder(deck, stats) {
     const exportText = state.exportText || JSON.stringify(toHoloDelta(deck), null, 2);
+    const selected = state.selectedCard ? getCard(state.selectedCard) : null;
     return `
-      <section>
-        <div class="section-title">
-          <div>
-            <h2>Creación de mazos</h2>
-            <p>Un deck de hOCG tiene 1 Oshi, main deck de 50 y cheer deck de 20.</p>
+      <section class="builder-layout">
+        <div class="builder-inventory">
+          <div class="toolbar" style="margin-bottom: 20px;">
+            <div class="field grow">
+              <label for="builderSearch">Buscar en inventario</label>
+              <input id="builderSearch" data-input="builder-search" value="${escapeAttr(state.builderSearch || '')}" placeholder="Nombre, número, tipo, color..." />
+            </div>
+            <div class="field">
+              <button data-action="duplicate-deck">Duplicar Mazo</button>
+            </div>
+            <div class="field">
+              <button class="danger" data-action="delete-deck" ${state.decks.length === 1 ? "disabled" : ""}>Eliminar Mazo</button>
+            </div>
           </div>
-          <div class="top-actions">
-            <button data-action="duplicate-deck">Duplicar</button>
-            <button class="danger" data-action="delete-deck" ${state.decks.length === 1 ? "disabled" : ""}>Eliminar</button>
+          
+          <div class="gacha-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+            ${renderInventoryGrid(deck)}
           </div>
         </div>
-        <div class="toolbar">
-          <div class="field">
-            <label for="activeDeck">Deck activo</label>
+        
+        <aside class="builder-decklist">
+          <div class="field" style="margin-bottom: 16px;">
+            <label for="activeDeck">Mazo Activo</label>
             <select id="activeDeck" data-change="active-deck">
               ${state.decks.map((item) => option(item.id, item.name, state.activeDeckId)).join("")}
             </select>
           </div>
-          <div class="field grow">
+          <div class="field" style="margin-bottom: 20px;">
             <label for="deckName">Nombre</label>
             <input id="deckName" data-input="deck-name" value="${escapeAttr(deck.name)}" />
           </div>
-        </div>
-      </section>
-
-      <section class="grid sidebar-grid">
-        <div class="panel">
-          <h2>Lista</h2>
+          
           ${renderWarnings(stats.warnings)}
-          <div class="grid" style="margin-top: 14px">
+          
+          <div class="decklist-zones" style="margin-top: 14px; display: flex; flex-direction: column; gap: 20px;">
             <div class="drop-zone" data-drop-zone="oshi">
               ${renderOshiSlot(deck)}
             </div>
@@ -1883,42 +1900,27 @@
               ${renderDeckList("cheer", "Cheer deck", deck.cheer)}
             </div>
           </div>
-        </div>
-        <aside class="panel">
-          <h2>Buscador Rápido (Arrastrar)</h2>
-          <p style="font-size:12px; color:var(--muted); margin-bottom:8px;">Busca y arrastra cartas directamente a tu mazo.</p>
-          <div class="field" style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-            <input type="text" data-input="builder-search" placeholder="Escribe para buscar..." style="min-height: 36px; flex: 1;" />
-            <label style="display:flex; align-items:center; gap:5px; font-size:12px; cursor:pointer;" title="Mostrar solo cartas obtenidas en los sobres">
-              <input type="checkbox" data-change="toggle-collection-filter" ${state.gacha.filterCollection ? "checked" : ""}> 
-              Solo Colección
-            </label>
-          </div>
-          <div class="quick-card-list" id="builder-quick-cards" style="margin-bottom: 20px;">
-            ${renderQuickCardItems(state.builderSearch || "")}
-          </div>
-          <hr />
-          <h2>Notas</h2>
-          <textarea data-input="deck-notes" placeholder="Plan de juego, matchup notes, proxies, compras pendientes...">${escapeHtml(deck.notes || "")}</textarea>
-          <hr />
-          <h2>Exportar Mazo</h2>
-          <div class="toolbar">
-            <button class="primary" data-action="export-json">HoloDelta JSON</button>
-            <button class="primary" data-action="export-text">Texto Plano</button>
+          
+          <hr style="margin: 24px 0;" />
+          
+          <h3>Opciones de Mazo</h3>
+          <div class="toolbar" style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <button class="primary" data-action="export-json">Exportar a HoloDelta JSON</button>
+            <button class="primary" data-action="export-text">Copiar Lista de Texto</button>
             <button data-action="download-json">Descargar JSON</button>
           </div>
-          <pre class="codebox">${escapeHtml(exportText)}</pre>
-          
-          <h2>Importar Mazo</h2>
-          <p style="font-size:12px; color:var(--muted); margin-bottom:8px;">Pega un JSON de HoloDelta o una lista de texto plano (ej. 4x hBP01-010).</p>
-          <textarea data-input="import-text" placeholder='Pega aquí tu JSON HoloDelta o lista de texto' style="min-height: 100px;"></textarea>
-          <div class="toolbar" style="margin-top: 10px;">
-            <button class="primary" data-action="import-any">Importar Mazo</button>
-            <button data-action="clear-import">Limpiar</button>
-          </div>
-          ${state.importMessage ? `<div class="success-box">${escapeHtml(state.importMessage)}</div>` : ""}
         </aside>
       </section>
+      
+      ${selected ? `
+        <div class="card-detail-modal">
+          <div class="modal-backdrop" data-action="close-detail"></div>
+          <div class="modal-content">
+            <button class="close-btn" data-action="close-detail" aria-label="Cerrar">&times;</button>
+            ${renderCardDetail(selected)}
+          </div>
+        </div>
+      ` : ''}
     `;
   }
 
@@ -3064,32 +3066,64 @@ Text ...
     `;
   }
 
-  function renderQuickCardItems(query = "") {
-    const q = query.trim().toLowerCase();
-    const filtered = data.cards.filter(c => {
-      if (state.gacha.filterCollection && !state.collection[c.id]) return false;
-      return !q || [c.name, c.number, c.type, c.color].join(" ").toLowerCase().includes(q);
-    }).slice(0, 24);
+  function renderInventoryGrid(deck) {
+    const q = (state.builderSearch || "").trim().toLowerCase();
     
-    if (filtered.length === 0) {
-      return `<div class="empty" style="grid-column: 1/-1; padding: 12px; font-size:12px;">Sin resultados.</div>`;
+    // Strict inventory logic
+    const inventory = data.cards.filter(c => {
+      // 1. Must own at least 1 copy
+      if (!state.collection[c.id] || state.collection[c.id] <= 0) return false;
+      // 2. Search filter
+      if (q && ![c.name, c.number, c.type, c.color].join(" ").toLowerCase().includes(q)) return false;
+      return true;
+    });
+
+    if (inventory.length === 0) {
+      return `<div class="empty" style="grid-column: 1/-1;">No tienes cartas que coincidan con la búsqueda. ¡Abre sobres en el Gacha Simulator!</div>`;
     }
-    
-    return filtered.map(card => {
+
+    return inventory.map(card => {
+      const owned = state.collection[card.id] || 0;
+      let inDeck = 0;
+      const key = cardKey(card.number, 0); // default art
+      
+      if (deck.main[key]) inDeck += deck.main[key];
+      if (deck.cheer[key]) inDeck += deck.cheer[key];
+      if (deck.oshi && deck.oshi.number === card.number) inDeck += 1;
+      
+      const available = owned - inDeck;
+      const isDepleted = available <= 0;
+      
       const imgUrl = getCardImageUrl(card);
       const fallbacks = getCardImageFallbacks(card);
       if (fallbacks.length > 0) fallbacks.shift();
       const fallbacksJson = escapeAttr(JSON.stringify(fallbacks));
       const rClass = rarityClass(card.rarity);
+      const isHighRarity = ["SR", "UR", "OSR", "OUR", "SEC"].includes(card.rarity);
+      
       return `
-        <div class="quick-card-item" draggable="true" data-id="${card.id}" title="${escapeAttr(card.name)} (${card.number})">
-          <div class="quick-card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || '#78709e'}">
-            <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" />
-            <div class="card-fallback-frame" style="display: none; padding: 4px; font-size: 8px; flex-direction: column; justify-content: center; height: 100%; text-align: center; color: #fff;">
-              <strong>${escapeHtml(card.name.slice(0,8))}</strong>
-              <span>${escapeHtml(card.number)}</span>
+        <div class="card-inventory-item ${isDepleted ? 'depleted' : ''}" 
+             data-action="add-card-inventory" data-id="${card.number}" 
+             draggable="true" 
+             style="position:relative; cursor:pointer;"
+             title="${escapeAttr(card.name)} (${card.number})">
+             
+          <div class="inventory-detail-btn" data-action="select-card" data-id="${card.id}" title="Ver detalles">
+            i
+          </div>
+          
+          <div class="card-copies-badge ${isDepleted ? 'depleted-badge' : ''}">x${available}</div>
+          
+          <div class="card-3d-wrapper ${isHighRarity ? 'glow-effect' : ''}" style="--card-color: ${colorMap[card.color] || '#78709e'}; width: 100%;">
+            <div class="card-3d-content rarity-${rClass}">
+              <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" loading="lazy" style="width: 100%; height: auto; border-radius: 12px; display: block;" />
+              <div class="card-foil"></div>
+              <div class="card-fallback-frame" style="display: none;">
+                <span>${escapeHtml(card.rarity.split(" ")[0])}</span>
+                <strong>${escapeHtml(card.name)}</strong>
+                <span>${escapeHtml(card.number.replace(/^h/, ""))}</span>
+              </div>
             </div>
-            ${state.gacha.filterCollection && state.collection[card.id] ? `<div style="position:absolute; bottom:-5px; right:-5px; background:#e8af44; color:#000; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:10px; z-index:10; border:2px solid #000;">x${state.collection[card.id]}</div>` : ''}
           </div>
         </div>
       `;
