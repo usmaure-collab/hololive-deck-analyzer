@@ -604,7 +604,77 @@
     dropZone.classList.remove("drag-over");
   });
 
-  app.addEventListener("drop", (event) => {
+  // --- 3D Tilt Effect Logic ---
+  let currentHoveredWrapper = null;
+
+  document.addEventListener("mousemove", (e) => {
+    const wrapper = e.target.closest('.card-3d-wrapper');
+    
+    // Si salimos de una carta que estábamos haciendo hover
+    if (wrapper !== currentHoveredWrapper) {
+      if (currentHoveredWrapper) {
+        const content = currentHoveredWrapper.querySelector('.card-3d-content');
+        if (content) {
+          content.style.transition = 'transform 0.3s ease-out';
+          content.style.transform = 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)';
+        }
+        const foil = currentHoveredWrapper.querySelector('.card-foil');
+        if (foil) foil.style.opacity = '0';
+      }
+      currentHoveredWrapper = wrapper;
+      if (wrapper) {
+         const content = wrapper.querySelector('.card-3d-content');
+         if (content) content.style.transition = 'none'; // Quitar transicion para que sea responsivo al instante
+      }
+    }
+
+    if (wrapper) {
+      const content = wrapper.querySelector('.card-3d-content');
+      const foil = wrapper.querySelector('.card-foil');
+      if (!content) return;
+      
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      // Normalizar a rango -1 a 1
+      const normX = (x - centerX) / centerX;
+      const normY = (y - centerY) / centerY;
+      
+      // Limitar angulo máximo a 15 grados
+      const maxDegree = 15;
+      const rotateX = -normY * maxDegree; // Invertir eje Y para que rotateX sea intuitivo
+      const rotateY = normX * maxDegree;
+      
+      content.style.transform = `perspective(1000px) scale3d(1.05, 1.05, 1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      
+      if (foil) {
+        // Mover el gradiente simulando reflejo
+        const bgX = (x / rect.width) * 100;
+        const bgY = (y / rect.height) * 100;
+        foil.style.backgroundPosition = `${bgX}% ${bgY}%`;
+        foil.style.opacity = '0.8';
+      }
+    }
+  });
+
+  // Asegurar que si el ratón sale de la ventana se reinicie
+  document.addEventListener("mouseleave", (e) => {
+    if (currentHoveredWrapper) {
+      const content = currentHoveredWrapper.querySelector('.card-3d-content');
+      if (content) {
+        content.style.transition = 'transform 0.3s ease-out';
+        content.style.transform = 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)';
+      }
+      const foil = currentHoveredWrapper.querySelector('.card-foil');
+      if (foil) foil.style.opacity = '0';
+      currentHoveredWrapper = null;
+    }
+  });
+
+  document.addEventListener("drop", (event) => {
     const dropZone = event.target.closest(".drop-zone");
     if (!dropZone) return;
     event.preventDefault();
@@ -1519,7 +1589,12 @@
     const rClass = rarityClass(card.rarity);
     return `
       <div class="card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || colorMap.Neutral}">
-        <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover;" />
+        <div class="card-3d-wrapper">
+          <div class="card-3d-content">
+            <img src="${imgUrl}" alt="${escapeHtml(card.name)}" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div class="card-foil"></div>
+          </div>
+        </div>
         <div class="card-fallback-frame" style="display: none;">
           <span>${escapeHtml(card.rarity.split(" ")[0])}</span>
           <strong>${escapeHtml(card.name)}</strong>
@@ -2100,7 +2175,12 @@
                   return `
                     <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=view-card-gacha][data-id=\\'${card.id}\\']')?.click()">
                       <button style="display:none;" data-action="view-card-gacha" data-id="${card.id}"></button>
-                      <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
+                      <div class="card-3d-wrapper">
+                        <div class="card-3d-content">
+                          <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
+                          <div class="card-foil"></div>
+                        </div>
+                      </div>
                       <div class="card-info">
                         <div class="card-name">${escapeHtml(card.name)}</div>
                         <div class="card-rarity">${card.rarity}</div>

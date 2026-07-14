@@ -1741,5 +1741,53 @@ table tr:hover td,
   background: linear-gradient(45deg, #f3ec78, #af4261);
   -webkit-background-clip: text;
   color: transparent;
-  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* --- 3D Tilt Effect --- */
+.card-3d-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card-3d-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+  border-radius: 12px;
+}
+
+.card-3d-content img, .card-3d-content .card-frame {
+  border-radius: 12px;
+  transform: translateZ(0); /* Force hardware acceleration */
+  backface-visibility: hidden;
+}
+
+.card-foil {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.5) 55%, rgba(255,255,255,0.1) 75%, transparent 100%);
+  background-size: 300% 300%;
+  background-position: 50% 50%;
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+}
+
+.card-3d-wrapper:hover .card-foil {
+  opacity: 0.8;
 }
