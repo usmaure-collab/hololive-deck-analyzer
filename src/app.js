@@ -199,6 +199,7 @@
 
     if (action === "tab") {
       state.tab = id;
+      state.selectedCard = null;
       if (id === "gacha") {
         state.gacha.opening = false;
         state.gacha.results = [];
@@ -825,6 +826,7 @@
         ...base,
         ...parsed,
         tab: "home",
+        selectedCard: null,
         ui: { ...base.ui, ...(parsed.ui || {}) },
         decks,
         activeDeckId: decks.some((deck) => deck.id === parsed.activeDeckId)
