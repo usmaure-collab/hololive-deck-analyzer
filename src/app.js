@@ -1188,7 +1188,7 @@
           </button>
           
           <button class="home-btn pekora-preview" data-action="tab" data-id="gacha">
-            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-103_OSR.png" alt="Pekora" class="idol-portrait">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-038_C.png" alt="Pekora" class="idol-portrait" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23222%22/></svg>'">
             <span class="btn-text">Sobres</span>
             <span class="btn-idol">👯‍♀️ Pekora</span>
           </button>
@@ -1956,8 +1956,8 @@
 
   function renderGacha() {
     const packs = [
-      { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "https://en.hololive-official-cardgame.com/wp-content/images/products/hBP01/hBP01_pack.png" },
-      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "https://en.hololive-official-cardgame.com/wp-content/images/products/hBP02/hBP02_pack.png" }
+      { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "" },
+      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "" }
     ];
 
     let content = "";
@@ -1980,7 +1980,7 @@
             const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(card.rarity);
             return `
               <div class="card-item ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite;">
-                <img src="${card.variants && card.variants.length > 0 ? getCardImage(card, card.variants[0].artIndex) : getCardImage(card)}" alt="${escapeHtml(card.name)}" loading="lazy" />
+                <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
                 <div class="card-info">
                   <div class="card-name">${escapeHtml(card.name)}</div>
                   <div class="card-rarity">${card.rarity}</div>
@@ -1995,13 +1995,15 @@
         <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
           ${packs.map(p => `
             <div class="gacha-pack-card" style="background: linear-gradient(145deg, #1e1e2f, #151520); border: 2px solid ${p.bg}; border-radius: 20px; padding: 20px; text-align: center; width: 300px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-              <h3 style="color: ${p.bg}; margin-top: 0;">${p.name}</h3>
-              <div style="height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                <img src="${p.img}" style="max-height: 100%; max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" alt="${p.name}"/>
+              <div style="background: linear-gradient(135deg, ${p.bg} 0%, #111 100%); width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 2px solid ${p.bg}; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                <div style="text-align: center;">
+                  <h3 style="color: #fff; margin-bottom: 5px; font-size: 1.2rem;">${p.id}</h3>
+                  <div style="font-size: 0.8rem; color: #ccc;">Booster Pack</div>
+                </div>
               </div>
-              <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
                 <button class="btn primary" style="background: ${p.bg}; color: #fff;" data-action="open-pack" data-set="${p.id}" data-amount="1">Abrir 1 Sobre</button>
-                <button class="btn outline" style="border-color: ${p.bg}; color: ${p.bg};" data-action="open-pack" data-set="${p.id}" data-amount="10">Abrir 10 Sobres</button>
+                <button class="btn outline" style="border-color: ${p.bg}; color: ${p.bg};" data-action="open-pack" data-set="${p.id}" data-amount="12">Abrir 1 Caja (12 Sobres)</button>
               </div>
             </div>
           `).join("")}
