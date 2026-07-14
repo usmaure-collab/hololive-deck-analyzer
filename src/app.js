@@ -211,6 +211,16 @@
       return;
     }
 
+    if (action === "view-card-gacha") {
+      state.tab = "catalog";
+      state.filters.search = ""; // Limpiar busqueda para asegurar que se vea
+      state.selectedCard = id;
+      state.selectedArtIdx = 0;
+      render();
+      window.scrollTo(0, 0);
+      return;
+    }
+
     if (action === "select-art") {
       state.selectedArtIdx = artIndex;
       render();
@@ -1980,20 +1990,25 @@
     };
 
     // Box Mapping (12 packs)
-    // - 1 Gran Hit (SEC, OUR, UR, OSR)
-    // - 3-4 SR
-    // - Resto RR
-    const hitPool = ["SEC", "OUR", "UR", "OSR"];
-    let boxHit = "OSR";
+    // Según estadísticas reales de Hololive OCG:
+    // - 1 UR asegurada por caja
+    // - 1 OSR en promedio por caja (con chance baja de ser SEC/OUR)
+    // - ~4 SR
+    // - ~6 RR
+    // Total = 12 hits/slots asegurados, uno por sobre
+    
+    // Slot 1: UR Garantizado
+    let boxHit1 = "UR";
+    
+    // Slot 2: OSR o mejor
+    let boxHit2 = "OSR";
     const boxRoll = Math.random() * 100;
-    if (boxRoll < 1.25) boxHit = "SEC";      // 1/80 boxes
-    else if (boxRoll < 3.75) boxHit = "OUR"; // 1/40 boxes
-    else if (boxRoll < 20.0) boxHit = "UR";  // 1/5 boxes
+    if (boxRoll < 1.25) boxHit2 = "SEC";      // 1/80 boxes
+    else if (boxRoll < 3.75) boxHit2 = "OUR"; // 1/40 boxes
     
     // Distribución de rarezas altas en los 12 sobres
-    const boxRarities = [boxHit];
-    const numSR = Math.random() > 0.5 ? 4 : 3;
-    for (let i = 0; i < numSR; i++) boxRarities.push("SR");
+    const boxRarities = [boxHit1, boxHit2];
+    for (let i = 0; i < 4; i++) boxRarities.push("SR");
     while (boxRarities.length < 12) boxRarities.push("RR");
     
     // Shuffle the 12 hit rarities
@@ -2031,19 +2046,20 @@
       let results = [];
       if (amount === 12) {
         // Caja Completa (Box Mapping asegurado)
-        const boxPacks = generateBoosterBox(setId);
-        boxPacks.forEach(pack => results = results.concat(pack));
+        results = generateBoosterBox(setId);
       } else {
         // Sobre suelto (Aleatorio normal o simula sobre suelto)
         for (let i = 0; i < amount; i++) {
-          results = results.concat(generateBoosterPack(setId));
+          results.push(generateBoosterPack(setId));
         }
       }
       
       // Add to collection
-      results.forEach(card => {
-        if (!state.collection[card.id]) state.collection[card.id] = 0;
-        state.collection[card.id]++;
+      results.forEach(pack => {
+        pack.forEach(card => {
+          if (!state.collection[card.id]) state.collection[card.id] = 0;
+          state.collection[card.id]++;
+        });
       });
 
       state.gacha.results = results;
@@ -2074,19 +2090,27 @@
           <button class="btn outline" onclick="document.querySelector('[data-action=clear-gacha]').click()">Volver a los sobres</button>
           <button style="display:none;" data-action="clear-gacha"></button>
         </div>
-        <div class="card-grid">
-          ${state.gacha.results.map(card => {
-            const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(card.rarity);
-            return `
-              <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite;">
-                <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
-                <div class="card-info">
-                  <div class="card-name">${escapeHtml(card.name)}</div>
-                  <div class="card-rarity">${card.rarity}</div>
-                </div>
+        <div class="gacha-packs-container" style="display: flex; flex-direction: column; gap: 40px; margin-bottom: 40px;">
+          ${state.gacha.results.map((pack, index) => `
+            <div class="gacha-pack-result" style="background: rgba(255,255,255,0.02); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05);">
+              <h3 style="margin-top: 0; color: var(--hl-cyan); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">Sobre ${index + 1}</h3>
+              <div class="card-grid">
+                ${pack.map(card => {
+                  const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(card.rarity);
+                  return `
+                    <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=view-card-gacha][data-id=\\'${card.id}\\']')?.click()">
+                      <button style="display:none;" data-action="view-card-gacha" data-id="${card.id}"></button>
+                      <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
+                      <div class="card-info">
+                        <div class="card-name">${escapeHtml(card.name)}</div>
+                        <div class="card-rarity">${card.rarity}</div>
+                      </div>
+                    </div>
+                  `;
+                }).join("")}
               </div>
-            `;
-          }).join("")}
+            </div>
+          `).join("")}
         </div>
       `;
     } else {
