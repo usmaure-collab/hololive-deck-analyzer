@@ -213,13 +213,24 @@
 
     if (action === "view-card-gacha") {
       state.tab = "catalog";
-      state.filters.search = ""; // Limpiar busqueda para asegurar que se vea
+      state.filters.search = ""; 
       state.selectedCard = id;
       state.selectedArtIdx = 0;
       render();
       window.scrollTo(0, 0);
       return;
     }
+
+    if (action === "open-card-modal") {
+      openCardModal(id, target.dataset.artidx || 0);
+      return;
+    }
+
+    if (action === "close-card-modal" || target.classList.contains("modal-overlay")) {
+      closeCardModal();
+      return;
+    }
+
 
     if (action === "select-art") {
       state.selectedArtIdx = artIndex;
@@ -585,6 +596,48 @@
   // SOPORTE DE DRAG AND DROP (ARRASTRAR Y SOLTAR)
   // ==========================================
   
+  function closeCardModal() {
+    const overlay = document.getElementById("card-modal-overlay");
+    if (overlay) {
+      overlay.classList.remove("active");
+      setTimeout(() => overlay.remove(), 300); // Wait for fade out
+    }
+  }
+
+  function openCardModal(cardId, artIndex = 0) {
+    const card = getCard(cardId);
+    if (!card) return;
+
+    // Temporarily set state for renderCardDetail to use
+    const prevIdx = state.selectedArtIdx;
+    state.selectedArtIdx = parseInt(artIndex, 10);
+    
+    const detailHtml = renderCardDetail(card);
+    
+    // Restore state
+    state.selectedArtIdx = prevIdx;
+
+    let overlay = document.getElementById("card-modal-overlay");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.id = "card-modal-overlay";
+      overlay.className = "modal-overlay";
+      overlay.dataset.action = "close-card-modal"; // Allow clicking outside to close
+      document.body.appendChild(overlay);
+    }
+
+    overlay.innerHTML = `
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close-btn" data-action="close-card-modal">&times;</button>
+        ${detailHtml}
+      </div>
+    `;
+
+    // Trigger reflow for animation
+    void overlay.offsetWidth;
+    overlay.classList.add("active");
+  }
+
   app.addEventListener("dragstart", (event) => {
     const cardEl = event.target.closest("[draggable='true']");
     if (!cardEl) return;
@@ -2183,8 +2236,8 @@
                   const artIndex = card.pulledVariantIndex || 0;
                   const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(displayRarity);
                   return `
-                    <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=view-card-gacha][data-id=\\'${card.id}\\']')?.click()">
-                      <button style="display:none;" data-action="view-card-gacha" data-id="${card.id}"></button>
+                    <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
+                      <button style="display:none;" data-action="open-card-modal" data-id="${card.id}" data-artidx="${artIndex}"></button>
                       ${renderCardFrame(card, artIndex, displayRarity)}
                       <div class="card-info" style="text-align: center; margin-top: 8px;">
                         <div class="card-rarity" style="font-size: 12px; color: var(--hl-cyan);">${escapeHtml(displayRarity)}</div>
