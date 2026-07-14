@@ -233,6 +233,12 @@
       return;
     }
 
+    if (action === "salvage-card") {
+      const cardId = target.dataset.id;
+      if (cardId) salvageCard(cardId);
+      return;
+    }
+
 
     if (action === "select-art") {
       state.selectedArtIdx = artIndex;
@@ -755,6 +761,7 @@
         opening: false,
         results: [],
         filterCollection: false,
+        sparkles: 0,
       }
     };
 
@@ -775,7 +782,11 @@
         compareA: decks.some((deck) => deck.id === parsed.compareA) ? parsed.compareA : decks[0].id,
         compareB: decks.some((deck) => deck.id === parsed.compareB) ? parsed.compareB : decks[0].id,
         collection: parsed.collection || {},
-        gacha: parsed.gacha || base.gacha,
+        gacha: {
+          ...base.gacha,
+          ...parsed.gacha,
+          sparkles: parsed.gacha?.sparkles || 0
+        }
       };
     } catch (error) {
       console.warn("No se pudo leer localStorage; se inicia limpio.", error);
@@ -791,8 +802,29 @@
       filters: state.filters,
       compareA: state.compareA,
       compareB: state.compareB,
+      collection: state.collection,
+      gacha: state.gacha,
+      ui: state.ui,
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(safe));
+  }
+
+  function salvageCard(cardId) {
+    const qty = state.collection[cardId] || 0;
+    if (qty > 1) {
+      state.collection[cardId] = qty - 1;
+      
+      const card = getCard(cardId);
+      let sparklesEarned = 1; // Base amount
+      if (card) {
+        if (card.rarityClass === 'silver') sparklesEarned = 3;
+        else if (card.rarityClass === 'gold' || card.rarityClass === 'platinum' || card.rarityClass === 'rainbow') sparklesEarned = 10;
+      }
+      
+      state.gacha.sparkles = (state.gacha.sparkles || 0) + sparklesEarned;
+      saveState();
+      render();
+    }
   }
 
   function createDeck(name) {
@@ -2209,6 +2241,10 @@
           <h2>Álbum de Colección</h2>
           <p>Progreso de obtención de cartas, agrupado por expansión.</p>
         </div>
+        <div style="text-align:right;">
+          <h3 style="color:var(--highlight); margin:0;">✨ Sparkles: ${state.gacha.sparkles || 0}</h3>
+          <small style="color:var(--muted);">Quema repetidas para obtener Sparkles</small>
+        </div>
       </div>`;
 
     for (const [setName, setCards] of Object.entries(sets)) {
@@ -2224,11 +2260,14 @@
         const badgeHtml = qty > 1 ? `<div class="collection-badge">x${qty}</div>` : '';
         const rarityDisp = escapeHtml(card.rarity.split(" ")[0]);
         
+        const salvageBtn = qty > 1 ? `<button class="salvage-btn" data-action="salvage-card" data-id="${escapeAttr(card.id)}" title="Quemar duplicado" onclick="event.stopPropagation()">🔥</button>` : '';
+        
         return `
           <div class="card-item album-card ${missingClass}" data-id="${escapeAttr(card.id)}" style="cursor: pointer; position: relative;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
             <button style="display:none;" data-action="open-card-modal" data-id="${escapeAttr(card.id)}"></button>
             ${renderCardFrame(card, 0, null)}
             ${badgeHtml}
+            ${salvageBtn}
             <div class="card-info" style="text-align: center; margin-top: 8px;">
               <div class="card-name" style="font-size: 10px; color: #aaa;">${escapeHtml(card.name)}</div>
               <div class="card-rarity" style="font-size: 12px; color: var(--hl-cyan);">${rarityDisp}</div>
