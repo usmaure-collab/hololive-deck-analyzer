@@ -1983,62 +1983,51 @@
 
   function generateBoosterPack(setId) {
     const packCards = [];
-    // Filtrar cartas de la expansion elegida
     const setCards = data.cards.filter(c => c.number.startsWith(setId));
     if (!setCards.length) return packCards;
 
-    // Agrupar por rareza
-    const pool = {
-      C: setCards.filter(c => c.rarity === "C"),
-      U: setCards.filter(c => c.rarity === "U"),
-      R: setCards.filter(c => c.rarity === "R"),
-      RR: setCards.filter(c => c.rarity === "RR"),
-      SR: setCards.filter(c => c.rarity === "SR"),
-      UR: setCards.filter(c => c.rarity === "UR"),
-      SEC: setCards.filter(c => c.rarity === "SEC"),
-      OSR: setCards.filter(c => c.rarity === "OSR"),
-      OUR: setCards.filter(c => c.rarity === "OUR"),
-    };
+    const pool = { C: [], U: [], R: [], RR: [], SR: [], UR: [], SEC: [], OSR: [], OUR: [] };
+    
+    setCards.forEach(c => {
+      if (pool[c.rarity]) pool[c.rarity].push({ ...c, pulledRarity: c.rarity, pulledVariantIndex: 0 });
+      if (c.variants) {
+        c.variants.forEach(v => {
+          if (pool[v.rarity]) pool[v.rarity].push({ ...c, pulledRarity: v.rarity, pulledVariantIndex: v.artIndex });
+        });
+      }
+    });
 
-    // Probabilidades (basadas en una caja de 12 sobres)
-    // - UR: ~2 por case (144 sobres) = 1.38%
-    // - OSR: ~1 por caja (12 sobres) = 8.33%
-    // - OUR: ~1 por 40 cajas (480 sobres) = 0.2%
-    // - SEC: ~1 por 80 cajas (960 sobres) = 0.1%
-    // - SR: ~3-4 por caja = 25-33%
-    // - RR: ~6 por caja = 50%
-    // Cada sobre tiene 8 cartas. Usualmente: 4 C, 2 U, 1 Cheer/Special, 1 R o superior.
-
-    const rand = () => Math.random() * 100;
-    const getRandomCard = (rarity) => {
-      const p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards);
+    const getRandomCard = (rarity, excludeIds = []) => {
+      let p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards.map(c => ({...c, pulledRarity: c.rarity, pulledVariantIndex: 0})));
+      const available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex));
+      if (available.length > 0) p = available;
       return p[Math.floor(Math.random() * p.length)];
     };
 
-    // 4 Comunes
-    for (let i = 0; i < 4; i++) packCards.push(getRandomCard("C"));
-    // 2 Uncommons
-    for (let i = 0; i < 2; i++) packCards.push(getRandomCard("U"));
-    
-    // 1 Slot para Cheer u otra carta baja (aqui ponemos C o U extra por simplicidad)
-    packCards.push(Math.random() > 0.5 ? getRandomCard("C") : getRandomCard("U"));
+    const packIds = [];
+    const addCard = (rarity) => {
+      const c = getRandomCard(rarity, packIds);
+      packCards.push(c);
+      packIds.push(c.id + ":" + c.pulledVariantIndex);
+    };
 
-    // 1 Slot de Rareza Alta
+    const rand = () => Math.random() * 100;
+    for (let i = 0; i < 4; i++) addCard("C");
+    for (let i = 0; i < 2; i++) addCard("U");
+    addCard(Math.random() > 0.5 ? "C" : "U");
+    
     const roll = rand();
     let hitRarity = "R";
     if (roll < 0.1) hitRarity = "SEC";
     else if (roll < 0.3) hitRarity = "OUR";
     else if (roll < 1.68) hitRarity = "UR";
-    else if (roll < 10.0) hitRarity = "OSR";
-    else if (roll < 40.0) hitRarity = "SR";
-    else if (roll < 90.0) hitRarity = "RR";
+    else if (roll < 10) hitRarity = "OSR";
+    else if (roll < 35) hitRarity = "SR";
+    else if (roll < 85) hitRarity = "RR";
     
-    // Si la rareza no existe en la expansion, baja a R
     if (!pool[hitRarity] || !pool[hitRarity].length) hitRarity = "R";
-    
-    packCards.push(getRandomCard(hitRarity));
+    addCard(hitRarity);
 
-    // Mezclar el sobre
     return packCards.sort(() => Math.random() - 0.5);
   }
 
@@ -2047,25 +2036,24 @@
     const setCards = data.cards.filter(c => c.number.startsWith(setId));
     if (!setCards.length) return boxPacks;
 
-    const pool = {
-      C: setCards.filter(c => c.rarity === "C"),
-      U: setCards.filter(c => c.rarity === "U"),
-      R: setCards.filter(c => c.rarity === "R"),
-      RR: setCards.filter(c => c.rarity === "RR"),
-      SR: setCards.filter(c => c.rarity === "SR"),
-      UR: setCards.filter(c => c.rarity === "UR"),
-      SEC: setCards.filter(c => c.rarity === "SEC"),
-      OSR: setCards.filter(c => c.rarity === "OSR"),
-      OUR: setCards.filter(c => c.rarity === "OUR"),
-    };
+    const pool = { C: [], U: [], R: [], RR: [], SR: [], UR: [], SEC: [], OSR: [], OUR: [] };
+    
+    setCards.forEach(c => {
+      if (pool[c.rarity]) pool[c.rarity].push({ ...c, pulledRarity: c.rarity, pulledVariantIndex: 0 });
+      if (c.variants) {
+        c.variants.forEach(v => {
+          if (pool[v.rarity]) pool[v.rarity].push({ ...c, pulledRarity: v.rarity, pulledVariantIndex: v.artIndex });
+        });
+      }
+    });
 
-    const getRandomCard = (rarity) => {
-      const p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards);
+    const getRandomCard = (rarity, excludeIds = []) => {
+      let p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards.map(c => ({...c, pulledRarity: c.rarity, pulledVariantIndex: 0})));
+      const available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex));
+      if (available.length > 0) p = available;
       return p[Math.floor(Math.random() * p.length)];
     };
 
-    // Box Mapping (12 packs)
-    // Según estadísticas reales de Hololive OCG:
     // - 1 UR asegurada por caja
     // - 1 OSR en promedio por caja (con chance baja de ser SEC/OUR)
     // - ~4 SR
@@ -2091,13 +2079,21 @@
 
     for (let p = 0; p < 12; p++) {
       const packCards = [];
-      for (let i = 0; i < 4; i++) packCards.push(getRandomCard("C"));
-      for (let i = 0; i < 2; i++) packCards.push(getRandomCard("U"));
-      packCards.push(Math.random() > 0.5 ? getRandomCard("C") : getRandomCard("U"));
+      const packIds = [];
+      
+      const addCard = (rarity) => {
+        const c = getRandomCard(rarity, packIds);
+        packCards.push(c);
+        packIds.push(c.id + ":" + c.pulledVariantIndex);
+      };
+
+      for (let i = 0; i < 4; i++) addCard("C");
+      for (let i = 0; i < 2; i++) addCard("U");
+      addCard(Math.random() > 0.5 ? "C" : "U");
       
       let hitR = boxRarities[p];
       if (!pool[hitR] || !pool[hitR].length) hitR = "R";
-      packCards.push(getRandomCard(hitR));
+      addCard(hitR);
       
       boxPacks.push(packCards.sort(() => Math.random() - 0.5));
     }
@@ -2171,19 +2167,21 @@
               <h3 style="margin-top: 0; color: var(--hl-cyan); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">Sobre ${index + 1}</h3>
               <div class="card-grid">
                 ${pack.map(card => {
-                  const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(card.rarity);
+                  const displayRarity = card.pulledRarity || card.rarity;
+                  const artIndex = card.pulledVariantIndex || 0;
+                  const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(displayRarity);
                   return `
                     <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=view-card-gacha][data-id=\\'${card.id}\\']')?.click()">
                       <button style="display:none;" data-action="view-card-gacha" data-id="${card.id}"></button>
                       <div class="card-3d-wrapper">
                         <div class="card-3d-content">
-                          <img src="${card.variants && card.variants.length > 0 ? getCardImageUrl(card, card.variants[0].artIndex) : getCardImageUrl(card)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" />
+                          <img src="${getCardImageUrl(card, artIndex)}" alt="${escapeHtml(card.name)}" loading="lazy" onerror="handleImageError(this)" data-fallbacks="${escapeAttr(JSON.stringify(getCardImageFallbacks(card)))}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
                           <div class="card-foil"></div>
                         </div>
                       </div>
                       <div class="card-info">
                         <div class="card-name">${escapeHtml(card.name)}</div>
-                        <div class="card-rarity">${card.rarity}</div>
+                        <div class="card-rarity">${displayRarity}</div>
                       </div>
                     </div>
                   `;
