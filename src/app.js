@@ -812,6 +812,8 @@
         gacha: {
           ...base.gacha,
           ...parsed.gacha,
+          opening: false,
+          results: [],
           sparkles: parsed.gacha?.sparkles || 0
         }
       };
