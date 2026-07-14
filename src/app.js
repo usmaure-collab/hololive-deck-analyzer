@@ -140,15 +140,34 @@
     Neutral: "#334155",
   };
 
+  function createStarEffect(x, y) {
+    for (let i = 0; i < 5; i++) {
+      const star = document.createElement("div");
+      star.className = "click-star";
+      star.textContent = "⭐";
+      star.style.left = (x - 12) + "px"; // Centrar aprox
+      star.style.top = (y - 12) + "px";
+      star.style.setProperty("--tx", (Math.random() * 80 - 40) + "px");
+      star.style.setProperty("--ty", (Math.random() * -80 - 20) + "px");
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 600);
+    }
+  }
+
   const state = loadState();
 
   render();
 
   app.addEventListener("click", (event) => {
-    const target = event.target.closest("[data-action]");
+    const target = event.target.closest("[data-action]") || event.target.closest(".home-btn-nav");
     if (!target) return;
 
+    if (target.classList.contains("home-btn-nav") || (target.dataset.action === "tab" && target.dataset.id === "home")) {
+      createStarEffect(event.clientX, event.clientY);
+    }
+    
     const action = target.dataset.action;
+    if (!action) return;
     
     // Play SFX if available
     if (window.SFX) {
@@ -1254,9 +1273,15 @@
       <div class="page-view" data-theme="${theme}">
         <header class="page-header">
           <button class="home-btn-nav" data-action="tab" data-id="home" title="Volver al inicio">
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-              <polygon points='35,20 85,50 35,80' fill='#e8af44' stroke='#e8af44' stroke-linejoin='round' stroke-width='8' />
-              <polygon points='25,12 75,42 25,72' fill='#ffffff' stroke='#ffffff' stroke-linejoin='round' stroke-width='8' />
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' style="width:100%; height:100%;">
+              <rect width='100' height='100' rx='25' fill='#0a0a0a' stroke='#e8af44' stroke-width='4'/>
+              <text x='50' y='75' font-family='sans-serif' font-size='65' font-weight='900' fill='url(#grad-home-nav)' text-anchor='middle'>h</text>
+              <defs>
+                <linearGradient id='grad-home-nav' x1='0%' y1='0%' x2='100%' y2='0%'>
+                  <stop offset='0%' stop-color='#e8af44'/>
+                  <stop offset='100%' stop-color='#ffffff'/>
+                </linearGradient>
+              </defs>
             </svg>
           </button>
           <h2 class="page-title">${escapeHtml(pageLabel)}</h2>
