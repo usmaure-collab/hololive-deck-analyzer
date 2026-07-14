@@ -1687,14 +1687,14 @@
     `;
   }
 
-  function renderCardFrame(card, artIndex = 0, overrideRarity = null) {
+  function renderCardFrame(card, artIndex = 0, overrideRarity = null, applyGlow = false) {
     const imgUrl = getCardImageUrl(card, artIndex);
     const fallbacks = getCardImageFallbacks(card, artIndex);
     if (fallbacks.length > 0) fallbacks.shift();
     const fallbacksJson = escapeAttr(JSON.stringify(fallbacks));
     const rClass = rarityClass(overrideRarity || card.rarity);
     return `
-      <div class="card-3d-wrapper" style="width: 100px; height: 140px;">
+      <div class="card-3d-wrapper ${applyGlow ? 'glow-effect' : ''}" style="aspect-ratio: 63/88; width: 100%; height: auto; position: relative;">
         <div class="card-3d-content">
           <div class="card-frame rarity-${rClass}" style="--card-color: ${colorMap[card.color] || colorMap.Neutral}">
             <img src="${imgUrl}" alt="${escapeHtml(card.name)}" loading="lazy" data-fallbacks="${fallbacksJson}" onerror="handleImageError(this)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
@@ -2353,10 +2353,10 @@
                   const artIndex = card.pulledVariantIndex || 0;
                   const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(displayRarity);
                   return `
-                    <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
+                    <div class="card-item gacha-result-card" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
                       <button style="display:none;" data-action="open-card-modal" data-id="${card.id}" data-artidx="${artIndex}"></button>
-                      ${renderCardFrame(card, artIndex, displayRarity)}
-                      <div class="card-info">
+                      ${renderCardFrame(card, artIndex, displayRarity, isHighRarity)}
+                      <div class="card-info" style="margin-top: 16px; text-align: center;">
                         <div class="card-name">${escapeHtml(card.name)}</div>
                         <div class="card-rarity">${displayRarity}</div>
                       </div>

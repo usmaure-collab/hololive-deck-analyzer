@@ -1681,7 +1681,7 @@ table tr:hover td,
 
 .glow-effect {
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .gacha-result-card {
