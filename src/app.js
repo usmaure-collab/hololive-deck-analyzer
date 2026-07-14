@@ -229,6 +229,12 @@
       return;
     }
 
+    if (action === "close-detail") {
+      state.selectedCard = null;
+      render();
+      return;
+    }
+
     if (action === "view-card-gacha") {
       state.tab = "catalog";
       state.filters.search = ""; 
@@ -775,9 +781,9 @@
       tab: "home",
       activeDeckId: fallbackDeck.id,
       decks: [fallbackDeck],
-      selectedCard: data.cards[0]?.id || "",
+      selectedCard: null,
       filters: { search: "", type: "All", color: "All", set: "All" },
-      ui: { catalogDetailMinimized: false, catalogPage: 1, detailPosX: null, detailPosY: null },
+      ui: { catalogPage: 1 },
       compareA: fallbackDeck.id,
       compareB: fallbackDeck.id,
       importText: "",
@@ -1649,25 +1655,15 @@
             <button class="btn" data-action="load-more-catalog">Cargar más cartas</button>
           </div>
         ` : ''}
-        <div id="floating-detail-widget" class="floating-widget ${state.ui.catalogDetailMinimized ? 'minimized' : ''}" ${state.ui.catalogDetailMinimized ? 'data-action="toggle-catalog-detail"' : ''} style="${state.ui.detailPosX !== null ? `left: ${state.ui.detailPosX}px; top: ${state.ui.detailPosY}px;` : ''}">
-          <div class="drag-handle">
-            <span style="font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">≡</span>
+        ${selected ? `
+          <div class="card-detail-modal">
+            <div class="modal-backdrop" data-action="close-detail"></div>
+            <div class="modal-content">
+              <button class="close-btn" data-action="close-detail" aria-label="Cerrar">&times;</button>
+              ${renderCardDetail(selected)}
+            </div>
           </div>
-          ${state.ui.catalogDetailMinimized 
-            ? `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                 <div style="pointer-events: none; transform: scale(1); transition: transform 0.3s ease;" class="princess-lens-wrapper">
-                   ${getPrincessLens(65)}
-                 </div>
-               </div>`
-            : `<div style="display: flex; justify-content: flex-end; margin-bottom: -15px; position: relative; z-index: 2;">
-                 <button class="btn small outline" data-action="toggle-catalog-detail" style="padding: 4px 12px; font-size: 0.85em; cursor: pointer; display: flex; align-items: center; gap: 8px; border-radius: 20px;">
-                   <span>Minimizar</span>
-                   ${getPrincessLens(20)}
-                 </button>
-               </div>
-               ${renderCardDetail(selected)}`
-          }
-        </div>
+        ` : ''}
       </section>
     `;
   }
@@ -3099,67 +3095,5 @@ Text ...
       `;
     }).join("");
   }
-
-  // ==========================================
-  // LÓGICA DE ARRASTRE DE WIDGET FLOTANTE
-  // ==========================================
-  let isDraggingWidget = false;
-  let widgetDragStartX = 0;
-  let widgetDragStartY = 0;
-  let widgetInitialLeft = 0;
-  let widgetInitialTop = 0;
-
-  document.addEventListener("mousedown", (e) => {
-    const handle = e.target.closest(".drag-handle");
-    if (!handle) return;
-    
-    const widget = document.getElementById("floating-detail-widget");
-    if (!widget) return;
-
-    isDraggingWidget = true;
-    widgetDragStartX = e.clientX;
-    widgetDragStartY = e.clientY;
-    
-    const rect = widget.getBoundingClientRect();
-    widgetInitialLeft = rect.left;
-    widgetInitialTop = rect.top;
-    
-    handle.style.cursor = "grabbing";
-    
-    // Prevent text selection while dragging
-    e.preventDefault();
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (!isDraggingWidget) return;
-    
-    const widget = document.getElementById("floating-detail-widget");
-    if (!widget) return;
-
-    const dx = e.clientX - widgetDragStartX;
-    const dy = e.clientY - widgetDragStartY;
-    
-    widget.style.left = `${widgetInitialLeft + dx}px`;
-    widget.style.top = `${widgetInitialTop + dy}px`;
-    widget.style.bottom = "auto";
-    widget.style.right = "auto";
-  });
-
-  document.addEventListener("mouseup", (e) => {
-    if (!isDraggingWidget) return;
-    isDraggingWidget = false;
-    
-    const widget = document.getElementById("floating-detail-widget");
-    if (!widget) return;
-    
-    const handle = widget.querySelector(".drag-handle");
-    if (handle) handle.style.cursor = "grab";
-    
-    // Save to state silently (no render to avoid flicker)
-    const rect = widget.getBoundingClientRect();
-    state.ui.detailPosX = rect.left;
-    state.ui.detailPosY = rect.top;
-    saveState();
-  });
 
 })();
