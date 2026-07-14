@@ -116,6 +116,7 @@
     compare: "hololive",
     importer: "hololive",
     gacha: "pekoradom",
+    album: "hololive",
     audit: "hololive",
   };
 
@@ -127,6 +128,7 @@
     compare: "Comparar Mazos",
     importer: "Importar Cartas",
     gacha: "Gacha Simulator — Usada Pekora 👯‍♀️",
+    album: "Álbum de Colección",
     audit: "Registro de Cambios",
   };
 
@@ -623,7 +625,9 @@
       overlay.id = "card-modal-overlay";
       overlay.className = "modal-overlay";
       overlay.dataset.action = "close-card-modal"; // Allow clicking outside to close
-      document.body.appendChild(overlay);
+      const appContainer = document.getElementById("app");
+      if (appContainer) appContainer.appendChild(overlay);
+      else document.body.appendChild(overlay);
     }
 
     overlay.innerHTML = `
@@ -1341,10 +1345,16 @@
             <span class="btn-text">Importar</span>
             <span class="btn-idol">Cartas</span>
           </button>
+
+          <button class="home-btn album-preview" data-action="tab" data-id="album">
+            <img src="https://images.weserv.nl/?url=https://en.hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/EN_hBP01-020_SEC.png" alt="Album" class="idol-portrait" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23222%22/></svg>'">
+            <span class="btn-text">Álbum</span>
+            <span class="btn-idol">Colección</span>
+          </button>
           
-          <button class="home-btn generic-preview" data-action="tab" data-id="audit">
-            <span class="btn-icon">📋</span>
-            <span class="btn-text">Cambios</span>
+          <button class="home-btn audit-preview" data-action="tab" data-id="audit">
+            <div class="idol-portrait" style="background:#222; display:flex; align-items:center; justify-content:center; color:#fff; font-size:30px;">📋</div>
+            <span class="btn-text">Historial</span>
             <span class="btn-idol">Registro</span>
           </button>
         </div>
@@ -1466,6 +1476,7 @@
     if (state.tab === "importer") return renderImporter();
     if (state.tab === "audit") return renderAudit();
     if (state.tab === "gacha") return renderGacha();
+    if (state.tab === "album") return renderAlbum();
     return renderDashboard(deck, stats);
   }
 
@@ -1733,14 +1744,18 @@
                 <div class="source-row">
                   <h3>${escapeHtml(market.vendor)}</h3>
                   <p>${escapeHtml(market.status)}</p>
-                  <div class="source-meta"><a href="${safeUrl(market.url)}" target="_blank" rel="noreferrer noopener">Abrir referencia</a></div>
+                  <div class="source-meta">
+                    ${/^https?:\/\//i.test(market.url) ? `<a href="${safeUrl(market.url)}" target="_blank" rel="noreferrer noopener">Abrir referencia</a>` : `<span style="color:#aaa;">Sin enlace</span>`}
+                  </div>
                 </div>
               `).join("") || `<div class="empty">Sin mercado registrado.</div>`}
             </div>
           </div>
           <div>
             <h3>Fuente</h3>
-            <p>${source ? escapeHtml(source.title) : "Import/manual"} - <a href="${safeUrl(card.officialUrl)}" target="_blank" rel="noreferrer noopener">ver carta/fuente</a></p>
+            <p>${source ? escapeHtml(source.title) : "Import/manual"}
+            ${/^https?:\/\//i.test(card.officialUrl) ? ` - <a href="${safeUrl(card.officialUrl)}" target="_blank" rel="noreferrer noopener">ver carta/fuente</a>` : ''}
+            </p>
           </div>
         </div>
       </div>
@@ -2030,6 +2045,7 @@
       if (pool[c.rarity]) pool[c.rarity].push({ ...c, pulledRarity: c.rarity, pulledVariantIndex: 0 });
       if (c.variants) {
         c.variants.forEach(v => {
+          if (v.artIndex === 0 && v.rarity === c.rarity) return; // Fix for double-weighting Mumei
           if (pool[v.rarity]) pool[v.rarity].push({ ...c, pulledRarity: v.rarity, pulledVariantIndex: v.artIndex });
         });
       }
@@ -2080,6 +2096,7 @@
       if (pool[c.rarity]) pool[c.rarity].push({ ...c, pulledRarity: c.rarity, pulledVariantIndex: 0 });
       if (c.variants) {
         c.variants.forEach(v => {
+          if (v.artIndex === 0 && v.rarity === c.rarity) return; // Fix for double-weighting Mumei
           if (pool[v.rarity]) pool[v.rarity].push({ ...c, pulledRarity: v.rarity, pulledVariantIndex: v.artIndex });
         });
       }
@@ -2178,6 +2195,67 @@
     }, 1500); // Simulando tiempo de apertura
   }
 
+  function renderAlbum() {
+    const sets = {};
+    data.cards.forEach(card => {
+      const set = card.set || card.number.split("-")[0]; // Agrupar por nombre de expansión o prefijo
+      if (!sets[set]) sets[set] = [];
+      sets[set].push(card);
+    });
+
+    let html = `<div class="album-section">`;
+    html += `<div class="section-title">
+        <div>
+          <h2>Álbum de Colección</h2>
+          <p>Progreso de obtención de cartas, agrupado por expansión.</p>
+        </div>
+      </div>`;
+
+    for (const [setName, setCards] of Object.entries(sets)) {
+      let obtainedCount = 0;
+      const totalCount = setCards.length;
+      
+      const cardsHtml = setCards.map(card => {
+        const qty = state.collection[card.id] || 0;
+        if (qty > 0) obtainedCount++;
+        
+        const isMissing = qty === 0;
+        const missingClass = isMissing ? 'card-missing' : '';
+        const badgeHtml = qty > 1 ? `<div class="collection-badge">x${qty}</div>` : '';
+        const rarityDisp = escapeHtml(card.rarity.split(" ")[0]);
+        
+        return `
+          <div class="card-item album-card ${missingClass}" data-id="${escapeAttr(card.id)}" style="cursor: pointer; position: relative;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
+            <button style="display:none;" data-action="open-card-modal" data-id="${escapeAttr(card.id)}"></button>
+            ${renderCardFrame(card, 0, null)}
+            ${badgeHtml}
+            <div class="card-info" style="text-align: center; margin-top: 8px;">
+              <div class="card-name" style="font-size: 10px; color: #aaa;">${escapeHtml(card.name)}</div>
+              <div class="card-rarity" style="font-size: 12px; color: var(--hl-cyan);">${rarityDisp}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const completionPct = totalCount > 0 ? ((obtainedCount / totalCount) * 100).toFixed(0) : 0;
+
+      html += `
+        <div class="panel" style="margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 20px;">
+            <h3>${escapeHtml(setName)}</h3>
+            <span style="font-weight: bold; color: var(--hl-cyan);">${obtainedCount} / ${totalCount} (${completionPct}%)</span>
+          </div>
+          <div class="card-grid" style="display: flex; gap: 16px; flex-wrap: wrap;">
+            ${cardsHtml}
+          </div>
+        </div>
+      `;
+    }
+    
+    html += `</div>`;
+    return html;
+  }
+
   function renderGacha() {
     const packs = [
       { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "assets/hbp01_pack.jpg" },
@@ -2212,9 +2290,9 @@
                     <div class="card-item gacha-result-card ${isHighRarity ? 'glow-effect' : ''}" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
                       <button style="display:none;" data-action="open-card-modal" data-id="${card.id}" data-artidx="${artIndex}"></button>
                       ${renderCardFrame(card, artIndex, displayRarity)}
-                      <div class="card-info" style="text-align: center; margin-top: 8px;">
-                        <div class="card-rarity" style="font-size: 12px; color: var(--hl-cyan);">${escapeHtml(displayRarity)}</div>
-                        <div class="card-name" style="font-size: 10px; color: #aaa;">${escapeHtml(card.name)}</div>
+                      <div class="card-info">
+                        <div class="card-name">${escapeHtml(card.name)}</div>
+                        <div class="card-rarity">${displayRarity}</div>
                       </div>
                     </div>
                   `;

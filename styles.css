@@ -1854,3 +1854,21 @@ table tr:hover td,
 .modal-close-btn:hover {
   color: var(--hl-pink);
 }
+/* --- Album Styles --- */
+.card-missing .card-3d-wrapper {
+  filter: grayscale(100%) opacity(40%);
+}
+.collection-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--hl-cyan);
+  color: #171334;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 2px solid #171334;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
