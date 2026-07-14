@@ -663,80 +663,53 @@
   });
 
   // --- 3D Tilt Effect Logic ---
-  let currentHoveredWrapper = null;
-  let isTicking = false;
-
-  document.addEventListener("mousemove", (e) => {
-    if (!isTicking) {
-      window.requestAnimationFrame(() => {
-        handleMouseMove(e);
-        isTicking = false;
-      });
-      isTicking = true;
+  app.addEventListener("mousemove", (e) => {
+    const wrapper = e.target.closest('.card-3d-wrapper');
+    if (!wrapper) return;
+    
+    const content = wrapper.querySelector('.card-3d-content');
+    const foil = wrapper.querySelector('.card-foil');
+    if (!content) return;
+    
+    const rect = wrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const normX = (x - centerX) / centerX;
+    const normY = (y - centerY) / centerY;
+    
+    const maxDegree = 15;
+    const rotateX = -normY * maxDegree;
+    const rotateY = normX * maxDegree;
+    
+    content.style.transition = 'none';
+    content.style.transform = `perspective(1000px) scale3d(1.05, 1.05, 1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    
+    if (foil) {
+      const bgX = (x / rect.width) * 100;
+      const bgY = (y / rect.height) * 100;
+      foil.style.backgroundPosition = `${bgX}% ${bgY}%`;
+      foil.style.opacity = '0.8';
     }
   });
 
-  function handleMouseMove(e) {
+  app.addEventListener("mouseout", (e) => {
     const wrapper = e.target.closest('.card-3d-wrapper');
-    
-    if (wrapper !== currentHoveredWrapper) {
-      if (currentHoveredWrapper) {
-        const content = currentHoveredWrapper.querySelector('.card-3d-content');
-        if (content) {
-          content.style.transition = 'transform 0.3s ease-out';
-          content.style.transform = 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)';
-        }
-        const foil = currentHoveredWrapper.querySelector('.card-foil');
-        if (foil) foil.style.opacity = '0';
-      }
-      currentHoveredWrapper = wrapper;
-      if (wrapper) {
-         const content = wrapper.querySelector('.card-3d-content');
-         if (content) content.style.transition = 'none'; 
-      }
-    }
+    if (!wrapper) return;
 
-    if (wrapper) {
-      const content = wrapper.querySelector('.card-3d-content');
-      const foil = wrapper.querySelector('.card-foil');
-      if (!content) return;
-      
-      const rect = wrapper.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const normX = (x - centerX) / centerX;
-      const normY = (y - centerY) / centerY;
-      
-      const maxDegree = 15;
-      const rotateX = -normY * maxDegree;
-      const rotateY = normX * maxDegree;
-      
-      content.style.transform = `perspective(1000px) scale3d(1.05, 1.05, 1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      
-      if (foil) {
-        const bgX = (x / rect.width) * 100;
-        const bgY = (y / rect.height) * 100;
-        foil.style.backgroundPosition = `${bgX}% ${bgY}%`;
-        foil.style.opacity = '0.8';
-      }
-    }
-  }
+    // Ensure we are actually leaving the wrapper and not just entering a child element
+    const related = e.relatedTarget;
+    if (related && wrapper.contains(related)) return;
 
-  // Asegurar que si el ratón sale de la ventana se reinicie
-  document.addEventListener("mouseleave", (e) => {
-    if (currentHoveredWrapper) {
-      const content = currentHoveredWrapper.querySelector('.card-3d-content');
-      if (content) {
-        content.style.transition = 'transform 0.3s ease-out';
-        content.style.transform = 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)';
-      }
-      const foil = currentHoveredWrapper.querySelector('.card-foil');
-      if (foil) foil.style.opacity = '0';
-      currentHoveredWrapper = null;
+    const content = wrapper.querySelector('.card-3d-content');
+    if (content) {
+      content.style.transition = 'transform 0.3s ease-out';
+      content.style.transform = 'perspective(1000px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)';
     }
+    const foil = wrapper.querySelector('.card-foil');
+    if (foil) foil.style.opacity = '0';
   });
 
   document.addEventListener("drop", (event) => {
