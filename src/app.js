@@ -2348,7 +2348,7 @@
   function renderGacha() {
     const packs = [
       { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "assets/hbp01_pack.jpg" },
-      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "assets/hbp02_pack.jpg" }
+      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "assets/hbp02_pack.png" }
     ];
 
     let content = "";
