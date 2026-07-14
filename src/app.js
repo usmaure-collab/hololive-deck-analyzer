@@ -161,6 +161,12 @@
   render();
 
   app.addEventListener("click", (event) => {
+    // Modal overlay click interception
+    if (event.target.id === "card-modal-overlay") {
+      closeCardModal();
+      return;
+    }
+
     const target = event.target.closest("[data-action]") || event.target.closest(".home-btn-nav");
     if (!target) return;
 
@@ -170,6 +176,11 @@
     
     const action = target.dataset.action;
     if (!action) return;
+
+    if (action === "close-card-modal") {
+      closeCardModal();
+      return;
+    }
     
     // Play SFX if available
     if (window.SFX) {
@@ -225,11 +236,6 @@
 
     if (action === "open-card-modal") {
       openCardModal(id, target.dataset.artidx || 0);
-      return;
-    }
-
-    if (action === "close-card-modal" || target.classList.contains("modal-overlay")) {
-      closeCardModal();
       return;
     }
 
@@ -630,14 +636,13 @@
       overlay = document.createElement("div");
       overlay.id = "card-modal-overlay";
       overlay.className = "modal-overlay";
-      overlay.dataset.action = "close-card-modal"; // Allow clicking outside to close
       const appContainer = document.getElementById("app");
       if (appContainer) appContainer.appendChild(overlay);
       else document.body.appendChild(overlay);
     }
 
     overlay.innerHTML = `
-      <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-content">
         <button class="modal-close-btn" data-action="close-card-modal">&times;</button>
         ${detailHtml}
       </div>
@@ -1732,16 +1737,18 @@
         </div>
         <div class="grid">
           <div>
-            <div class="meta-line">
+            <div class="meta-line" style="margin-bottom: 16px; align-items: center;">
               <span class="tag ${colorClass(card.color)}">${escapeHtml(card.color)}</span>
               <span class="tag">${escapeHtml(card.rarity)}</span>
               ${card.hp ? `<span class="tag">HP ${escapeHtml(card.hp)}</span>` : ""}
               ${card.life ? `<span class="tag">Life ${escapeHtml(card.life)}</span>` : ""}
               ${card.bloom ? `<span class="tag">${escapeHtml(card.bloom)}</span>` : ""}
             </div>
-            <p><b>Texto/resumen:</b> ${escapeHtml(card.text)}</p>
-            <p><b>Sinergia:</b> ${escapeHtml(card.synergy)}</p>
-            <p><b>Tags:</b> ${(card.tags || []).map(escapeHtml).join(", ") || "Sin tags"}</p>
+            <div style="display: flex; flex-direction: column; gap: 12px; line-height: 1.6;">
+              <p style="margin:0;"><b>Texto/resumen:</b> ${escapeHtml(card.text)}</p>
+              <p style="margin:0;"><b>Sinergia:</b> ${escapeHtml(card.synergy)}</p>
+              <p style="margin:0;"><b>Tags:</b> ${(card.tags || []).map(escapeHtml).join(", ") || "Sin tags"}</p>
+            </div>
           </div>
           <div>
             <h3>Artes y rarezas</h3>
