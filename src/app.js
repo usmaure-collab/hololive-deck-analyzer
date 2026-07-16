@@ -1125,12 +1125,6 @@
       container.classList.remove("carousel-fade-out");
       container.classList.add("carousel-fade-in");
       
-      if (progress) {
-        progress.style.animation = "none";
-        void progress.offsetWidth; // trigger reflow
-        progress.style.animation = "carouselProgress 4s steps(1, end) infinite";
-      }
-
       setTimeout(() => container.classList.remove("carousel-fade-in"), 500);
 
       gachaCarouselIndex = (gachaCarouselIndex + 3) % gachaCarouselCards.length;
@@ -1145,8 +1139,12 @@
     gachaCarouselIndex = 0;
     
     const allHits = getGachaFeaturedCards(setId, 999);
-    const validRarities = ["SEC", "OUR", "UR", "SSR", "OSR"];
-    gachaCarouselCards = allHits.filter(c => validRarities.includes(c.featuredRarity));
+    gachaCarouselCards = allHits.filter(c => 
+      c.featuredRarity === "SEC" || 
+      c.featuredRarity === "OUR" || 
+      c.featuredRarity === "UR" || 
+      c.featuredRarity === "SY"
+    );
     
     if (gachaCarouselCards.length <= 3) return;
 
@@ -2629,7 +2627,7 @@
           <section class="gacha-featured-section">
             <div class="gacha-featured-heading">
               <div><span>SPOTLIGHT</span><h3>Los hits que pueden aparecer</h3></div>
-              <p>Las cartas de rareza más alta de esta expansión, rotando cada 4 segundos.<br><span id="gacha-carousel-progress" class="gacha-carousel-progress"></span> 4s hasta la próxima rotación.</p>
+              <p>Las cartas de rareza más alta de esta expansión.</p>
             </div>
             <div class="gacha-featured-cards" id="gacha-carousel-container">
               ${featuredCards.map((card, index) => `

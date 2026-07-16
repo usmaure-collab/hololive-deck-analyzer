@@ -2339,27 +2339,6 @@ table tr:hover td,
   animation: gachaFeatureIn 0.5s forwards;
 }
 
-@keyframes carouselProgress {
-  0% { content: '[        ]'; }
-  12% { content: '[=       ]'; }
-  25% { content: '[==      ]'; }
-  37% { content: '[===     ]'; }
-  50% { content: '[====    ]'; }
-  62% { content: '[=====   ]'; }
-  75% { content: '[======  ]'; }
-  87% { content: '[======= ]'; }
-  100% { content: '[========]'; }
-}
-
-.gacha-carousel-progress::before {
-  content: '[        ]';
-  display: inline-block;
-  font-family: monospace;
-  letter-spacing: 2px;
-  animation: carouselProgress 4s steps(1, end) infinite;
-  color: var(--hl-cyan);
-}
-
 .gacha-featured-cards { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; max-width:820px; transition: opacity 0.5s ease; }
 .gacha-featured-card { position:relative; overflow:visible; min-width:0; padding:0; border:0; border-radius:12px; background:transparent; color:#fff; text-align:left; animation:gachaFeatureIn .65s calc(var(--feature-index) * .13s + .15s) both; }
 .gacha-featured-card:hover { z-index:2; transform:translateY(-9px) scale(1.035); }
