@@ -1089,9 +1089,7 @@
 
     return [...bestByCard.values()]
       .sort((a, b) => {
-        const aBoost = a.type === "Oshi" ? 100 : 0;
-        const bBoost = b.type === "Oshi" ? 100 : 0;
-        return (rarityOrder[b.featuredRarity] ?? 0) + bBoost - ((rarityOrder[a.featuredRarity] ?? 0) + aBoost);
+        return (rarityOrder[b.featuredRarity] ?? 0) - (rarityOrder[a.featuredRarity] ?? 0);
       })
       .slice(0, limit);
   }
@@ -2212,6 +2210,20 @@
     else if (roll < 35) hitRarity = "SR";
     else if (roll < 85) hitRarity = "RR";
     
+    // Normalize missing database cards by downgrading hits if the pool is artificially small
+    while (hitRarity !== "R") {
+      if (!pool[hitRarity] || !pool[hitRarity].length) {
+        hitRarity = hitRarity === "SEC" ? "UR" : hitRarity === "OUR" ? "OSR" : hitRarity === "UR" ? "SR" : hitRarity === "OSR" ? "SR" : hitRarity === "SR" ? "RR" : "R";
+      } else {
+        const expectedMinimums = { SR: 8, UR: 3, SEC: 2, OSR: 6, OUR: 3, RR: 10 };
+        const expected = expectedMinimums[hitRarity];
+        if (expected && pool[hitRarity].length < expected && Math.random() > (pool[hitRarity].length / expected)) {
+          hitRarity = hitRarity === "SEC" ? "UR" : hitRarity === "OUR" ? "OSR" : hitRarity === "UR" ? "SR" : hitRarity === "OSR" ? "SR" : hitRarity === "SR" ? "RR" : "R";
+        } else {
+          break;
+        }
+      }
+    }
     if (!pool[hitRarity] || !pool[hitRarity].length) hitRarity = "R";
     addCard(hitRarity);
 
@@ -2283,6 +2295,19 @@
       addCard(Math.random() > 0.5 ? "C" : "U");
       
       let hitR = boxRarities[p];
+      while (hitR !== "R") {
+        if (!pool[hitR] || !pool[hitR].length) {
+          hitR = hitR === "SEC" ? "UR" : hitR === "OUR" ? "OSR" : hitR === "UR" ? "SR" : hitR === "OSR" ? "SR" : hitR === "SR" ? "RR" : "R";
+        } else {
+          const expectedMinimums = { SR: 8, UR: 3, SEC: 2, OSR: 6, OUR: 3, RR: 10 };
+          const expected = expectedMinimums[hitR];
+          if (expected && pool[hitR].length < expected && Math.random() > (pool[hitR].length / expected)) {
+            hitR = hitR === "SEC" ? "UR" : hitR === "OUR" ? "OSR" : hitR === "UR" ? "SR" : hitR === "OSR" ? "SR" : hitR === "SR" ? "RR" : "R";
+          } else {
+            break;
+          }
+        }
+      }
       if (!pool[hitR] || !pool[hitR].length) hitR = "R";
       addCard(hitR);
       
