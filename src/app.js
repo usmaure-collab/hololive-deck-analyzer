@@ -1031,27 +1031,21 @@
     
     const urls = [];
     
-    // 1. Probar en subdominio inglés (EN_), carpeta de set
+    // Priorizar el arte (sufijo) antes que el idioma. 
+    // Es mejor mostrar el arte SEC en japonés que el arte base en inglés.
     uniqueSuffixes.forEach(s => {
       const suffixStr = s ? `_${s}` : "";
+      
+      // 1. Probar en subdominio inglés (EN_), carpeta de set
       urls.push(`https://en.hololive-official-cardgame.com/wp-content/images/cardlist/${folder}/EN_${num}${suffixStr}.png`);
-    });
-    
-    // 2. Probar en subdominio inglés (EN_), carpeta COMMON
-    uniqueSuffixes.forEach(s => {
-      const suffixStr = s ? `_${s}` : "";
-      urls.push(`https://en.hololive-official-cardgame.com/wp-content/images/cardlist/COMMON/EN_${num}${suffixStr}.png`);
-    });
-    
-    // 3. Probar en sitio japonés (sin EN_), carpeta de set
-    uniqueSuffixes.forEach(s => {
-      const suffixStr = s ? `_${s}` : "";
+      
+      // 2. Probar en sitio japonés (sin EN_), carpeta de set
       urls.push(`https://hololive-official-cardgame.com/wp-content/images/cardlist/${folder}/${num}${suffixStr}.png`);
-    });
-    
-    // 4. Probar en sitio japonés (sin EN_), carpeta COMMON
-    uniqueSuffixes.forEach(s => {
-      const suffixStr = s ? `_${s}` : "";
+      
+      // 3. Probar en subdominio inglés (EN_), carpeta COMMON
+      urls.push(`https://en.hololive-official-cardgame.com/wp-content/images/cardlist/COMMON/EN_${num}${suffixStr}.png`);
+      
+      // 4. Probar en sitio japonés (sin EN_), carpeta COMMON
       urls.push(`https://hololive-official-cardgame.com/wp-content/images/cardlist/COMMON/${num}${suffixStr}.png`);
     });
     
