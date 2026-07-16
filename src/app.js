@@ -203,6 +203,7 @@
       if (id === "gacha") {
         state.gacha.opening = false;
         state.gacha.results = [];
+        state.gacha.view = "lobby";
         saveState();
       }
       render();
@@ -216,8 +217,26 @@
       return;
     }
 
+    if (action === "select-gacha-set") {
+      state.gacha.selectedPack = id;
+      state.gacha.view = "detail";
+      state.gacha.results = [];
+      saveState();
+      render();
+      return;
+    }
+
+    if (action === "back-gacha-lobby") {
+      state.gacha.view = "lobby";
+      state.gacha.results = [];
+      saveState();
+      render();
+      return;
+    }
+
     if (action === "clear-gacha") {
       state.gacha.results = [];
+      state.gacha.view = "detail";
       saveState();
       render();
       return;
@@ -810,6 +829,7 @@
       collection: {}, // id: quantity
       gacha: {
         selectedPack: "hBP01",
+        view: "lobby",
         opening: false,
         results: [],
         filterCollection: false,
@@ -836,7 +856,8 @@
         compareB: decks.some((deck) => deck.id === parsed.compareB) ? parsed.compareB : decks[0].id,
         collection: parsed.collection || {},
         gacha: {
-          ...(parsed.gacha || base.gacha), // Recupera configuraciones (sparkles, filtros)
+          ...base.gacha,
+          ...(parsed.gacha || {}), // Recupera configuraciones (sparkles, filtros)
           opening: false, // FUERZA a que la animación esté apagada
           results: []     // FUERZA a que el sobre esté vacío al recargar
         }
@@ -1046,6 +1067,28 @@
     if (r === "RR" || r === "SR") return "platinum";
     if (r === "UR" || r === "OSR" || r === "OUR" || r === "SEC" || r === "P" || r === "SY") return "rainbow";
     return "bronze";
+  }
+
+  function getGachaFeaturedCards(setId, limit = 3) {
+    const rarityOrder = { C: 0, U: 1, R: 2, RR: 3, SR: 4, OSR: 5, UR: 6, OUR: 7, SEC: 8 };
+    const bestByCard = new Map();
+
+    data.cards
+      .filter((card) => card.number.startsWith(setId))
+      .forEach((card) => {
+        const editions = [{ artIndex: 0, rarity: card.rarity }, ...(card.variants || [])];
+        editions.forEach((edition) => {
+          const candidate = { ...card, featuredArtIndex: edition.artIndex || 0, featuredRarity: edition.rarity || card.rarity };
+          const previous = bestByCard.get(card.id);
+          if (!previous || (rarityOrder[candidate.featuredRarity] ?? 0) > (rarityOrder[previous.featuredRarity] ?? 0)) {
+            bestByCard.set(card.id, candidate);
+          }
+        });
+      });
+
+    return [...bestByCard.values()]
+      .sort((a, b) => (rarityOrder[b.featuredRarity] ?? 0) - (rarityOrder[a.featuredRarity] ?? 0))
+      .slice(0, limit);
   }
 
   function addCard(number, zone, artIndex = 0) {
@@ -2362,8 +2405,16 @@
 
   function renderGacha() {
     const packs = [
-      { id: "hBP01", name: "Blooming Radiance", bg: "var(--highlight)", img: "assets/hbp01_pack.jpg" },
-      { id: "hBP02", name: "Quintet Spectrum", bg: "var(--hl-cyan)", img: "assets/hbp02_pack.png" }
+      {
+        id: "hBP01", name: "Blooming Radiance", img: "assets/hbp01_pack.jpg", theme: "blooming",
+        eyebrow: "Booster Pack 01", tagline: "El primer escenario se ilumina", description: "Descubre a las estrellas que encendieron el comienzo de hololive OCG.",
+        accent: "#ff6f9f", glow: "rgba(255, 111, 159, .45)", rarityNote: "UR garantizada en una caja"
+      },
+      {
+        id: "hBP02", name: "Quintet Spectrum", img: "assets/hbp02_pack.png", theme: "quintet",
+        eyebrow: "Booster Pack 02", tagline: "Cinco colores. Un escenario.", description: "Una expansión etérea donde cada sobre puede revelar un nuevo brillo.",
+        accent: "#56d7ff", glow: "rgba(86, 215, 255, .45)", rarityNote: "OSR o mejor en cada caja"
+      }
     ];
 
     let content = "";
@@ -2406,7 +2457,7 @@
         </div>
         <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
           <h2 class="magical-text">¡Nuevas Cartas Obtenidas!</h2>
-          <button class="btn outline" onclick="document.querySelector('[data-action=clear-gacha]').click()">Volver a los sobres</button>
+          <button class="btn outline" onclick="document.querySelector('[data-action=clear-gacha]').click()">Volver a la expansión</button>
           <button style="display:none;" data-action="clear-gacha"></button>
         </div>
         <div class="gacha-packs-container" style="display: flex; flex-direction: column; gap: 40px; margin-bottom: 40px;">
@@ -2433,6 +2484,57 @@
               </div>
             </div>
           `).join("")}
+        </div>
+      `;
+    } else if (state.gacha.view === "detail") {
+      const selectedPack = packs.find((pack) => pack.id === state.gacha.selectedPack) || packs[0];
+      const featuredCards = getGachaFeaturedCards(selectedPack.id);
+      content = `
+        <div class="gacha-set-page theme-${selectedPack.theme}" style="--set-accent:${selectedPack.accent}; --set-glow:${selectedPack.glow}; --set-art:url('${selectedPack.img}')">
+          <button class="gacha-back-button" data-action="back-gacha-lobby">← Todas las expansiones</button>
+          <section class="gacha-set-hero">
+            <div class="gacha-set-hero-copy">
+              <span class="gacha-set-eyebrow">${selectedPack.eyebrow}</span>
+              <h2>${selectedPack.name}</h2>
+              <p class="gacha-set-tagline">${selectedPack.tagline}</p>
+              <p class="gacha-set-description">${selectedPack.description}</p>
+              <div class="gacha-set-meta"><span>8 cartas por sobre</span><span>${selectedPack.rarityNote}</span></div>
+              <div class="gacha-set-actions">
+                <button class="btn primary" data-action="open-pack" data-set="${selectedPack.id}" data-amount="1">Abrir 1 sobre</button>
+                <button class="btn outline" data-action="open-pack" data-set="${selectedPack.id}" data-amount="12">Abrir caja · 12 sobres</button>
+              </div>
+            </div>
+            <div class="gacha-set-pack-stage" aria-label="Sobre de ${escapeAttr(selectedPack.name)}">
+              <div class="gacha-set-pack-image"></div>
+              <span class="gacha-set-orbit orbit-one"></span><span class="gacha-set-orbit orbit-two"></span>
+            </div>
+          </section>
+          <section class="gacha-featured-section">
+            <div class="gacha-featured-heading"><div><span>SPOTLIGHT</span><h3>Los hits que pueden aparecer</h3></div><p>Las cartas de rareza más alta de esta expansión.</p></div>
+            <div class="gacha-featured-cards">
+              ${featuredCards.map((card, index) => `
+                <button class="gacha-featured-card rarity-${rarityClass(card.featuredRarity)}" style="--feature-index:${index};" data-action="open-card-modal" data-id="${escapeAttr(card.id)}" data-artidx="${card.featuredArtIndex}" aria-label="Ver ${escapeAttr(card.name)}">
+                  ${renderCardFrame(card, card.featuredArtIndex, card.featuredRarity, true)}
+                  <span class="gacha-featured-rarity">${escapeHtml(card.featuredRarity)}</span>
+                  <span class="gacha-featured-name">${escapeHtml(card.name)}</span>
+                </button>
+              `).join("") || `<p class="empty">No hay cartas destacadas disponibles para esta expansión.</p>`}
+            </div>
+          </section>
+        </div>
+      `;
+    } else if (state.gacha.view === "lobby") {
+      content = `
+        <div class="gacha-expansion-hub">
+          <div class="gacha-hub-intro"><span>SELECT SET</span><h2>Elige tu próximo escenario</h2><p>Cada expansión tiene su propio mundo, sus propios hits y una experiencia de apertura personalizada.</p></div>
+          <div class="gacha-expansion-list">
+            ${packs.map((pack, index) => `
+              <article class="gacha-expansion-portal theme-${pack.theme}" style="--set-accent:${pack.accent}; --set-glow:${pack.glow}; --set-art:url('${pack.img}'); --portal-index:${index};">
+                <div class="gacha-portal-art"><div class="gacha-portal-pack"></div><span class="gacha-portal-shimmer"></span></div>
+                <div class="gacha-portal-copy"><span>${pack.eyebrow}</span><h3>${pack.name}</h3><p>${pack.tagline}</p><small>${pack.rarityNote}</small><button class="btn primary" data-action="select-gacha-set" data-id="${pack.id}">Explorar expansión <b>→</b></button></div>
+              </article>
+            `).join("")}
+          </div>
         </div>
       `;
     } else {
