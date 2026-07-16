@@ -2222,6 +2222,7 @@ table tr:hover td,
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem; /* Separación natural entre texto y carta */
   overflow: hidden;
   cursor: pointer;
   animation: hitRevealBgIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -2247,17 +2248,14 @@ table tr:hover td,
 }
 
 .hit-reveal-text {
-  position: absolute;
-  top: 6%; /* Movido más arriba para no ocultar el arte */
+  position: relative;
   z-index: 10;
   font-family: 'Cinzel', serif;
   font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 900;
-  /* Degradado premium dorado/iridiscente */
   background: linear-gradient(to bottom right, #fffdf2, #f5d76e, #e8a825);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* Drop-shadow ajustado al degradado */
   filter: drop-shadow(0 4px 15px rgba(232, 168, 37, 0.6)) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.9));
   letter-spacing: 0.15em;
   opacity: 0;
@@ -2291,12 +2289,11 @@ table tr:hover td,
 }
 
 .hit-character-name {
-  position: absolute;
-  bottom: 12%; /* Empujado más abajo para evitar el badge NUEVA */
+  position: relative;
   z-index: 10;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 300; /* Tipografía más ligera y elegante */
+  font-weight: 300;
   color: #fff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 255, 255, 0.4);
   letter-spacing: 0.2em;
@@ -2307,13 +2304,28 @@ table tr:hover td,
 
 .hit-continue-text {
   position: absolute;
-  bottom: 8%;
+  bottom: 5%;
   z-index: 4;
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.1rem;
   letter-spacing: 0.1em;
   opacity: 0;
   animation: hitContinueFade 1.5s ease-in-out 2s infinite alternate;
+}
+
+.gacha-view-root {
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gacha-view-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .gacha-hit-reveal-overlay.rarity-ur .hit-reveal-text, .gacha-hit-reveal-overlay.rarity-our .hit-reveal-text, .gacha-hit-reveal-overlay.rarity-sec .hit-reveal-text {
