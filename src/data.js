@@ -96,266 +96,6 @@ window.HOCG_DATA = {
   ],
   "cards": [
     {
-      "id": "hY01-001",
-      "number": "hY01-001",
-      "name": "White Cheer",
-      "type": "Cheer",
-      "color": "White",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer blanco."
-    },
-    {
-      "id": "hY01-001-C",
-      "number": "hY01-001",
-      "name": "White Cheer",
-      "type": "Cheer",
-      "color": "White",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer blanco.",
-      "artIndex": 0,
-      "note": "Common (Estándar)"
-    },
-    {
-      "id": "hY01-001-SY",
-      "number": "hY01-001",
-      "name": "White Cheer",
-      "type": "Cheer",
-      "color": "White",
-      "rarity": "SY",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer blanco.",
-      "artIndex": 1,
-      "note": "Special Yell (Holográfica)"
-    },
-    {
-      "id": "hY02-001",
-      "number": "hY02-001",
-      "name": "Green Cheer",
-      "type": "Cheer",
-      "color": "Green",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer verde."
-    },
-    {
-      "id": "hY02-001-C",
-      "number": "hY02-001",
-      "name": "Green Cheer",
-      "type": "Cheer",
-      "color": "Green",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer verde.",
-      "artIndex": 0,
-      "note": "Common (Estándar)"
-    },
-    {
-      "id": "hY02-001-SY",
-      "number": "hY02-001",
-      "name": "Green Cheer",
-      "type": "Cheer",
-      "color": "Green",
-      "rarity": "SY",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer verde.",
-      "artIndex": 1,
-      "note": "Special Yell (Holográfica)"
-    },
-    {
-      "id": "hY03-001",
-      "number": "hY03-001",
-      "name": "Red Cheer",
-      "type": "Cheer",
-      "color": "Red",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer rojo."
-    },
-    {
-      "id": "hY03-001-C",
-      "number": "hY03-001",
-      "name": "Red Cheer",
-      "type": "Cheer",
-      "color": "Red",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer rojo.",
-      "artIndex": 0,
-      "note": "Common (Estándar)"
-    },
-    {
-      "id": "hY03-001-SY",
-      "number": "hY03-001",
-      "name": "Red Cheer",
-      "type": "Cheer",
-      "color": "Red",
-      "rarity": "SY",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer rojo.",
-      "artIndex": 1,
-      "note": "Special Yell (Holográfica)"
-    },
-    {
-      "id": "hY04-001",
-      "number": "hY04-001",
-      "name": "Blue Cheer",
-      "type": "Cheer",
-      "color": "Blue",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer azul."
-    },
-    {
-      "id": "hY04-001-C",
-      "number": "hY04-001",
-      "name": "Blue Cheer",
-      "type": "Cheer",
-      "color": "Blue",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer azul.",
-      "artIndex": 0,
-      "note": "Common (Estándar)"
-    },
-    {
-      "id": "hY04-001-SY",
-      "number": "hY04-001",
-      "name": "Blue Cheer",
-      "type": "Cheer",
-      "color": "Blue",
-      "rarity": "SY",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer azul.",
-      "artIndex": 1,
-      "note": "Special Yell (Holográfica)"
-    },
-    {
-      "id": "hY05-001",
-      "number": "hY05-001",
-      "name": "Purple Cheer",
-      "type": "Cheer",
-      "color": "Purple",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer morado."
-    },
-    {
-      "id": "hY05-001-C",
-      "number": "hY05-001",
-      "name": "Purple Cheer",
-      "type": "Cheer",
-      "color": "Purple",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer morado.",
-      "artIndex": 0,
-      "note": "Common (Estándar)"
-    },
-    {
-      "id": "hY05-001-SY",
-      "number": "hY05-001",
-      "name": "Purple Cheer",
-      "type": "Cheer",
-      "color": "Purple",
-      "rarity": "SY",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer morado.",
-      "artIndex": 1,
-      "note": "Special Yell (Holográfica)"
-    },
-    {
-      "id": "hY06-001",
-      "number": "hY06-001",
-      "name": "Colorless Cheer",
-      "type": "Cheer",
-      "color": "Neutral",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer incoloro."
-    },
-    {
-      "id": "hY06-001-C",
-      "number": "hY06-001",
-      "name": "Colorless Cheer",
-      "type": "Cheer",
-      "color": "Neutral",
-      "rarity": "C",
-      "set": "Start Cheer Set",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "Cheer"
-      ],
-      "text": "Produce 1 Cheer incoloro.",
-      "artIndex": 0,
-      "note": "Common (Estándar)"
-    },
-    {
       "id": "hBP01-001",
       "number": "hBP01-001",
       "name": "Amane Kanata",
@@ -902,37 +642,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare"
     },
     {
-      "id": "hBP01-006-SEC",
-      "number": "hBP01-006",
-      "name": "Takanashi Kiara",
-      "type": "Oshi",
-      "color": "Red",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "release": "2025-07-11 EN",
-      "life": 5,
-      "tags": [
-        "EN",
-        "Myth",
-        "Oshi"
-      ],
-      "bloom": "",
-      "hp": "",
-      "role": "Recursion desde Archive",
-      "text": "Oshi roja. Recupera holomems del archive y mitiga el dano a tu vida.",
-      "synergy": "Combina de forma excelente con Kiara y cartas de descarte.",
-      "market": [
-        {
-          "vendor": "TCGplayer",
-          "status": "Referencia",
-          "url": "https://www.tcgplayer.com/"
-        }
-      ],
-      "sourceId": "official-card-list-en",
-      "artIndex": 2,
-      "note": "Secret Rare (Firmada)"
-    },
-    {
       "id": "hBP01-007",
       "number": "hBP01-007",
       "name": "Hoshimachi Suisei",
@@ -1024,37 +733,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare"
     },
     {
-      "id": "hBP01-007-SEC",
-      "number": "hBP01-007",
-      "name": "Hoshimachi Suisei",
-      "type": "Oshi",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "release": "2025-07-11 EN",
-      "life": 5,
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Oshi"
-      ],
-      "bloom": "",
-      "hp": "",
-      "role": "Oshi de Control",
-      "text": "Oshi azul. Presiona la retaguardia enemiga retirando Cheers o haciendo sniper.",
-      "synergy": "Perfecto para el arquetipo Suisei Sniper azul.",
-      "market": [
-        {
-          "vendor": "TCGplayer",
-          "status": "Referencia",
-          "url": "https://www.tcgplayer.com/"
-        }
-      ],
-      "sourceId": "official-card-list-en",
-      "artIndex": 2,
-      "note": "Secret Rare (Firmada)"
-    },
-    {
       "id": "hBP01-008",
       "number": "hBP01-008",
       "name": "Kobo Kanaeru",
@@ -1144,126 +822,6 @@ window.HOCG_DATA = {
       "sourceId": "official-card-list-en",
       "artIndex": 1,
       "note": "Oshi Ultra Rare"
-    },
-    {
-      "id": "hSD01-001",
-      "number": "hSD01-001",
-      "name": "Tokino Sora",
-      "type": "Oshi",
-      "color": "White",
-      "rarity": "OSR",
-      "set": "Start Deck 1",
-      "release": "2025-07-11 EN",
-      "life": 5,
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Oshi"
-      ],
-      "bloom": "",
-      "hp": "",
-      "role": "Oshi de Consistencia",
-      "text": "Oshi blanca. Permite buscar recursos o curar holomems de tu escenario.",
-      "synergy": "Combina muy bien con cartas de Sora de Start Deck y Booster 1.",
-      "market": [
-        {
-          "vendor": "TCGplayer",
-          "status": "Referencia",
-          "url": "https://www.tcgplayer.com/"
-        }
-      ],
-      "sourceId": "official-card-list-en"
-    },
-    {
-      "id": "hSD01-001-OSR",
-      "number": "hSD01-001",
-      "name": "Tokino Sora",
-      "type": "Oshi",
-      "color": "White",
-      "rarity": "OSR",
-      "set": "Start Deck 1",
-      "release": "2025-07-11 EN",
-      "life": 5,
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Oshi"
-      ],
-      "bloom": "",
-      "hp": "",
-      "role": "Oshi de Consistencia",
-      "text": "Oshi blanca. Permite buscar recursos o curar holomems de tu escenario.",
-      "synergy": "Combina muy bien con cartas de Sora de Start Deck y Booster 1.",
-      "market": [
-        {
-          "vendor": "TCGplayer",
-          "status": "Referencia",
-          "url": "https://www.tcgplayer.com/"
-        }
-      ],
-      "sourceId": "official-card-list-en",
-      "artIndex": 0,
-      "note": "Oshi Rare"
-    },
-    {
-      "id": "hSD01-002",
-      "number": "hSD01-002",
-      "name": "AZKi",
-      "type": "Oshi",
-      "color": "Green",
-      "rarity": "OSR",
-      "set": "Start Deck 1",
-      "release": "2025-07-11 EN",
-      "life": 5,
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Oshi"
-      ],
-      "bloom": "",
-      "hp": "",
-      "role": "Oshi de Tempo",
-      "text": "Oshi verde. Aumenta el ratio de robo o acelera la preparacion de Cheers.",
-      "synergy": "Ideal para mazos rapidos de AZKi.",
-      "market": [
-        {
-          "vendor": "TCGplayer",
-          "status": "Referencia",
-          "url": "https://www.tcgplayer.com/"
-        }
-      ],
-      "sourceId": "official-card-list-en"
-    },
-    {
-      "id": "hSD01-002-OSR",
-      "number": "hSD01-002",
-      "name": "AZKi",
-      "type": "Oshi",
-      "color": "Green",
-      "rarity": "OSR",
-      "set": "Start Deck 1",
-      "release": "2025-07-11 EN",
-      "life": 5,
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Oshi"
-      ],
-      "bloom": "",
-      "hp": "",
-      "role": "Oshi de Tempo",
-      "text": "Oshi verde. Aumenta el ratio de robo o acelera la preparacion de Cheers.",
-      "synergy": "Ideal para mazos rapidos de AZKi.",
-      "market": [
-        {
-          "vendor": "TCGplayer",
-          "status": "Referencia",
-          "url": "https://www.tcgplayer.com/"
-        }
-      ],
-      "sourceId": "official-card-list-en",
-      "artIndex": 0,
-      "note": "Oshi Rare"
     },
     {
       "id": "hBP01-009",
@@ -1403,6 +961,28 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Double Rare (Diseño foil base)"
+    },
+    {
+      "id": "hBP01-014-UR",
+      "number": "hBP01-014",
+      "name": "Amane Kanata",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "JP",
+        "Gen 4",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 200,
+      "text": "Arts: Hace 90 de dano base. Collab: Castiga con dano extra a holomems con dano acumulado.",
+      "synergy": "Apoyado por Oshi Kanata para lograr KOs en un solo golpe.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
     },
     {
       "id": "hBP01-015",
@@ -1563,60 +1143,6 @@ window.HOCG_DATA = {
       "market": []
     },
     {
-      "id": "hSD01-004",
-      "number": "hSD01-004",
-      "name": "Tokino Sora",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "R",
-      "set": "Start Deck 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 120,
-      "text": "Habilidad: Cura 20 de dano a una de tus holomems al entrar.",
-      "market": []
-    },
-    {
-      "id": "hSD01-005",
-      "number": "hSD01-005",
-      "name": "Tokino Sora",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "U",
-      "set": "Start Deck 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 130,
-      "text": "Arts: Hace 50 de dano con 2 Cheers blancas.",
-      "market": []
-    },
-    {
-      "id": "hSD01-006",
-      "number": "hSD01-006",
-      "name": "Tokino Sora",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "RR",
-      "set": "Start Deck 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 100 de dano.",
-      "market": []
-    },
-    {
       "id": "hBP01-022",
       "number": "hBP01-022",
       "name": "Tokino Sora",
@@ -1651,6 +1177,26 @@ window.HOCG_DATA = {
       "hp": 210,
       "text": "Collab: Roba 2 cartas. Arts: Hace 80 de dano.",
       "market": []
+    },
+    {
+      "id": "hBP01-023-UR",
+      "number": "hBP01-023",
+      "name": "Tokino Sora",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 210,
+      "text": "Collab: Roba 2 cartas. Arts: Hace 80 de dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
     },
     {
       "id": "hBP01-024",
@@ -1725,6 +1271,26 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hBP01-027-UR",
+      "number": "hBP01-027",
+      "name": "Vestia Zeta",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "ID",
+        "ID Gen 3",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 200,
+      "text": "Buzz Holomem. Gift V.7: En Collab, puedes lanzar dado para reducir dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
+    },
+    {
       "id": "hBP01-028",
       "number": "hBP01-028",
       "name": "IRyS",
@@ -1787,7 +1353,7 @@ window.HOCG_DATA = {
       "name": "IRyS",
       "type": "holomem",
       "color": "White",
-      "rarity": "R",
+      "rarity": "SR",
       "set": "Booster Pack 1",
       "tags": [
         "EN",
@@ -2056,6 +1622,26 @@ window.HOCG_DATA = {
       "note": "Double Rare (Diseño foil base)"
     },
     {
+      "id": "hBP01-043-UR",
+      "number": "hBP01-043",
+      "name": "Usada Pekora",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 3",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 dano. Habilidad: Regresa cualquier holomem 1st del rival a su mano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
+    },
+    {
       "id": "hBP01-044",
       "number": "hBP01-044",
       "name": "AZKi",
@@ -2071,60 +1657,6 @@ window.HOCG_DATA = {
       "bloom": "Debut",
       "hp": 60,
       "text": "Collab: Si tienes otra holomem Gen 0, gana Arts +10.",
-      "market": []
-    },
-    {
-      "id": "hSD01-009",
-      "number": "hSD01-009",
-      "name": "AZKi",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "R",
-      "set": "Start Deck 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 120,
-      "text": "Habilidad: Gana 1 Cheer del archive al entrar.",
-      "market": []
-    },
-    {
-      "id": "hSD01-010",
-      "number": "hSD01-010",
-      "name": "AZKi",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "U",
-      "set": "Start Deck 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 130,
-      "text": "Arts: Hace 50 de dano con 2 Cheers verdes.",
-      "market": []
-    },
-    {
-      "id": "hSD01-011",
-      "number": "hSD01-011",
-      "name": "AZKi",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "RR",
-      "set": "Start Deck 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 dano. Collab: Roba 1 carta.",
       "market": []
     },
     {
@@ -2183,6 +1715,27 @@ window.HOCG_DATA = {
       "hp": 220,
       "text": "Bloom: Recupera 40 HP. Lanza dado; si es impar, recupera hasta 3 Cheers verdes del archive. Arts: Hace 120 dano.",
       "market": []
+    },
+    {
+      "id": "hBP01-047-UR",
+      "number": "hBP01-047",
+      "name": "AZKi",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Singing",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 220,
+      "text": "Bloom: Recupera 40 HP. Lanza dado; si es impar, recupera hasta 3 Cheers verdes del archive. Arts: Hace 120 dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
     },
     {
       "id": "hBP01-048",
@@ -2257,6 +1810,26 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hBP01-051-UR",
+      "number": "hBP01-051",
+      "name": "Kazama Iroha",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "HoloX",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 250,
+      "text": "Buzz Holomem. Arts: Hace 50 de dano. Gana +20 por cada Cheer adjunta (max 5).",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
+    },
+    {
       "id": "hBP01-052",
       "number": "hBP01-052",
       "name": "Airani Iofifteen",
@@ -2319,7 +1892,7 @@ window.HOCG_DATA = {
       "name": "Airani Iofifteen",
       "type": "holomem",
       "color": "Green",
-      "rarity": "R",
+      "rarity": "SR",
       "set": "Booster Pack 1",
       "tags": [
         "ID",
@@ -2441,6 +2014,26 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Double Rare (Diseño foil base)"
+    },
+    {
+      "id": "hBP01-060-UR",
+      "number": "hBP01-060",
+      "name": "Takane Lui",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "HoloX",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 200,
+      "text": "Arts: Hace 90 dano. Habilidad: Lanza 1 Cheer rojo al archive para retirar 1 soporte.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
     },
     {
       "id": "hBP01-061",
@@ -2589,6 +2182,26 @@ window.HOCG_DATA = {
       "note": "Double Rare (Diseño foil base)"
     },
     {
+      "id": "hBP01-067-UR",
+      "number": "hBP01-067",
+      "name": "Takanashi Kiara",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "EN",
+        "Myth",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 200,
+      "text": "Arts: Hace 90 dano. Habilidad: Si Kiara es K.O., revive.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
+    },
+    {
       "id": "hBP01-068",
       "number": "hBP01-068",
       "name": "Omaru Polka",
@@ -2641,6 +2254,76 @@ window.HOCG_DATA = {
       "hp": 120,
       "text": "Arts: Hace 40 de dano.",
       "market": []
+    },
+    {
+      "id": "hBP01-071",
+      "number": "hBP01-071",
+      "name": "Omaru Polka",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "RR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 5",
+        "Kemomimi"
+      ],
+      "hp": 240,
+      "bloom": "1st Buzz",
+      "baton": 1,
+      "arts": [
+        {
+          "name": "Polka Circus",
+          "damage": "50+",
+          "cost": {
+            "Red": 1,
+            "Colorless": 1
+          }
+        }
+      ],
+      "skills": [
+        {
+          "type": "Bloom Effect",
+          "name": "Polka Illusion",
+          "effect": "You may return 1 [Troupe Member] from your archive to hand."
+        }
+      ]
+    },
+    {
+      "id": "hBP01-071-UR",
+      "number": "hBP01-071",
+      "name": "Omaru Polka",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 5",
+        "Kemomimi"
+      ],
+      "hp": 240,
+      "bloom": "1st Buzz",
+      "baton": 1,
+      "arts": [
+        {
+          "name": "Polka Circus",
+          "damage": "50+",
+          "cost": {
+            "Red": 1,
+            "Colorless": 1
+          }
+        }
+      ],
+      "skills": [
+        {
+          "type": "Bloom Effect",
+          "name": "Polka Illusion",
+          "effect": "You may return 1 [Troupe Member] from your archive to hand."
+        }
+      ],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
     },
     {
       "id": "hBP01-072",
@@ -2702,7 +2385,7 @@ window.HOCG_DATA = {
       "name": "Hakos Baelz",
       "type": "holomem",
       "color": "Red",
-      "rarity": "R",
+      "rarity": "SR",
       "set": "Booster Pack 1",
       "tags": [
         "EN",
@@ -2842,6 +2525,26 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Double Rare (Diseño foil base)"
+    },
+    {
+      "id": "hBP01-081-UR",
+      "number": "hBP01-081",
+      "name": "Hoshimachi Suisei",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 de dano a cualquier holomem enemiga ( sniper).",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
     },
     {
       "id": "hBP01-082",
@@ -3045,6 +2748,26 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hBP01-091-UR",
+      "number": "hBP01-091",
+      "name": "Moona Hoshinova",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "ID",
+        "ID Gen 1",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 dano. Habilidad: Roba 2 cartas al entrar.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Full Art)"
+    },
+    {
       "id": "hBP01-092",
       "number": "hBP01-092",
       "name": "Ouro Kronii",
@@ -3104,7 +2827,7 @@ window.HOCG_DATA = {
       "name": "Ouro Kronii",
       "type": "holomem",
       "color": "Blue",
-      "rarity": "R",
+      "rarity": "SR",
       "set": "Booster Pack 1",
       "tags": [
         "EN",
@@ -3222,42 +2945,6 @@ window.HOCG_DATA = {
       "bloom": "Spot",
       "hp": 120,
       "text": "Spot Holomem. Habilidad: Lanza 1 dado al entrar. Si sale par, roba 1 carta.",
-      "market": []
-    },
-    {
-      "id": "hSD01-012",
-      "number": "hSD01-012",
-      "name": "Airani Iofifteen",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "C",
-      "set": "Start Deck 1",
-      "tags": [
-        "ID",
-        "ID Gen 1",
-        "Debut"
-      ],
-      "bloom": "Debut",
-      "hp": 70,
-      "text": "Collab: Permite mover 1 Cheer del archive al center.",
-      "market": []
-    },
-    {
-      "id": "hSD01-016",
-      "number": "hSD01-016",
-      "name": "Harusaki Nodoka",
-      "type": "Support",
-      "color": "Neutral",
-      "rarity": "C",
-      "set": "Start Decks",
-      "tags": [
-        "Staff",
-        "LIMITED",
-        "Draw"
-      ],
-      "bloom": "",
-      "hp": "",
-      "text": "Staff LIMITED. Roba 3 cartas de tu deck.",
       "market": []
     },
     {
@@ -3625,142 +3312,6 @@ window.HOCG_DATA = {
       "market": []
     },
     {
-      "id": "hBP05-080",
-      "number": "hBP05-080",
-      "name": "SorAZ Celebration",
-      "type": "Support",
-      "color": "Neutral",
-      "rarity": "U",
-      "set": "Booster Pack 5",
-      "tags": [
-        "Event",
-        "LIMITED",
-        "Search"
-      ],
-      "text": "Event LIMITED. Busca en tu deck cualquier carta.",
-      "market": []
-    },
-    {
-      "id": "hSD02-009",
-      "number": "hSD02-009",
-      "name": "Nakiri Ayame",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: AyaFubuMi's \"Aya\" 60",
-      "market": []
-    },
-    {
-      "id": "hSD02-009-SR",
-      "number": "hSD02-009",
-      "name": "Nakiri Ayame",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: AyaFubuMi's \"Aya\" 60",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
-      "id": "hSD03-009",
-      "number": "hSD03-009",
-      "name": "Nekomata Okayu",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hSD03-009-SR",
-      "number": "hSD03-009",
-      "name": "Nekomata Okayu",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
-      "id": "hSD04-009",
-      "number": "hSD04-009",
-      "name": "Yuzuki Choco",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Cooking"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hSD04-009-SR",
-      "number": "hSD04-009",
-      "name": "Yuzuki Choco",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Cooking"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
       "id": "hBP02-001",
       "number": "hBP02-001",
       "name": "Shirakami Fubuki",
@@ -3805,22 +3356,6 @@ window.HOCG_DATA = {
       "life": 5,
       "artIndex": 1,
       "note": "Oshi Ultra Rare (Alt Art)"
-    },
-    {
-      "id": "hBP02-001-SEC",
-      "number": "hBP02-001",
-      "name": "Shirakami Fubuki",
-      "type": "Oshi",
-      "color": "White",
-      "rarity": "SEC",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Mascot Creation [1/Turn]Reveal 1 mascot from your deck, and add it to hand. Then, shuffle the deck. / SP Oshi Skill: [holo Power：-2] FBKINGDOM [1/Game]You may roll a die once for every 2 mascots on your stage if your white holomem downed your opponent's holomem:If an odd number appears once or more, your opponent gets life-1.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
     },
     {
       "id": "hBP02-002",
@@ -3915,22 +3450,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare (Alt Art)"
     },
     {
-      "id": "hBP02-003-SEC",
-      "number": "hBP02-003",
-      "name": "Houshou Marine",
-      "type": "Oshi",
-      "color": "Red",
-      "rarity": "SEC",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-3] Ahoy! [1/Turn]Bloom 1 of your holomem with #Gen 3 that bloomed this turn once more using a holomem from your hand. / SP Oshi Skill: [holo Power：-2] Set Sail~! [1/Game]Deal 50 special damage for each holomem stacked to your 〈Houshou Marine〉 center holomem to your opponent's center holomem or collab holomem.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
-    },
-    {
       "id": "hBP02-004",
       "number": "hBP02-004",
       "name": "Sakamata Chloe",
@@ -3975,22 +3494,6 @@ window.HOCG_DATA = {
       "life": 5,
       "artIndex": 1,
       "note": "Oshi Ultra Rare (Alt Art)"
-    },
-    {
-      "id": "hBP02-004-SEC",
-      "number": "hBP02-004",
-      "name": "Sakamata Chloe",
-      "type": "Oshi",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-1] Poe Poe Poe~ [1/Turn]Usable if your center holomem is 〈Sakamata Chloe〉:Look at the top 3 cards of your deck. Archive all of those cards, or return them to the top of the deck in any order. / SP Oshi Skill: [holo Power：-3] Life Reset Button [1/Game]Count the number of cards in your hand, return [all of your hand cards and all of your archived holomem] to deck and shuffle it. Then, draw 1 card for each card returned from hand to deck.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
     },
     {
       "id": "hBP02-005",
@@ -4441,29 +3944,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP02-013-UR",
-      "number": "hBP02-013",
-      "name": "Shirakami Fubuki",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+1",
-        "GAMERS",
-        "Kemomimi",
-        "Painting"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: Mascots Feast 80+ This Arts gets +20 for each mascot on your stage.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP02-014",
       "number": "hBP02-014",
       "name": "Shirogane Noel",
@@ -4664,27 +4144,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-017-UR",
-      "number": "hBP02-017",
-      "name": "Shirogane Noel",
-      "type": "Buzz holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+3",
-        "Alcohol"
-      ],
-      "bloom": "1st",
-      "hp": 260,
-      "text": "Arts: Soft & Fluffy Musclehead Lady Knight 50 / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP02-018",
@@ -5027,28 +4486,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP02-023-UR",
-      "number": "hBP02-023",
-      "name": "Pavolia Reine",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "ID",
-        "ID+Gen+2",
-        "Bird",
-        "Painting"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Peacock Dance 100+ This Arts gets +20 for every cheer color on your stage.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP02-024",
       "number": "hBP02-024",
       "name": "Ookami Mio",
@@ -5259,28 +4696,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-027-UR",
-      "number": "hBP02-027",
-      "name": "Ookami Mio",
-      "type": "Buzz holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi",
-        "Cooking"
-      ],
-      "bloom": "1st",
-      "hp": 240,
-      "text": "Arts: Tarot's Guidance 60+ You may archive the top card of your deck:If the archived card is a holomem, this Arts gets +20. If it is a support card, this Arts gets +50. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP02-028",
@@ -5580,28 +4995,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP02-033-UR",
-      "number": "hBP02-033",
-      "name": "Houshou Marine",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+3",
-        "Painting",
-        "Sea"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: You Guys~? Isn't Your Captain Cute? 80+ This Arts gets +20 for each holomem stacked to this holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP02-034",
       "number": "hBP02-034",
       "name": "Nakiri Ayame",
@@ -5661,27 +5054,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-034-UR",
-      "number": "hBP02-034",
-      "name": "Nakiri Ayame",
-      "type": "Buzz holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Shooter"
-      ],
-      "bloom": "1st",
-      "hp": 250,
-      "text": "Arts: I laugh 50 / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP02-035",
@@ -6008,27 +5380,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP02-040-UR",
-      "number": "hBP02-040",
-      "name": "Sakamata Chloe",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "holoX",
-        "Sea"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: holoX-lot 100+ You may reveal the top 3 cards of your deck:This Arts gets +20 for each holomem revealed. Then, archive the revealed cards.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP02-041",
       "number": "hBP02-041",
       "name": "Nekomata Okayu",
@@ -6091,28 +5442,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-041-UR",
-      "number": "hBP02-041",
-      "name": "Nekomata Okayu",
-      "type": "Buzz holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi",
-        "Singing"
-      ],
-      "bloom": "1st",
-      "hp": 230,
-      "text": "Arts: Poison Cat 50 You may archive 1 blue cheer from this holomem:Deal 20 special damage to your opponent's center holomem and 1 of their back holomem. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP02-042",
@@ -6384,26 +5713,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-047-UR",
-      "number": "hBP02-047",
-      "name": "Murasaki Shion",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Violet Magic 80 Deal 20 special damage for each of your opponent's center holomem's cheers to your opponent's center holomem and collab holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP02-048",
@@ -6730,27 +6039,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP02-053-UR",
-      "number": "hBP02-053",
-      "name": "Kureiji Ollie",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "ID",
-        "ID+Gen+2",
-        "Language"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Calculated Strategy 100+ If you have 2 or more 2nd holomem with #ID Gen 2 on your stage, this Arts gets +40.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP02-054",
       "number": "hBP02-054",
       "name": "Mori Calliope",
@@ -7075,27 +6363,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP02-059-UR",
-      "number": "hBP02-059",
-      "name": "Mori Calliope",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "EN",
-        "Myth",
-        "Singing"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Featuring Myth 80+ If you have 4 or more holomem with #Myth in your archive, this Arts gets +40. Then, if you have 8 or more, this Arts gets +40.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP02-060",
       "number": "hBP02-060",
       "name": "Yuzuki Choco",
@@ -7367,28 +6634,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-064-UR",
-      "number": "hBP02-064",
-      "name": "Ninomae Ina'nis",
-      "type": "Buzz holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "EN",
-        "Myth",
-        "Painting",
-        "Sea"
-      ],
-      "bloom": "1st",
-      "hp": 250,
-      "text": "Arts: Archaic Smile 60+ If you have 5 or more holomem with #Myth in your archive, you may reattach 1 cheer from this holomem to your other holomem. Then, if you have 10 or more, this Arts gets +50. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP02-065",
@@ -8447,20 +7692,50 @@ window.HOCG_DATA = {
       "note": "S Rarity"
     },
     {
-      "id": "hBP02-084-SEC",
+      "id": "hBP02-084",
       "number": "hBP02-084",
       "name": "Mikkorone 24",
       "type": "Support・Event・LIMITED",
       "color": "",
-      "rarity": "SEC",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
+      "rarity": "U",
+      "set": "Booster Pack 4 (Curious Universe)",
+      "release": "2026-07 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hBP02-084-SR",
+      "number": "hBP02-084",
+      "name": "Mikkorone 24",
+      "type": "Support・Event・LIMITED",
+      "color": "",
+      "rarity": "SR",
+      "set": "Booster Pack 4 (Curious Universe)",
+      "release": "2026-07 EN",
       "bloom": "",
       "hp": "",
       "text": "",
       "market": [],
-      "artIndex": 2,
-      "note": "SEC Rarity"
+      "artIndex": 0,
+      "note": "SR Rarity"
+    },
+    {
+      "id": "hBP02-084-U",
+      "number": "hBP02-084",
+      "name": "Mikkorone 24",
+      "type": "Support・Event・LIMITED",
+      "color": "",
+      "rarity": "U",
+      "set": "Booster Pack 4 (Curious Universe)",
+      "release": "2026-07 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": [],
+      "artIndex": 1,
+      "note": "U Rarity"
     },
     {
       "id": "hBP02-085",
@@ -9354,126 +8629,6 @@ window.HOCG_DATA = {
       "note": "S Rarity"
     },
     {
-      "id": "hSD02-009",
-      "number": "hSD02-009",
-      "name": "Nakiri Ayame",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: AyaFubuMi's \"Aya\" 60",
-      "market": []
-    },
-    {
-      "id": "hSD02-009-SR",
-      "number": "hSD02-009",
-      "name": "Nakiri Ayame",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: AyaFubuMi's \"Aya\" 60",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
-      "id": "hSD03-009",
-      "number": "hSD03-009",
-      "name": "Nekomata Okayu",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hSD03-009-SR",
-      "number": "hSD03-009",
-      "name": "Nekomata Okayu",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
-      "id": "hSD04-009",
-      "number": "hSD04-009",
-      "name": "Yuzuki Choco",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Cooking"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hSD04-009-SR",
-      "number": "hSD04-009",
-      "name": "Yuzuki Choco",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "SR",
-      "set": "Booster Pack 2",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Cooking"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
       "id": "hBP03-001",
       "number": "hBP03-001",
       "name": "Himemori Luna",
@@ -9566,22 +8721,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare (Alt Art)"
     },
     {
-      "id": "hBP03-002-SEC",
-      "number": "hBP03-002",
-      "name": "Shishiro Botan",
-      "type": "Oshi",
-      "color": "Green",
-      "rarity": "SEC",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] poi [1/Turn]Send 1 cheer from your archive to your back holomem 〈Shishiro Botan〉. / SP Oshi Skill: [holo Power：-2] Sniping [1/Game]Usable if your center holomem is green:Deal 100 special damage to your opponent's center holomem other than Debut.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
-    },
-    {
       "id": "hBP03-003",
       "number": "hBP03-003",
       "name": "Sakura Miko",
@@ -9626,22 +8765,6 @@ window.HOCG_DATA = {
       "life": 5,
       "artIndex": 1,
       "note": "Oshi Ultra Rare (Alt Art)"
-    },
-    {
-      "id": "hBP03-003-SEC",
-      "number": "hBP03-003",
-      "name": "Sakura Miko",
-      "type": "Oshi",
-      "color": "Red",
-      "rarity": "SEC",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Are 35P Making a Comeback?! [1/Turn]You may roll a die once:If it is 1, 2, 4 or 6, return 1 〈35P〉 from your archive to hand. If it is 3 or 5, return 2 〈35P〉 from your archive to hand. / SP Oshi Skill: [holo Power：-2] The Strength to not Give Up [1/Game]Usable if your center holomem is red:Choose any number of cards from your hand and return them to the bottom of the deck in any order. Then, draw cards until your hand has 5 cards.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
     },
     {
       "id": "hBP03-004",
@@ -9736,22 +8859,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare (Alt Art)"
     },
     {
-      "id": "hBP03-005-SEC",
-      "number": "hBP03-005",
-      "name": "Tokoyami Towa",
-      "type": "Oshi",
-      "color": "Purple",
-      "rarity": "SEC",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Devil's Voice [1/Turn]During this turn, your [center holomem and collab holomem] with #Singing get Arts+20. / SP Oshi Skill: [holo Power：-2] Diabolical Deeds [1/Game]During your opponent's turn, usable when your 〈Tokoyami Towa〉 is downed:Return 2 cheers each from your opponent's center holomem and collab holomem to the bottom of the cheer deck in any order.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
-    },
-    {
       "id": "hBP03-006",
       "number": "hBP03-006",
       "name": "Inugami Korone",
@@ -9842,22 +8949,6 @@ window.HOCG_DATA = {
       "life": 5,
       "artIndex": 1,
       "note": "Oshi Ultra Rare (Alt Art)"
-    },
-    {
-      "id": "hBP03-007-SEC",
-      "number": "hBP03-007",
-      "name": "Tsunomaki Watame",
-      "type": "Oshi",
-      "color": "Yellow",
-      "rarity": "SEC",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Welcome to the Member Sheep! [1/Turn]Reveal 1 fan from your deck, and add it to hand. Then, shuffle the deck. / SP Oshi Skill: [holo Power：-2] Watame isn't at fault, right? [1/Game]Send the top 2 cards of your cheer deck to 1 of your 〈Tsunomaki Watame〉.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
     },
     {
       "id": "hBP03-008",
@@ -10230,27 +9321,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP03-014-UR",
-      "number": "hBP03-014",
-      "name": "Himemori Luna",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+4",
-        "Baby"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: Good Work Today 100+ If 〈Lu-knights〉 is attached to this holomen, this Arts gets +50.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP03-015",
       "number": "hBP03-015",
       "name": "Todoroki Hajime",
@@ -10310,27 +9380,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP03-015-UR",
-      "number": "hBP03-015",
-      "name": "Todoroki Hajime",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "DEV_IS",
-        "ReGLOSS",
-        "Baby"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: This is the Power of this Badass 110+ If you have 4 or more back holomem with #ReGLOSS, this holomem gets Arts+40.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP03-016",
@@ -10673,28 +9722,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP03-021-UR",
-      "number": "hBP03-021",
-      "name": "Shishiro Botan",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+5",
-        "Kemomimi",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: God-Tier Aim 110 If your Oshi holomem is 〈Shishiro Botan〉, you may archive 1 cheer from your back holomem:Deal 40 special damage to your opponent's center holomem or collab holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP03-022",
       "number": "hBP03-022",
       "name": "Aki Rosenthal",
@@ -10876,26 +9903,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP03-024-UR",
-      "number": "hBP03-024",
-      "name": "Kazama Iroha",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "holoX"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Kazama Attacc 100+ If 2 or more non-green cheers are attached to this holomem, this Arts gets +50.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP03-025",
@@ -11222,27 +10229,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP03-030-UR",
-      "number": "hBP03-030",
-      "name": "Sakura Miko",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+0",
-        "Baby"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Elite Shrine Maiden 120+ This Arts gets +20 for each 〈35P〉 attached to this holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP03-031",
       "number": "hBP03-031",
       "name": "Akai Haato",
@@ -11443,27 +10429,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP03-034-UR",
-      "number": "hBP03-034",
-      "name": "Akai Haato",
-      "type": "Buzz holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+1",
-        "Cooking"
-      ],
-      "bloom": "1st",
-      "hp": 240,
-      "text": "Arts: Red or Rouge 40+ You may roll a die once:If it is odd, deal 20 special damage to your opponent's center holomem and collab holomem. If it is even, this Arts gets +40. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP03-035",
@@ -11932,27 +10897,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP03-043-UR",
-      "number": "hBP03-043",
-      "name": "Fuwawa Abyssgard",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "EN",
-        "Advent",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: I Love Donuts 60",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP03-044",
@@ -12677,28 +11621,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP03-056-UR",
-      "number": "hBP03-056",
-      "name": "Tokoyami Towa",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+4",
-        "Singing",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Breaking Out of the Stereotypes 30 Deal 30 special damage to your opponent's center holomem or collab holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP03-057",
       "number": "hBP03-057",
       "name": "Robocosan",
@@ -13225,27 +12147,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP03-066-UR",
-      "number": "hBP03-066",
-      "name": "Inugami Korone",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "GAMERS",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 210,
-      "text": "Arts: The Biggest Disaster 120+ If the target of this Arts is your opponent's 2nd holomem, you may archive 1 1st holomem stacked to this holomem:This Arts gets +50.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP03-067",
       "number": "hBP03-067",
       "name": "Tsunomaki Watame",
@@ -13584,28 +12485,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP03-072-UR",
-      "number": "hBP03-072",
-      "name": "Tsunomaki Watame",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+4",
-        "Kemomimi",
-        "Singing"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Watame Night Fever!! 80+ [Center Position Only]If 6 or more cheers are attached to this holomem, during this turn, this holomem and your collab holomem get Arts+100.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP03-073",
@@ -13948,28 +12827,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP03-078-UR",
-      "number": "hBP03-078",
-      "name": "Ayunda Risu",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "ID",
-        "ID+Gen+1",
-        "Kemomimi",
-        "Singing"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Squirrel Girl from the Magical Forest 50+ ■If a green cheer is attached to this holomem, this Arts gets +50. ■If a blue cheer is attached to this holomem, this Arts gets +50.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP03-079",
       "number": "hBP03-079",
       "name": "Shiranui Flare",
@@ -14029,27 +12886,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP03-079-UR",
-      "number": "hBP03-079",
-      "name": "Shiranui Flare",
-      "type": "Buzz holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "JP",
-        "Gen+3",
-        "Half-Elf"
-      ],
-      "bloom": "1st",
-      "hp": 240,
-      "text": "Arts: Sunrise Cheer 50+ If 3 or more cheers are attached to this holomem, this Arts gets +30. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP03-080",
@@ -14714,6 +13550,52 @@ window.HOCG_DATA = {
       "note": "S Rarity"
     },
     {
+      "id": "hBP03-093",
+      "number": "hBP03-093",
+      "name": "hololive Gen 4",
+      "type": "Support・Event・LIMITED",
+      "color": "",
+      "rarity": "U",
+      "set": "Booster Pack 4 (Curious Universe)",
+      "release": "2026-07 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hBP03-093-U",
+      "number": "hBP03-093",
+      "name": "hololive Gen 4",
+      "type": "Support・Event・LIMITED",
+      "color": "",
+      "rarity": "U",
+      "set": "Booster Pack 4 (Curious Universe)",
+      "release": "2026-07 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": [],
+      "artIndex": 0,
+      "note": "U Rarity"
+    },
+    {
+      "id": "hBP03-093-S",
+      "number": "hBP03-093",
+      "name": "hololive Gen 4",
+      "type": "Support・Event・LIMITED",
+      "color": "",
+      "rarity": "S",
+      "set": "Booster Pack 4 (Curious Universe)",
+      "release": "2026-07 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": [],
+      "artIndex": 1,
+      "note": "S Rarity"
+    },
+    {
       "id": "hBP03-094",
       "number": "hBP03-094",
       "name": "FPS Stream",
@@ -15317,182 +14199,6 @@ window.HOCG_DATA = {
       "market": []
     },
     {
-      "id": "hY01-001",
-      "number": "hY01-001",
-      "name": "White Cheer",
-      "type": "Cheer",
-      "color": "White",
-      "rarity": "C",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hY02-001",
-      "number": "hY02-001",
-      "name": "Green Cheer",
-      "type": "Cheer",
-      "color": "Green",
-      "rarity": "C",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hY03-001",
-      "number": "hY03-001",
-      "name": "Red Cheer",
-      "type": "Cheer",
-      "color": "Red",
-      "rarity": "C",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hY04-001",
-      "number": "hY04-001",
-      "name": "Blue Cheer",
-      "type": "Cheer",
-      "color": "Blue",
-      "rarity": "C",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hY05-001",
-      "number": "hY05-001",
-      "name": "Purple Cheer",
-      "type": "Cheer",
-      "color": "Purple",
-      "rarity": "C",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hY06-001",
-      "number": "hY06-001",
-      "name": "Yellow Cheer",
-      "type": "Cheer",
-      "color": "Yellow",
-      "rarity": "C",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hBP02-084",
-      "number": "hBP02-084",
-      "name": "Mikkorone 24",
-      "type": "Support・Event・LIMITED",
-      "color": "",
-      "rarity": "U",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hBP02-084-SR",
-      "number": "hBP02-084",
-      "name": "Mikkorone 24",
-      "type": "Support・Event・LIMITED",
-      "color": "",
-      "rarity": "SR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": [],
-      "artIndex": 0,
-      "note": "SR Rarity"
-    },
-    {
-      "id": "hBP02-084-U",
-      "number": "hBP02-084",
-      "name": "Mikkorone 24",
-      "type": "Support・Event・LIMITED",
-      "color": "",
-      "rarity": "U",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": [],
-      "artIndex": 1,
-      "note": "U Rarity"
-    },
-    {
-      "id": "hBP03-093",
-      "number": "hBP03-093",
-      "name": "hololive Gen 4",
-      "type": "Support・Event・LIMITED",
-      "color": "",
-      "rarity": "U",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": []
-    },
-    {
-      "id": "hBP03-093-U",
-      "number": "hBP03-093",
-      "name": "hololive Gen 4",
-      "type": "Support・Event・LIMITED",
-      "color": "",
-      "rarity": "U",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": [],
-      "artIndex": 0,
-      "note": "U Rarity"
-    },
-    {
-      "id": "hBP03-093-S",
-      "number": "hBP03-093",
-      "name": "hololive Gen 4",
-      "type": "Support・Event・LIMITED",
-      "color": "",
-      "rarity": "S",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "hp": "",
-      "text": "",
-      "market": [],
-      "artIndex": 1,
-      "note": "S Rarity"
-    },
-    {
       "id": "hBP04-001",
       "number": "hBP04-001",
       "name": "Hakui Koyori",
@@ -15537,22 +14243,6 @@ window.HOCG_DATA = {
       "life": 5,
       "artIndex": 1,
       "note": "Oshi Ultra Rare (Alt Art)"
-    },
-    {
-      "id": "hBP04-001-SEC",
-      "number": "hBP04-001",
-      "name": "Hakui Koyori",
-      "type": "Oshi",
-      "color": "White",
-      "rarity": "SEC",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Koyori Experimenting [1/Turn]During this turn, 1 of your 〈Hakui Koyori〉 that has a support card with #KOYO LABO attached gets Arts+30. / SP Oshi Skill: [holo Power：-2] Assistants, mmmwah! [1/Game]Usable if your 〈Hakui Koyori〉 with 〈Koyori's Assistants〉 attached would take damage from the opponent during the opponent's turn:1 of those holomem takes -100 damage.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
     },
     {
       "id": "hBP04-002",
@@ -15693,22 +14383,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare (Alt Art)"
     },
     {
-      "id": "hBP04-004-SEC",
-      "number": "hBP04-004",
-      "name": "Yukihana Lamy",
-      "type": "Oshi",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-1] I Love You [1/Turn]Usable when your holomem is downed during the opponent's turn:Return 1 fan attached to that holomem to hand. / SP Oshi Skill: [holo Power：-3] Vroom, Bari Bari Bari Bari [1/Game]Choose 1 of your 〈Yukihana Lamy〉. During this turn, the chosen holomem deals +100 special damage to 1 of your opponent's holomem, and if the chosen holomem downed an opponent's holomem, draw 2 cards.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
-    },
-    {
       "id": "hBP04-005",
       "number": "hBP04-005",
       "name": "La+ Darknesss",
@@ -15755,22 +14429,6 @@ window.HOCG_DATA = {
       "note": "Oshi Ultra Rare (Alt Art)"
     },
     {
-      "id": "hBP04-005-SEC",
-      "number": "hBP04-005",
-      "name": "La+ Darknesss",
-      "type": "Oshi",
-      "color": "Purple",
-      "rarity": "SEC",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Leader's Work [1/Turn]During this turn, if you would roll a die 3 times for 1 ability of your holomem, regard all numbers on the faces of that die as 5. / SP Oshi Skill: [holo Power：-3] We Are Secret Society holoX! [1/Game]Choose 1 of your holomem with #holoX. During this turn, the chosen holomem's Arts may be used without cheer requirements.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
-    },
-    {
       "id": "hBP04-006",
       "number": "hBP04-006",
       "name": "Oozora Subaru",
@@ -15815,22 +14473,6 @@ window.HOCG_DATA = {
       "life": 5,
       "artIndex": 1,
       "note": "Oshi Ultra Rare (Alt Art)"
-    },
-    {
-      "id": "hBP04-006-SEC",
-      "number": "hBP04-006",
-      "name": "Oozora Subaru",
-      "type": "Oshi",
-      "color": "Yellow",
-      "rarity": "SEC",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "bloom": "",
-      "text": "Oshi Skill: [holo Power：-2] Mental! Physical! Passion! [1/Turn]Usable if your 〈Oozora Subaru〉 would take damage from the opponent during the opponent's turn:All of your 〈Oozora Subaru〉 take -30 damage. / SP Oshi Skill: [holo Power：-2] Comedic Reactions [1/Game]Usable if your life is 3 or less:During this turn, your center holomem 〈Oozora Subaru〉 gets Arts+100.",
-      "market": [],
-      "life": 5,
-      "artIndex": 2,
-      "note": "Secret Rare (Alt Art/Signed)"
     },
     {
       "id": "hBP04-007",
@@ -16201,27 +14843,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-013-UR",
-      "number": "hBP04-013",
-      "name": "Hakui Koyori",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "JP",
-        "holoX",
-        "Kemomimi"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Koyori's Awakening 160 If a support card with #KOYO LABO is attached to this holomem, reveal 1 support card with #KOYO LABO from your deck, and add it to hand. Then, shuffle the deck.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-014",
@@ -16886,27 +15507,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-025-UR",
-      "number": "hBP04-025",
-      "name": "Juufuutei Raden",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "DEV_IS",
-        "ReGLOSS",
-        "Alcohol"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Looks Like the Next Act Is Ready 140+ If your Oshi holomem is 〈Juufuutei Raden〉, you may reattach 2 cheers from this holomem each to 2 of your back holomem:This Arts gets +30.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-026",
@@ -17579,28 +16179,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP04-037-UR",
-      "number": "hBP04-037",
-      "name": "Ichijou Ririka",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "DEV_IS",
-        "ReGLOSS",
-        "Cooking",
-        "Language"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Oh? Wanna Fight? 80 Deal 50 special damage to your opponent's center holomem. If you used 〈Struggle Meal〉 this turn, deal 30 special damage to your opponent's center holomem or collab holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP04-038",
       "number": "hBP04-038",
       "name": "Houshou Marine",
@@ -17855,26 +16433,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-042-UR",
-      "number": "hBP04-042",
-      "name": "Kaela Kovalskia",
-      "type": "Buzz holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "ID",
-        "IDGen+3"
-      ],
-      "bloom": "1st",
-      "hp": 240,
-      "text": "Arts: holoh3ro 30 If your stage has other holomem with #ID Gen 3, draw 1 card. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-043",
@@ -18217,28 +16775,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP04-048-UR",
-      "number": "hBP04-048",
-      "name": "Yukihana Lamy",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "JP",
-        "Gen+5",
-        "Half-Elf",
-        "Alcohol"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: May Today Be a Blessed Day 130 You may archive 1 cheer from this holomem:Deal 30 special damage to 1 of your opponent's center holomem or back holomem.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP04-049",
       "number": "hBP04-049",
       "name": "Moona Hoshinova",
@@ -18490,26 +17026,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-053-UR",
-      "number": "hBP04-053",
-      "name": "Shiori Novella",
-      "type": "Buzz holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "EN",
-        "Advent"
-      ],
-      "bloom": "1st",
-      "hp": 230,
-      "text": "Arts: Bookmark of a Memory 70 You may reveal the top card of your holo Power:If the revealed card is a holomem with #EN, deal 20 special damage to 1 of your opponent's holomem. Then, return the revealed card to the bottom of the holo Power face down. / Extra: If this holomem is downed, you get life-2",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-054",
@@ -18876,27 +17392,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-059-UR",
-      "number": "hBP04-059",
-      "name": "La+ Darknesss",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "JP",
-        "holoX",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Legend of My Supremacy 120 Deal 10 special damage to your opponent's center holomem for each time a die was rolled by your abilities this turn.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-060",
@@ -19281,27 +17776,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP04-066-UR",
-      "number": "hBP04-066",
-      "name": "Koseki Bijou",
-      "type": "holomem",
-      "color": "Purple",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "EN",
-        "Advent",
-        "Baby"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: I Hope You'll Feel My Radiance! 80+ This Arts gets +10 for each cheer in your opponent's archive.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP04-067",
       "number": "hBP04-067",
       "name": "Oozora Subaru",
@@ -19629,28 +18103,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP04-072-UR",
-      "number": "hBP04-072",
-      "name": "Oozora Subaru",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "JP",
-        "Gen+2",
-        "Singing",
-        "Bird"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Sunshine Girl 100+ This Arts gets +10 for each cheer on both players' stage. However, only up to 8 cheers are counted.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP04-073",
       "number": "hBP04-073",
       "name": "Anya Melfissa",
@@ -19975,27 +18427,6 @@ window.HOCG_DATA = {
       "note": "SR Rarity"
     },
     {
-      "id": "hBP04-078-UR",
-      "number": "hBP04-078",
-      "name": "Anya Melfissa",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "ID",
-        "IDGen+2",
-        "Language"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Dungeon Adventure 160",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
-    },
-    {
       "id": "hBP04-079",
       "number": "hBP04-079",
       "name": "Natsuiro Matsuri",
@@ -20196,27 +18627,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-082-UR",
-      "number": "hBP04-082",
-      "name": "Natsuiro Matsuri",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "JP",
-        "Gen+1",
-        "Shooter"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: Found a Favorite 60+ This Arts gets +20 for each of this holomem's cheers.",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-083",
@@ -20429,28 +18839,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "SR Rarity"
-    },
-    {
-      "id": "hBP04-086-UR",
-      "number": "hBP04-086",
-      "name": "Momosuzu Nene",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "UR",
-      "set": "Booster Pack 4 (Curious Universe)",
-      "release": "2026-07 EN",
-      "tags": [
-        "JP",
-        "Gen+5",
-        "Singing",
-        "Painting"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Lots of Husbands 50",
-      "market": [],
-      "artIndex": 2,
-      "note": "UR Rarity"
     },
     {
       "id": "hBP04-087",
@@ -21368,6 +19756,286 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hBP05-080",
+      "number": "hBP05-080",
+      "name": "SorAZ Celebration",
+      "type": "Support",
+      "color": "Neutral",
+      "rarity": "U",
+      "set": "Booster Pack 5",
+      "tags": [
+        "Event",
+        "LIMITED",
+        "Search"
+      ],
+      "text": "Event LIMITED. Busca en tu deck cualquier carta.",
+      "market": []
+    },
+    {
+      "id": "hSD01-001",
+      "number": "hSD01-001",
+      "name": "Tokino Sora",
+      "type": "Oshi",
+      "color": "White",
+      "rarity": "OSR",
+      "set": "Start Deck 1",
+      "release": "2025-07-11 EN",
+      "life": 5,
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Oshi"
+      ],
+      "bloom": "",
+      "hp": "",
+      "role": "Oshi de Consistencia",
+      "text": "Oshi blanca. Permite buscar recursos o curar holomems de tu escenario.",
+      "synergy": "Combina muy bien con cartas de Sora de Start Deck y Booster 1.",
+      "market": [
+        {
+          "vendor": "TCGplayer",
+          "status": "Referencia",
+          "url": "https://www.tcgplayer.com/"
+        }
+      ],
+      "sourceId": "official-card-list-en"
+    },
+    {
+      "id": "hSD01-001-OSR",
+      "number": "hSD01-001",
+      "name": "Tokino Sora",
+      "type": "Oshi",
+      "color": "White",
+      "rarity": "OSR",
+      "set": "Start Deck 1",
+      "release": "2025-07-11 EN",
+      "life": 5,
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Oshi"
+      ],
+      "bloom": "",
+      "hp": "",
+      "role": "Oshi de Consistencia",
+      "text": "Oshi blanca. Permite buscar recursos o curar holomems de tu escenario.",
+      "synergy": "Combina muy bien con cartas de Sora de Start Deck y Booster 1.",
+      "market": [
+        {
+          "vendor": "TCGplayer",
+          "status": "Referencia",
+          "url": "https://www.tcgplayer.com/"
+        }
+      ],
+      "sourceId": "official-card-list-en",
+      "artIndex": 0,
+      "note": "Oshi Rare"
+    },
+    {
+      "id": "hSD01-002",
+      "number": "hSD01-002",
+      "name": "AZKi",
+      "type": "Oshi",
+      "color": "Green",
+      "rarity": "OSR",
+      "set": "Start Deck 1",
+      "release": "2025-07-11 EN",
+      "life": 5,
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Oshi"
+      ],
+      "bloom": "",
+      "hp": "",
+      "role": "Oshi de Tempo",
+      "text": "Oshi verde. Aumenta el ratio de robo o acelera la preparacion de Cheers.",
+      "synergy": "Ideal para mazos rapidos de AZKi.",
+      "market": [
+        {
+          "vendor": "TCGplayer",
+          "status": "Referencia",
+          "url": "https://www.tcgplayer.com/"
+        }
+      ],
+      "sourceId": "official-card-list-en"
+    },
+    {
+      "id": "hSD01-002-OSR",
+      "number": "hSD01-002",
+      "name": "AZKi",
+      "type": "Oshi",
+      "color": "Green",
+      "rarity": "OSR",
+      "set": "Start Deck 1",
+      "release": "2025-07-11 EN",
+      "life": 5,
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Oshi"
+      ],
+      "bloom": "",
+      "hp": "",
+      "role": "Oshi de Tempo",
+      "text": "Oshi verde. Aumenta el ratio de robo o acelera la preparacion de Cheers.",
+      "synergy": "Ideal para mazos rapidos de AZKi.",
+      "market": [
+        {
+          "vendor": "TCGplayer",
+          "status": "Referencia",
+          "url": "https://www.tcgplayer.com/"
+        }
+      ],
+      "sourceId": "official-card-list-en",
+      "artIndex": 0,
+      "note": "Oshi Rare"
+    },
+    {
+      "id": "hSD01-004",
+      "number": "hSD01-004",
+      "name": "Tokino Sora",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "R",
+      "set": "Start Deck 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 120,
+      "text": "Habilidad: Cura 20 de dano a una de tus holomems al entrar.",
+      "market": []
+    },
+    {
+      "id": "hSD01-005",
+      "number": "hSD01-005",
+      "name": "Tokino Sora",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "U",
+      "set": "Start Deck 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 130,
+      "text": "Arts: Hace 50 de dano con 2 Cheers blancas.",
+      "market": []
+    },
+    {
+      "id": "hSD01-006",
+      "number": "hSD01-006",
+      "name": "Tokino Sora",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "RR",
+      "set": "Start Deck 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 200,
+      "text": "Arts: Hace 100 de dano.",
+      "market": []
+    },
+    {
+      "id": "hSD01-009",
+      "number": "hSD01-009",
+      "name": "AZKi",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "R",
+      "set": "Start Deck 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 120,
+      "text": "Habilidad: Gana 1 Cheer del archive al entrar.",
+      "market": []
+    },
+    {
+      "id": "hSD01-010",
+      "number": "hSD01-010",
+      "name": "AZKi",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "U",
+      "set": "Start Deck 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 130,
+      "text": "Arts: Hace 50 de dano con 2 Cheers verdes.",
+      "market": []
+    },
+    {
+      "id": "hSD01-011",
+      "number": "hSD01-011",
+      "name": "AZKi",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "RR",
+      "set": "Start Deck 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 dano. Collab: Roba 1 carta.",
+      "market": []
+    },
+    {
+      "id": "hSD01-012",
+      "number": "hSD01-012",
+      "name": "Airani Iofifteen",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "C",
+      "set": "Start Deck 1",
+      "tags": [
+        "ID",
+        "ID Gen 1",
+        "Debut"
+      ],
+      "bloom": "Debut",
+      "hp": 70,
+      "text": "Collab: Permite mover 1 Cheer del archive al center.",
+      "market": []
+    },
+    {
+      "id": "hSD01-016",
+      "number": "hSD01-016",
+      "name": "Harusaki Nodoka",
+      "type": "Support",
+      "color": "Neutral",
+      "rarity": "C",
+      "set": "Start Decks",
+      "tags": [
+        "Staff",
+        "LIMITED",
+        "Draw"
+      ],
+      "bloom": "",
+      "hp": "",
+      "text": "Staff LIMITED. Roba 3 cartas de tu deck.",
+      "market": []
+    },
+    {
       "id": "hSD01-016",
       "number": "hSD01-016",
       "name": "Harusaki Nodoka",
@@ -21394,6 +20062,246 @@ window.HOCG_DATA = {
       "hp": "",
       "text": "",
       "market": []
+    },
+    {
+      "id": "hSD02-009",
+      "number": "hSD02-009",
+      "name": "Nakiri Ayame",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Shooter"
+      ],
+      "bloom": "2nd",
+      "hp": 180,
+      "text": "Arts: AyaFubuMi's \"Aya\" 60",
+      "market": []
+    },
+    {
+      "id": "hSD02-009-SR",
+      "number": "hSD02-009",
+      "name": "Nakiri Ayame",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Shooter"
+      ],
+      "bloom": "2nd",
+      "hp": 180,
+      "text": "Arts: AyaFubuMi's \"Aya\" 60",
+      "market": [],
+      "artIndex": 0,
+      "note": "SR Rarity"
+    },
+    {
+      "id": "hSD02-009",
+      "number": "hSD02-009",
+      "name": "Nakiri Ayame",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Shooter"
+      ],
+      "bloom": "2nd",
+      "hp": 180,
+      "text": "Arts: AyaFubuMi's \"Aya\" 60",
+      "market": []
+    },
+    {
+      "id": "hSD02-009-SR",
+      "number": "hSD02-009",
+      "name": "Nakiri Ayame",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Shooter"
+      ],
+      "bloom": "2nd",
+      "hp": 180,
+      "text": "Arts: AyaFubuMi's \"Aya\" 60",
+      "market": [],
+      "artIndex": 0,
+      "note": "SR Rarity"
+    },
+    {
+      "id": "hSD03-009",
+      "number": "hSD03-009",
+      "name": "Nekomata Okayu",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "GAMERS",
+        "Kemomimi"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hSD03-009-SR",
+      "number": "hSD03-009",
+      "name": "Nekomata Okayu",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "GAMERS",
+        "Kemomimi"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": [],
+      "artIndex": 0,
+      "note": "SR Rarity"
+    },
+    {
+      "id": "hSD03-009",
+      "number": "hSD03-009",
+      "name": "Nekomata Okayu",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "GAMERS",
+        "Kemomimi"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hSD03-009-SR",
+      "number": "hSD03-009",
+      "name": "Nekomata Okayu",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "GAMERS",
+        "Kemomimi"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": [],
+      "artIndex": 0,
+      "note": "SR Rarity"
+    },
+    {
+      "id": "hSD04-009",
+      "number": "hSD04-009",
+      "name": "Yuzuki Choco",
+      "type": "holomem",
+      "color": "Purple",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Cooking"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hSD04-009-SR",
+      "number": "hSD04-009",
+      "name": "Yuzuki Choco",
+      "type": "holomem",
+      "color": "Purple",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Cooking"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": [],
+      "artIndex": 0,
+      "note": "SR Rarity"
+    },
+    {
+      "id": "hSD04-009",
+      "number": "hSD04-009",
+      "name": "Yuzuki Choco",
+      "type": "holomem",
+      "color": "Purple",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Cooking"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hSD04-009-SR",
+      "number": "hSD04-009",
+      "name": "Yuzuki Choco",
+      "type": "holomem",
+      "color": "Purple",
+      "rarity": "SR",
+      "set": "Booster Pack 2",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "JP",
+        "Gen+2",
+        "Cooking"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "",
+      "market": [],
+      "artIndex": 0,
+      "note": "SR Rarity"
     },
     {
       "id": "hSD08-002",
@@ -21537,6 +20445,66 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hY01-001",
+      "number": "hY01-001",
+      "name": "White Cheer",
+      "type": "Cheer",
+      "color": "White",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer blanco."
+    },
+    {
+      "id": "hY01-001-C",
+      "number": "hY01-001",
+      "name": "White Cheer",
+      "type": "Cheer",
+      "color": "White",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer blanco.",
+      "artIndex": 0,
+      "note": "Common (Estándar)"
+    },
+    {
+      "id": "hY01-001-SY",
+      "number": "hY01-001",
+      "name": "White Cheer",
+      "type": "Cheer",
+      "color": "White",
+      "rarity": "SY",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer blanco.",
+      "artIndex": 1,
+      "note": "Special Yell (Holográfica)"
+    },
+    {
+      "id": "hY01-001",
+      "number": "hY01-001",
+      "name": "White Cheer",
+      "type": "Cheer",
+      "color": "White",
+      "rarity": "C",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
       "id": "hY01-003",
       "number": "hY01-003",
       "name": "White Cheer",
@@ -21550,70 +20518,6 @@ window.HOCG_DATA = {
         "Shirakami Fubuki"
       ],
       "text": "Produce 1 Cheer blanco.",
-      "market": []
-    },
-    {
-      "id": "hY02-002",
-      "number": "hY02-002",
-      "name": "Green Cheer",
-      "type": "Cheer",
-      "color": "Green",
-      "rarity": "SY",
-      "set": "Booster Pack 2 (Quintet Spectrum)",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "Cheer",
-        "Ookami Mio"
-      ],
-      "text": "Produce 1 Cheer verde.",
-      "market": []
-    },
-    {
-      "id": "hY03-002",
-      "number": "hY03-002",
-      "name": "Red Cheer",
-      "type": "Cheer",
-      "color": "Red",
-      "rarity": "SY",
-      "set": "Booster Pack 2 (Quintet Spectrum)",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "Cheer",
-        "Houshou Marine"
-      ],
-      "text": "Produce 1 Cheer rojo.",
-      "market": []
-    },
-    {
-      "id": "hY04-002",
-      "number": "hY04-002",
-      "name": "Blue Cheer",
-      "type": "Cheer",
-      "color": "Blue",
-      "rarity": "SY",
-      "set": "Booster Pack 2 (Quintet Spectrum)",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "Cheer",
-        "Sakamata Chloe"
-      ],
-      "text": "Produce 1 Cheer azul.",
-      "market": []
-    },
-    {
-      "id": "hY05-002",
-      "number": "hY05-002",
-      "name": "Purple Cheer",
-      "type": "Cheer",
-      "color": "Purple",
-      "rarity": "SY",
-      "set": "Booster Pack 2 (Quintet Spectrum)",
-      "release": "2025-10-17 EN",
-      "tags": [
-        "Cheer",
-        "Murasaki Shion"
-      ],
-      "text": "Produce 1 Cheer morado.",
       "market": []
     },
     {
@@ -21633,86 +20537,6 @@ window.HOCG_DATA = {
       "market": []
     },
     {
-      "id": "hY02-003",
-      "number": "hY02-003",
-      "name": "Green Cheer",
-      "type": "Cheer",
-      "color": "Green",
-      "rarity": "SY",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "Cheer",
-        "Kazama Iroha"
-      ],
-      "text": "Produce 1 Cheer verde.",
-      "market": []
-    },
-    {
-      "id": "hY03-003",
-      "number": "hY03-003",
-      "name": "Red Cheer",
-      "type": "Cheer",
-      "color": "Red",
-      "rarity": "SY",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "Cheer",
-        "Sakura Miko"
-      ],
-      "text": "Produce 1 Cheer rojo.",
-      "market": []
-    },
-    {
-      "id": "hY04-003",
-      "number": "hY04-003",
-      "name": "Blue Cheer",
-      "type": "Cheer",
-      "color": "Blue",
-      "rarity": "SY",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "Cheer",
-        "Hoshimachi Suisei"
-      ],
-      "text": "Produce 1 Cheer azul.",
-      "market": []
-    },
-    {
-      "id": "hY05-003",
-      "number": "hY05-003",
-      "name": "Purple Cheer",
-      "type": "Cheer",
-      "color": "Purple",
-      "rarity": "SY",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "Cheer",
-        "Tokoyami Towa"
-      ],
-      "text": "Produce 1 Cheer morado.",
-      "market": []
-    },
-    {
-      "id": "hY06-002",
-      "number": "hY06-002",
-      "name": "Yellow Cheer",
-      "type": "Cheer",
-      "color": "Yellow",
-      "rarity": "SY",
-      "set": "Booster Pack 3 (Elite Spark)",
-      "release": "2026-04 EN",
-      "tags": [
-        "Cheer",
-        "Tsunomaki Watame"
-      ],
-      "text": "Produce 1 Cheer amarillo.",
-      "market": []
-    },
-    {
       "id": "hY01-006",
       "number": "hY01-006",
       "name": "White Cheer",
@@ -21726,6 +20550,98 @@ window.HOCG_DATA = {
         "Hakui Koyori"
       ],
       "text": "Produce 1 Cheer blanco.",
+      "market": []
+    },
+    {
+      "id": "hY02-001",
+      "number": "hY02-001",
+      "name": "Green Cheer",
+      "type": "Cheer",
+      "color": "Green",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer verde."
+    },
+    {
+      "id": "hY02-001-C",
+      "number": "hY02-001",
+      "name": "Green Cheer",
+      "type": "Cheer",
+      "color": "Green",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer verde.",
+      "artIndex": 0,
+      "note": "Common (Estándar)"
+    },
+    {
+      "id": "hY02-001-SY",
+      "number": "hY02-001",
+      "name": "Green Cheer",
+      "type": "Cheer",
+      "color": "Green",
+      "rarity": "SY",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer verde.",
+      "artIndex": 1,
+      "note": "Special Yell (Holográfica)"
+    },
+    {
+      "id": "hY02-001",
+      "number": "hY02-001",
+      "name": "Green Cheer",
+      "type": "Cheer",
+      "color": "Green",
+      "rarity": "C",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hY02-002",
+      "number": "hY02-002",
+      "name": "Green Cheer",
+      "type": "Cheer",
+      "color": "Green",
+      "rarity": "SY",
+      "set": "Booster Pack 2 (Quintet Spectrum)",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "Cheer",
+        "Ookami Mio"
+      ],
+      "text": "Produce 1 Cheer verde.",
+      "market": []
+    },
+    {
+      "id": "hY02-003",
+      "number": "hY02-003",
+      "name": "Green Cheer",
+      "type": "Cheer",
+      "color": "Green",
+      "rarity": "SY",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "tags": [
+        "Cheer",
+        "Kazama Iroha"
+      ],
+      "text": "Produce 1 Cheer verde.",
       "market": []
     },
     {
@@ -21745,6 +20661,98 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hY03-001",
+      "number": "hY03-001",
+      "name": "Red Cheer",
+      "type": "Cheer",
+      "color": "Red",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer rojo."
+    },
+    {
+      "id": "hY03-001-C",
+      "number": "hY03-001",
+      "name": "Red Cheer",
+      "type": "Cheer",
+      "color": "Red",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer rojo.",
+      "artIndex": 0,
+      "note": "Common (Estándar)"
+    },
+    {
+      "id": "hY03-001-SY",
+      "number": "hY03-001",
+      "name": "Red Cheer",
+      "type": "Cheer",
+      "color": "Red",
+      "rarity": "SY",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer rojo.",
+      "artIndex": 1,
+      "note": "Special Yell (Holográfica)"
+    },
+    {
+      "id": "hY03-001",
+      "number": "hY03-001",
+      "name": "Red Cheer",
+      "type": "Cheer",
+      "color": "Red",
+      "rarity": "C",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hY03-002",
+      "number": "hY03-002",
+      "name": "Red Cheer",
+      "type": "Cheer",
+      "color": "Red",
+      "rarity": "SY",
+      "set": "Booster Pack 2 (Quintet Spectrum)",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "Cheer",
+        "Houshou Marine"
+      ],
+      "text": "Produce 1 Cheer rojo.",
+      "market": []
+    },
+    {
+      "id": "hY03-003",
+      "number": "hY03-003",
+      "name": "Red Cheer",
+      "type": "Cheer",
+      "color": "Red",
+      "rarity": "SY",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "tags": [
+        "Cheer",
+        "Sakura Miko"
+      ],
+      "text": "Produce 1 Cheer rojo.",
+      "market": []
+    },
+    {
       "id": "hY03-004",
       "number": "hY03-004",
       "name": "Red Cheer",
@@ -21758,6 +20766,98 @@ window.HOCG_DATA = {
         "Mikodanyee"
       ],
       "text": "Produce 1 Cheer rojo.",
+      "market": []
+    },
+    {
+      "id": "hY04-001",
+      "number": "hY04-001",
+      "name": "Blue Cheer",
+      "type": "Cheer",
+      "color": "Blue",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer azul."
+    },
+    {
+      "id": "hY04-001-C",
+      "number": "hY04-001",
+      "name": "Blue Cheer",
+      "type": "Cheer",
+      "color": "Blue",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer azul.",
+      "artIndex": 0,
+      "note": "Common (Estándar)"
+    },
+    {
+      "id": "hY04-001-SY",
+      "number": "hY04-001",
+      "name": "Blue Cheer",
+      "type": "Cheer",
+      "color": "Blue",
+      "rarity": "SY",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer azul.",
+      "artIndex": 1,
+      "note": "Special Yell (Holográfica)"
+    },
+    {
+      "id": "hY04-001",
+      "number": "hY04-001",
+      "name": "Blue Cheer",
+      "type": "Cheer",
+      "color": "Blue",
+      "rarity": "C",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hY04-002",
+      "number": "hY04-002",
+      "name": "Blue Cheer",
+      "type": "Cheer",
+      "color": "Blue",
+      "rarity": "SY",
+      "set": "Booster Pack 2 (Quintet Spectrum)",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "Cheer",
+        "Sakamata Chloe"
+      ],
+      "text": "Produce 1 Cheer azul.",
+      "market": []
+    },
+    {
+      "id": "hY04-003",
+      "number": "hY04-003",
+      "name": "Blue Cheer",
+      "type": "Cheer",
+      "color": "Blue",
+      "rarity": "SY",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "tags": [
+        "Cheer",
+        "Hoshimachi Suisei"
+      ],
+      "text": "Produce 1 Cheer azul.",
       "market": []
     },
     {
@@ -21777,6 +20877,98 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hY05-001",
+      "number": "hY05-001",
+      "name": "Purple Cheer",
+      "type": "Cheer",
+      "color": "Purple",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer morado."
+    },
+    {
+      "id": "hY05-001-C",
+      "number": "hY05-001",
+      "name": "Purple Cheer",
+      "type": "Cheer",
+      "color": "Purple",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer morado.",
+      "artIndex": 0,
+      "note": "Common (Estándar)"
+    },
+    {
+      "id": "hY05-001-SY",
+      "number": "hY05-001",
+      "name": "Purple Cheer",
+      "type": "Cheer",
+      "color": "Purple",
+      "rarity": "SY",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer morado.",
+      "artIndex": 1,
+      "note": "Special Yell (Holográfica)"
+    },
+    {
+      "id": "hY05-001",
+      "number": "hY05-001",
+      "name": "Purple Cheer",
+      "type": "Cheer",
+      "color": "Purple",
+      "rarity": "C",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hY05-002",
+      "number": "hY05-002",
+      "name": "Purple Cheer",
+      "type": "Cheer",
+      "color": "Purple",
+      "rarity": "SY",
+      "set": "Booster Pack 2 (Quintet Spectrum)",
+      "release": "2025-10-17 EN",
+      "tags": [
+        "Cheer",
+        "Murasaki Shion"
+      ],
+      "text": "Produce 1 Cheer morado.",
+      "market": []
+    },
+    {
+      "id": "hY05-003",
+      "number": "hY05-003",
+      "name": "Purple Cheer",
+      "type": "Cheer",
+      "color": "Purple",
+      "rarity": "SY",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "tags": [
+        "Cheer",
+        "Tokoyami Towa"
+      ],
+      "text": "Produce 1 Cheer morado.",
+      "market": []
+    },
+    {
       "id": "hY05-004",
       "number": "hY05-004",
       "name": "Purple Cheer",
@@ -21790,6 +20982,66 @@ window.HOCG_DATA = {
         "Yuzuki Choco"
       ],
       "text": "Produce 1 Cheer morado.",
+      "market": []
+    },
+    {
+      "id": "hY06-001",
+      "number": "hY06-001",
+      "name": "Colorless Cheer",
+      "type": "Cheer",
+      "color": "Neutral",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer incoloro."
+    },
+    {
+      "id": "hY06-001-C",
+      "number": "hY06-001",
+      "name": "Colorless Cheer",
+      "type": "Cheer",
+      "color": "Neutral",
+      "rarity": "C",
+      "set": "Start Cheer Set",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "Cheer"
+      ],
+      "text": "Produce 1 Cheer incoloro.",
+      "artIndex": 0,
+      "note": "Common (Estándar)"
+    },
+    {
+      "id": "hY06-001",
+      "number": "hY06-001",
+      "name": "Yellow Cheer",
+      "type": "Cheer",
+      "color": "Yellow",
+      "rarity": "C",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "bloom": "",
+      "hp": "",
+      "text": "",
+      "market": []
+    },
+    {
+      "id": "hY06-002",
+      "number": "hY06-002",
+      "name": "Yellow Cheer",
+      "type": "Cheer",
+      "color": "Yellow",
+      "rarity": "SY",
+      "set": "Booster Pack 3 (Elite Spark)",
+      "release": "2026-04 EN",
+      "tags": [
+        "Cheer",
+        "Tsunomaki Watame"
+      ],
+      "text": "Produce 1 Cheer amarillo.",
       "market": []
     },
     {
@@ -21807,209 +21059,6 @@ window.HOCG_DATA = {
       ],
       "text": "Produce 1 Cheer amarillo.",
       "market": []
-    },
-    {
-      "id": "hBP01-014-UR",
-      "number": "hBP01-014",
-      "name": "Amane Kanata",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "JP",
-        "Gen 4",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 de dano base. Collab: Castiga con dano extra a holomems con dano acumulado.",
-      "synergy": "Apoyado por Oshi Kanata para lograr KOs en un solo golpe.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-023-UR",
-      "number": "hBP01-023",
-      "name": "Tokino Sora",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 210,
-      "text": "Collab: Roba 2 cartas. Arts: Hace 80 de dano.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-027-UR",
-      "number": "hBP01-027",
-      "name": "Vestia Zeta",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "ID",
-        "ID Gen 3",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 200,
-      "text": "Buzz Holomem. Gift V.7: En Collab, puedes lanzar dado para reducir dano.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-043-UR",
-      "number": "hBP01-043",
-      "name": "Usada Pekora",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 3",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 dano. Habilidad: Regresa cualquier holomem 1st del rival a su mano.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-047-UR",
-      "number": "hBP01-047",
-      "name": "AZKi",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Singing",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 220,
-      "text": "Bloom: Recupera 40 HP. Lanza dado; si es impar, recupera hasta 3 Cheers verdes del archive. Arts: Hace 120 dano.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-051-UR",
-      "number": "hBP01-051",
-      "name": "Kazama Iroha",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "HoloX",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 250,
-      "text": "Buzz Holomem. Arts: Hace 50 de dano. Gana +20 por cada Cheer adjunta (max 5).",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-059-UR",
-      "number": "hBP01-059",
-      "name": "Takane Lui",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "HoloX",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 130,
-      "text": "Collab: Si tienes un PC en juego, roba 1 carta.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-067-UR",
-      "number": "hBP01-067",
-      "name": "Takanashi Kiara",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "EN",
-        "Myth",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 dano. Habilidad: Si Kiara es K.O., revive.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-081-UR",
-      "number": "hBP01-081",
-      "name": "Hoshimachi Suisei",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 de dano a cualquier holomem enemiga ( sniper).",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-091-UR",
-      "number": "hBP01-091",
-      "name": "Moona Hoshinova",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "ID",
-        "ID Gen 1",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 dano. Habilidad: Roba 2 cartas al entrar.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa)"
     }
   ]
 };

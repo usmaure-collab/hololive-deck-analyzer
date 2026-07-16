@@ -1132,7 +1132,8 @@
       c.featuredRarity === "SEC" || 
       c.featuredRarity === "OUR" || 
       c.featuredRarity === "UR" || 
-      c.featuredRarity === "SY"
+      c.featuredRarity === "SY" ||
+      c.featuredRarity === "SR"
     );
     
     if (gachaCarouselCards.length <= 3) return;
