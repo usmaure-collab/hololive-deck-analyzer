@@ -1096,6 +1096,77 @@
       .slice(0, limit);
   }
 
+  // --- Carousel Logic ---
+  let gachaCarouselIndex = 0;
+  let gachaCarouselInterval = null;
+  let gachaCarouselCards = [];
+
+  function updateGachaCarousel() {
+    const container = document.getElementById("gacha-carousel-container");
+    const progress = document.getElementById("gacha-carousel-progress");
+    if (!container || gachaCarouselCards.length === 0) return;
+
+    container.classList.add("carousel-fade-out");
+    
+    setTimeout(() => {
+      const displayCards = [];
+      for (let i = 0; i < 3; i++) {
+        displayCards.push(gachaCarouselCards[(gachaCarouselIndex + i) % gachaCarouselCards.length]);
+      }
+
+      container.innerHTML = displayCards.map((card, index) => `
+        <button class="gacha-featured-card rarity-${rarityClass(card.featuredRarity)}" style="--feature-index:${index}; animation: none;" data-action="open-card-modal" data-id="${escapeAttr(card.id)}" data-artidx="${card.featuredArtIndex}" aria-label="Ver ${escapeAttr(card.name)}">
+          ${renderCardFrame(card, card.featuredArtIndex, card.featuredRarity, true)}
+          <span class="gacha-featured-rarity">${escapeHtml(card.featuredRarity)}</span>
+          <span class="gacha-featured-name">${escapeHtml(card.name)}</span>
+        </button>
+      `).join("");
+
+      container.classList.remove("carousel-fade-out");
+      container.classList.add("carousel-fade-in");
+      
+      if (progress) {
+        progress.style.animation = "none";
+        void progress.offsetWidth; // trigger reflow
+        progress.style.animation = "carouselProgress 4s steps(1, end) infinite";
+      }
+
+      setTimeout(() => container.classList.remove("carousel-fade-in"), 500);
+
+      gachaCarouselIndex = (gachaCarouselIndex + 3) % gachaCarouselCards.length;
+    }, 500);
+  }
+
+  function initGachaCarousel(setId) {
+    if (gachaCarouselInterval) {
+      clearInterval(gachaCarouselInterval);
+      gachaCarouselInterval = null;
+    }
+    gachaCarouselIndex = 0;
+    
+    const allHits = getGachaFeaturedCards(setId, 999);
+    const validRarities = ["SEC", "OUR", "UR", "SSR", "OSR"];
+    gachaCarouselCards = allHits.filter(c => validRarities.includes(c.featuredRarity));
+    
+    if (gachaCarouselCards.length <= 3) return;
+
+    gachaCarouselIndex = 3; 
+    gachaCarouselInterval = setInterval(() => {
+      if (document.getElementById("gacha-carousel-container")) {
+        updateGachaCarousel();
+      } else {
+        stopGachaCarousel();
+      }
+    }, 4000);
+  }
+
+  function stopGachaCarousel() {
+    if (gachaCarouselInterval) {
+      clearInterval(gachaCarouselInterval);
+      gachaCarouselInterval = null;
+    }
+  }
+
   function addCard(number, zone, artIndex = 0) {
     const deck = activeDeck();
     const card = getCard(number);
@@ -1567,6 +1638,14 @@
           }
         }
       }
+    }
+
+    // Inicializar carrusel si estamos en la vista de detalle de gacha
+    if (state.tab === "gacha" && state.gacha.view === "detail" && typeof initGachaCarousel === "function") {
+      const selectedPack = state.gacha.selectedPack || "hBP01";
+      initGachaCarousel(selectedPack);
+    } else if (typeof stopGachaCarousel === "function") {
+      stopGachaCarousel();
     }
   }
 
@@ -2548,8 +2627,11 @@
             </div>
           </section>
           <section class="gacha-featured-section">
-            <div class="gacha-featured-heading"><div><span>SPOTLIGHT</span><h3>Los hits que pueden aparecer</h3></div><p>Las cartas de rareza más alta de esta expansión.</p></div>
-            <div class="gacha-featured-cards">
+            <div class="gacha-featured-heading">
+              <div><span>SPOTLIGHT</span><h3>Los hits que pueden aparecer</h3></div>
+              <p>Las cartas de rareza más alta de esta expansión, rotando cada 4 segundos.<br><span id="gacha-carousel-progress" class="gacha-carousel-progress"></span> 4s hasta la próxima rotación.</p>
+            </div>
+            <div class="gacha-featured-cards" id="gacha-carousel-container">
               ${featuredCards.map((card, index) => `
                 <button class="gacha-featured-card rarity-${rarityClass(card.featuredRarity)}" style="--feature-index:${index};" data-action="open-card-modal" data-id="${escapeAttr(card.id)}" data-artidx="${card.featuredArtIndex}" aria-label="Ver ${escapeAttr(card.name)}">
                   ${renderCardFrame(card, card.featuredArtIndex, card.featuredRarity, true)}
