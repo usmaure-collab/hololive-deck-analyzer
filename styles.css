@@ -2210,6 +2210,146 @@ table tr:hover td,
 
 .gacha-new-badge { margin-right: 6px; padding: 2px 6px; color: #10273f; background: #7de9ff; border-color: #c9faff; font-size: .58rem; vertical-align: 1px; }
 
+/* --- HIT REVEAL OVERLAY --- */
+.gacha-hit-reveal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  animation: hitRevealBgIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.hit-reveal-bg {
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 60%);
+  animation: hitBgPulse 3s infinite alternate;
+  z-index: 1;
+}
+
+.hit-reveal-rays {
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.15) 10deg, transparent 20deg, transparent 40deg, rgba(255, 255, 255, 0.1) 50deg, transparent 60deg, transparent 80deg, rgba(255, 255, 255, 0.15) 90deg, transparent 100deg);
+  background-size: 100% 100%;
+  animation: hitRaysRotate 15s linear infinite;
+  z-index: 2;
+  opacity: 0;
+  animation: hitRaysRotate 20s linear infinite, hitRaysFadeIn 1s 0.8s forwards;
+}
+
+.hit-reveal-text {
+  position: absolute;
+  top: 15%;
+  z-index: 4;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px var(--highlight, #ffdf61);
+  letter-spacing: 0.15em;
+  opacity: 0;
+  transform: scale(3);
+  animation: hitTextSlam 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s forwards;
+  pointer-events: none;
+}
+
+.hit-reveal-card-container {
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0.1) translateY(100px);
+  animation: hitCardAppear 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s forwards;
+}
+
+.hit-reveal-card-container .card-frame {
+  width: 280px;
+  height: 390px;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hit-reveal-card-container::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  z-index: -1;
+  opacity: 0;
+  animation: hitCardFlash 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.9s forwards;
+}
+
+.hit-continue-text {
+  position: absolute;
+  bottom: 8%;
+  z-index: 4;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: hitContinueFade 1.5s ease-in-out 2s infinite alternate;
+}
+
+.gacha-hit-reveal-overlay.rarity-ur .hit-reveal-text, .gacha-hit-reveal-overlay.rarity-our .hit-reveal-text, .gacha-hit-reveal-overlay.rarity-sec .hit-reveal-text {
+  background: linear-gradient(to right, #ffdf61, #fa5bdb, #6c8cff, #ffdf61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: hitTextSlam 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s forwards, rainbow-text 3s linear infinite;
+}
+
+@keyframes rainbow-text {
+  to { background-position: 200% center; }
+}
+
+@keyframes hitRevealBgIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hitBgPulse {
+  from { transform: scale(1); opacity: 0.5; }
+  to { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes hitRaysRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes hitRaysFadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes hitTextSlam {
+  0% { opacity: 0; transform: scale(3); filter: blur(10px); }
+  40% { opacity: 1; transform: scale(0.9); filter: blur(0px); }
+  60% { transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hitCardAppear {
+  0% { opacity: 0; transform: scale(0.1) translateY(200px) rotateY(-90deg); }
+  50% { opacity: 1; transform: scale(1.1) translateY(-20px) rotateY(10deg); filter: brightness(2); }
+  100% { opacity: 1; transform: scale(1) translateY(0) rotateY(0deg); filter: brightness(1); }
+}
+
+@keyframes hitCardFlash {
+  0% { opacity: 0; transform: scale(0.8); }
+  30% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(2); }
+}
+
+@keyframes hitContinueFade {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
 @keyframes gachaPackTear {
   0% { transform: translateY(30px) scale(.72) rotate(-10deg); opacity: 0; }
   24% { transform: translateY(0) scale(1.02) rotate(8deg); opacity: 1; }

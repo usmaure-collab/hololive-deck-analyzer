@@ -249,6 +249,11 @@
       return;
     }
 
+    if (action === "next-hit") {
+      advanceHitReveal();
+      return;
+    }
+
     if (action === "close-detail") {
       state.selectedCard = null;
       render();
@@ -834,6 +839,8 @@
         results: [],
         filterCollection: false,
         sparkles: 0,
+        hitQueue: [],
+        currentHit: null
       }
     };
 
@@ -2407,20 +2414,39 @@
 
       state.gacha.results = results;
       state.gacha.opening = false;
-      saveState();
-      render();
-
-      const rarestPull = results.flat().reduce((best, card) => {
-        const order = { C: 0, U: 1, R: 2, RR: 3, SR: 4, OSR: 5, UR: 6, OUR: 7, SEC: 8 };
-        const current = order[card.pulledRarity || card.rarity] ?? 0;
-        const previous = order[best?.pulledRarity || best?.rarity] ?? -1;
-        return current > previous ? card : best;
-      }, null);
-      const rarestRarity = rarestPull?.pulledRarity || rarestPull?.rarity;
-      if (window.SFX?.playHit && ["SR", "OSR", "UR", "OUR", "SEC"].includes(rarestRarity)) {
-        setTimeout(() => window.SFX.playHit(rarestRarity), 320);
+      
+      // Filter for hits
+      const allPulls = results.flat();
+      const hits = allPulls.filter(c => ["SR", "OSR", "UR", "OUR", "SEC"].includes(c.pulledRarity || c.rarity));
+      
+      if (hits.length > 0) {
+        // Sort hits by rarity order (lowest hit first, saving the best for last!)
+        const rarityOrder = { SR: 4, OSR: 5, UR: 6, OUR: 7, SEC: 8 };
+        hits.sort((a, b) => {
+          return (rarityOrder[a.pulledRarity || a.rarity] || 0) - (rarityOrder[b.pulledRarity || b.rarity] || 0);
+        });
+        state.gacha.hitQueue = hits;
+        advanceHitReveal(false); // Start reveal process without rendering yet (it will render inside)
+      } else {
+        saveState();
+        render();
       }
     }, amount === 12 ? 2100 : 1650);
+  }
+
+  function advanceHitReveal(isManualClick = true) {
+    if (state.gacha.hitQueue.length > 0) {
+      state.gacha.currentHit = state.gacha.hitQueue.shift();
+      if (window.SFX?.playHit) {
+        const rarity = state.gacha.currentHit.pulledRarity || state.gacha.currentHit.rarity;
+        window.SFX.playHit(rarity);
+      }
+      render();
+    } else {
+      state.gacha.currentHit = null;
+      saveState();
+      render();
+    }
   }
 
   function renderAlbum() {
@@ -2522,6 +2548,24 @@
             <h2>${openingLabel}</h2>
             <p>La suerte ya está echada...</p>
           </div>
+        </div>
+      `;
+    } else if (state.gacha.currentHit) {
+      const hit = state.gacha.currentHit;
+      const hitRarity = hit.pulledRarity || hit.rarity;
+      const hitLabel = ["UR", "OUR", "SEC"].includes(hitRarity) ? "MEGA HIT!" : "HIT!";
+      const hitArtIdx = hit.artIndex || 0;
+      
+      content = `
+        <div class="gacha-hit-reveal-overlay rarity-${rarityClass(hitRarity)}" data-action="next-hit">
+          <div class="hit-reveal-bg"></div>
+          <div class="hit-reveal-rays"></div>
+          <div class="hit-reveal-text"><span>${hitLabel}</span></div>
+          <div class="hit-reveal-card-container">
+            ${renderCardFrame(hit, hitArtIdx, hitRarity, true)}
+            ${hit.isNewPull ? '<span class="hit-new-badge">NUEVA</span>' : ''}
+          </div>
+          <p class="hit-continue-text">Toca para continuar</p>
         </div>
       `;
     } else if (state.gacha.results.length > 0) {
