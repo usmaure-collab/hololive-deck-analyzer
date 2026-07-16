@@ -2248,7 +2248,7 @@ table tr:hover td,
 .hit-reveal-text {
   position: absolute;
   top: 15%;
-  z-index: 4;
+  z-index: 10;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   color: #fff;
@@ -2282,6 +2282,21 @@ table tr:hover td,
   z-index: -1;
   opacity: 0;
   animation: hitCardFlash 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.9s forwards;
+}
+
+.hit-character-name {
+  position: absolute;
+  bottom: 20%;
+  z-index: 10;
+  font-family: sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: hitContinueFade 1.2s ease-in-out 1.2s forwards;
+  pointer-events: none;
 }
 
 .hit-continue-text {
