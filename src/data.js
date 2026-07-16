@@ -22131,6 +22131,208 @@ window.HOCG_DATA = {
       ],
       "text": "Produce 1 Cheer amarillo.",
       "market": []
+    },
+    {
+      "id": "hBP01-023-UR",
+      "number": "hBP01-023",
+      "name": "Tokino Sora",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 210,
+      "text": "Collab: Roba 2 cartas. Arts: Hace 80 de dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-023-SEC",
+      "number": "hBP01-023",
+      "name": "Tokino Sora",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 210,
+      "text": "Collab: Roba 2 cartas. Arts: Hace 80 de dano.",
+      "market": [],
+      "artIndex": 2,
+      "note": "Secret Rare (Ilustración alternativa especial)"
+    },
+    {
+      "id": "hBP01-027-UR",
+      "number": "hBP01-027",
+      "name": "Vestia Zeta",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "ID",
+        "ID Gen 3",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 200,
+      "text": "Buzz Holomem. Gift V.7: En Collab, puedes lanzar dado para reducir dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-027-SEC",
+      "number": "hBP01-027",
+      "name": "Vestia Zeta",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "tags": [
+        "ID",
+        "ID Gen 3",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 200,
+      "text": "Buzz Holomem. Gift V.7: En Collab, puedes lanzar dado para reducir dano.",
+      "market": [],
+      "artIndex": 2,
+      "note": "Secret Rare (Ilustración alternativa especial)"
+    },
+    {
+      "id": "hBP01-047-UR",
+      "number": "hBP01-047",
+      "name": "AZKi",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Singing",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 220,
+      "text": "Bloom: Recupera 40 HP. Lanza dado; si es impar, recupera hasta 3 Cheers verdes del archive. Arts: Hace 120 dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-047-SEC",
+      "number": "hBP01-047",
+      "name": "AZKi",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Singing",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 220,
+      "text": "Bloom: Recupera 40 HP. Lanza dado; si es impar, recupera hasta 3 Cheers verdes del archive. Arts: Hace 120 dano.",
+      "market": [],
+      "artIndex": 2,
+      "note": "Secret Rare (Ilustración alternativa especial)"
+    },
+    {
+      "id": "hBP01-051-UR",
+      "number": "hBP01-051",
+      "name": "Kazama Iroha",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "HoloX",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 250,
+      "text": "Buzz Holomem. Arts: Hace 50 de dano. Gana +20 por cada Cheer adjunta (max 5).",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-051-SEC",
+      "number": "hBP01-051",
+      "name": "Kazama Iroha",
+      "type": "holomem",
+      "color": "Green",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "HoloX",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 250,
+      "text": "Buzz Holomem. Arts: Hace 50 de dano. Gana +20 por cada Cheer adjunta (max 5).",
+      "market": [],
+      "artIndex": 2,
+      "note": "Secret Rare (Ilustración alternativa especial)"
+    },
+    {
+      "id": "hBP01-091-UR",
+      "number": "hBP01-091",
+      "name": "Moona Hoshinova",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "ID",
+        "ID Gen 1",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 dano. Habilidad: Roba 2 cartas al entrar.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-091-SEC",
+      "number": "hBP01-091",
+      "name": "Moona Hoshinova",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "tags": [
+        "ID",
+        "ID Gen 1",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 dano. Habilidad: Roba 2 cartas al entrar.",
+      "market": [],
+      "artIndex": 2,
+      "note": "Secret Rare (Ilustración alternativa especial)"
     }
   ]
 };
