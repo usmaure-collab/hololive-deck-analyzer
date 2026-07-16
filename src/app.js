@@ -2702,14 +2702,16 @@
     }
 
     return `
-      <section>
+      <section class="gacha-view-root">
         <div class="section-title">
           <div>
             <h2>Gacha Simulator</h2>
             <p>¡Abre sobres virtuales y consigue cartas para tu colección local!</p>
           </div>
         </div>
-        ${content}
+        <div class="gacha-view-content">
+          ${content}
+        </div>
       </section>
     `;
   }
