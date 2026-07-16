@@ -1405,28 +1405,6 @@ window.HOCG_DATA = {
       "note": "Double Rare (Diseño foil base)"
     },
     {
-      "id": "hBP01-014-UR",
-      "number": "hBP01-014",
-      "name": "Amane Kanata",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "JP",
-        "Gen 4",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 de dano base. Collab: Castiga con dano extra a holomems con dano acumulado.",
-      "synergy": "Apoyado por Oshi Kanata para lograr KOs en un solo golpe.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa sin bordes)"
-    },
-    {
       "id": "hBP01-015",
       "number": "hBP01-015",
       "name": "Nanashi Mumei",
@@ -2078,26 +2056,6 @@ window.HOCG_DATA = {
       "note": "Double Rare (Diseño foil base)"
     },
     {
-      "id": "hBP01-043-UR",
-      "number": "hBP01-043",
-      "name": "Usada Pekora",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 3",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 dano. Habilidad: Regresa cualquier holomem 1st del rival a su mano.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa sin bordes)"
-    },
-    {
       "id": "hBP01-044",
       "number": "hBP01-044",
       "name": "AZKi",
@@ -2485,26 +2443,6 @@ window.HOCG_DATA = {
       "note": "Double Rare (Diseño foil base)"
     },
     {
-      "id": "hBP01-060-UR",
-      "number": "hBP01-060",
-      "name": "Takane Lui",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "HoloX",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 dano. Habilidad: Lanza 1 Cheer rojo al archive para retirar 1 soporte.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa sin bordes)"
-    },
-    {
       "id": "hBP01-061",
       "number": "hBP01-061",
       "name": "Takane Lui",
@@ -2651,26 +2589,6 @@ window.HOCG_DATA = {
       "note": "Double Rare (Diseño foil base)"
     },
     {
-      "id": "hBP01-067-UR",
-      "number": "hBP01-067",
-      "name": "Takanashi Kiara",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "EN",
-        "Myth",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 dano. Habilidad: Si Kiara es K.O., revive.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa sin bordes)"
-    },
-    {
       "id": "hBP01-068",
       "number": "hBP01-068",
       "name": "Omaru Polka",
@@ -2723,44 +2641,6 @@ window.HOCG_DATA = {
       "hp": 120,
       "text": "Arts: Hace 40 de dano.",
       "market": []
-    },
-    {
-      "id": "hBP01-071",
-      "number": "hBP01-071",
-      "name": "Omaru Polka",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 5",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 130,
-      "text": "Habilidad: Roba 1 carta si tu Oshi es roja. Arts: Hace 50 de daño.",
-      "market": []
-    },
-    {
-      "id": "hBP01-071-UR",
-      "number": "hBP01-071",
-      "name": "Omaru Polka",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 5",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 130,
-      "text": "Habilidad: Roba 1 carta si tu Oshi es roja. Arts: Hace 50 de daño.",
-      "market": [],
-      "artIndex": 0,
-      "note": "Ultra Rare (Diseño holográfico estándar)"
     },
     {
       "id": "hBP01-072",
@@ -2962,26 +2842,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Double Rare (Diseño foil base)"
-    },
-    {
-      "id": "hBP01-081-UR",
-      "number": "hBP01-081",
-      "name": "Hoshimachi Suisei",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "UR",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 de dano a cualquier holomem enemiga ( sniper).",
-      "market": [],
-      "artIndex": 1,
-      "note": "Ultra Rare (Ilustración alternativa sin bordes)"
     },
     {
       "id": "hBP01-082",
@@ -21949,6 +21809,28 @@ window.HOCG_DATA = {
       "market": []
     },
     {
+      "id": "hBP01-014-UR",
+      "number": "hBP01-014",
+      "name": "Amane Kanata",
+      "type": "holomem",
+      "color": "White",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "release": "2025-07-11 EN",
+      "tags": [
+        "JP",
+        "Gen 4",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 200,
+      "text": "Arts: Hace 90 de dano base. Collab: Castiga con dano extra a holomems con dano acumulado.",
+      "synergy": "Apoyado por Oshi Kanata para lograr KOs en un solo golpe.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
       "id": "hBP01-023-UR",
       "number": "hBP01-023",
       "name": "Tokino Sora",
@@ -21984,6 +21866,26 @@ window.HOCG_DATA = {
       "bloom": "1st",
       "hp": 200,
       "text": "Buzz Holomem. Gift V.7: En Collab, puedes lanzar dado para reducir dano.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-043-UR",
+      "number": "hBP01-043",
+      "name": "Usada Pekora",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 3",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 dano. Habilidad: Regresa cualquier holomem 1st del rival a su mano.",
       "market": [],
       "artIndex": 1,
       "note": "Ultra Rare (Ilustración alternativa)"
@@ -22025,6 +21927,66 @@ window.HOCG_DATA = {
       "bloom": "1st",
       "hp": 250,
       "text": "Buzz Holomem. Arts: Hace 50 de dano. Gana +20 por cada Cheer adjunta (max 5).",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-059-UR",
+      "number": "hBP01-059",
+      "name": "Takane Lui",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "HoloX",
+        "1st"
+      ],
+      "bloom": "1st",
+      "hp": 130,
+      "text": "Collab: Si tienes un PC en juego, roba 1 carta.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-067-UR",
+      "number": "hBP01-067",
+      "name": "Takanashi Kiara",
+      "type": "holomem",
+      "color": "Red",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "EN",
+        "Myth",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 200,
+      "text": "Arts: Hace 90 dano. Habilidad: Si Kiara es K.O., revive.",
+      "market": [],
+      "artIndex": 1,
+      "note": "Ultra Rare (Ilustración alternativa)"
+    },
+    {
+      "id": "hBP01-081-UR",
+      "number": "hBP01-081",
+      "name": "Hoshimachi Suisei",
+      "type": "holomem",
+      "color": "Blue",
+      "rarity": "UR",
+      "set": "Booster Pack 1",
+      "tags": [
+        "JP",
+        "Gen 0",
+        "2nd"
+      ],
+      "bloom": "2nd",
+      "hp": 190,
+      "text": "Arts: Hace 80 de dano a cualquier holomem enemiga ( sniper).",
       "market": [],
       "artIndex": 1,
       "note": "Ultra Rare (Ilustración alternativa)"
