@@ -1427,28 +1427,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa sin bordes)"
     },
     {
-      "id": "hBP01-014-SEC",
-      "number": "hBP01-014",
-      "name": "Amane Kanata",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "JP",
-        "Gen 4",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 de dano base. Collab: Castiga con dano extra a holomems con dano acumulado.",
-      "synergy": "Apoyado por Oshi Kanata para lograr KOs en un solo golpe.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
-    },
-    {
       "id": "hBP01-015",
       "number": "hBP01-015",
       "name": "Nanashi Mumei",
@@ -1587,28 +1565,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Super Rare (Diseño foil base)"
-    },
-    {
-      "id": "hBP01-020-SEC",
-      "number": "hBP01-020",
-      "name": "Nanashi Mumei",
-      "type": "holomem",
-      "color": "Yellow",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "release": "2025-07-11 EN",
-      "tags": [
-        "EN",
-        "Promise",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 180,
-      "text": "Arts: Hace 100 de dano base. Collab: Si tienes a Kronii en stage, hace +30 de dano.",
-      "synergy": "Muy fuerte en mazos hibridos de Promise.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Secret Rare (Ilustración alternativa Full Art)"
     },
     {
       "id": "hBP01-021",
@@ -1994,26 +1950,6 @@ window.HOCG_DATA = {
       "note": "Rare (Foil estándar)"
     },
     {
-      "id": "hBP01-037-SEC",
-      "number": "hBP01-037",
-      "name": "Aki Rosenthal",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 1",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: 80 dano. Habilidad: Lanza 1 Cheer verde verde al archive para hacer +30 dano.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Secret Rare (Ilustración alternativa Full Art)"
-    },
-    {
       "id": "hBP01-038",
       "number": "hBP01-038",
       "name": "Usada Pekora",
@@ -2160,26 +2096,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "Ultra Rare (Ilustración alternativa sin bordes)"
-    },
-    {
-      "id": "hBP01-043-SEC",
-      "number": "hBP01-043",
-      "name": "Usada Pekora",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 3",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 dano. Habilidad: Regresa cualquier holomem 1st del rival a su mano.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
     },
     {
       "id": "hBP01-044",
@@ -2589,26 +2505,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa sin bordes)"
     },
     {
-      "id": "hBP01-060-SEC",
-      "number": "hBP01-060",
-      "name": "Takane Lui",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "HoloX",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 dano. Habilidad: Lanza 1 Cheer rojo al archive para retirar 1 soporte.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
-    },
-    {
       "id": "hBP01-061",
       "number": "hBP01-061",
       "name": "Takane Lui",
@@ -2775,26 +2671,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa sin bordes)"
     },
     {
-      "id": "hBP01-067-SEC",
-      "number": "hBP01-067",
-      "name": "Takanashi Kiara",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "EN",
-        "Myth",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "Arts: Hace 90 dano. Habilidad: Si Kiara es K.O., revive.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
-    },
-    {
       "id": "hBP01-068",
       "number": "hBP01-068",
       "name": "Omaru Polka",
@@ -2885,26 +2761,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Ultra Rare (Diseño holográfico estándar)"
-    },
-    {
-      "id": "hBP01-071-SEC",
-      "number": "hBP01-071",
-      "name": "Omaru Polka",
-      "type": "holomem",
-      "color": "Red",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 5",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 130,
-      "text": "Habilidad: Roba 1 carta si tu Oshi es roja. Arts: Hace 50 de daño.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Secret Rare / Parallel (Ilustración alternativa Full Art)"
     },
     {
       "id": "hBP01-072",
@@ -3128,26 +2984,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa sin bordes)"
     },
     {
-      "id": "hBP01-081-SEC",
-      "number": "hBP01-081",
-      "name": "Hoshimachi Suisei",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 de dano a cualquier holomem enemiga ( sniper).",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa exclusiva Full Art)"
-    },
-    {
       "id": "hBP01-082",
       "number": "hBP01-082",
       "name": "Kobo Kanaeru",
@@ -3274,26 +3110,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 0,
       "note": "Rare (Foil estándar)"
-    },
-    {
-      "id": "hBP01-087-SEC",
-      "number": "hBP01-087",
-      "name": "Kobo Kanaeru",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "ID",
-        "ID Gen 3",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 200,
-      "text": "2nd Bloom. Arts: Hace 90 de daño. Gana 20 de escudo al principio de tu turno.",
-      "market": [],
-      "artIndex": 1,
-      "note": "Secret Rare (Ilustración alternativa Full Art)"
     },
     {
       "id": "hBP01-088",
@@ -22153,26 +21969,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa)"
     },
     {
-      "id": "hBP01-023-SEC",
-      "number": "hBP01-023",
-      "name": "Tokino Sora",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 210,
-      "text": "Collab: Roba 2 cartas. Arts: Hace 80 de dano.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
-    },
-    {
       "id": "hBP01-027-UR",
       "number": "hBP01-027",
       "name": "Vestia Zeta",
@@ -22191,26 +21987,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-027-SEC",
-      "number": "hBP01-027",
-      "name": "Vestia Zeta",
-      "type": "holomem",
-      "color": "White",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "ID",
-        "ID Gen 3",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 200,
-      "text": "Buzz Holomem. Gift V.7: En Collab, puedes lanzar dado para reducir dano.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
     },
     {
       "id": "hBP01-047-UR",
@@ -22234,27 +22010,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa)"
     },
     {
-      "id": "hBP01-047-SEC",
-      "number": "hBP01-047",
-      "name": "AZKi",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "Gen 0",
-        "Singing",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 220,
-      "text": "Bloom: Recupera 40 HP. Lanza dado; si es impar, recupera hasta 3 Cheers verdes del archive. Arts: Hace 120 dano.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
-    },
-    {
       "id": "hBP01-051-UR",
       "number": "hBP01-051",
       "name": "Kazama Iroha",
@@ -22275,26 +22030,6 @@ window.HOCG_DATA = {
       "note": "Ultra Rare (Ilustración alternativa)"
     },
     {
-      "id": "hBP01-051-SEC",
-      "number": "hBP01-051",
-      "name": "Kazama Iroha",
-      "type": "holomem",
-      "color": "Green",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "JP",
-        "HoloX",
-        "1st"
-      ],
-      "bloom": "1st",
-      "hp": 250,
-      "text": "Buzz Holomem. Arts: Hace 50 de dano. Gana +20 por cada Cheer adjunta (max 5).",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
-    },
-    {
       "id": "hBP01-091-UR",
       "number": "hBP01-091",
       "name": "Moona Hoshinova",
@@ -22313,26 +22048,6 @@ window.HOCG_DATA = {
       "market": [],
       "artIndex": 1,
       "note": "Ultra Rare (Ilustración alternativa)"
-    },
-    {
-      "id": "hBP01-091-SEC",
-      "number": "hBP01-091",
-      "name": "Moona Hoshinova",
-      "type": "holomem",
-      "color": "Blue",
-      "rarity": "SEC",
-      "set": "Booster Pack 1",
-      "tags": [
-        "ID",
-        "ID Gen 1",
-        "2nd"
-      ],
-      "bloom": "2nd",
-      "hp": 190,
-      "text": "Arts: Hace 80 dano. Habilidad: Roba 2 cartas al entrar.",
-      "market": [],
-      "artIndex": 2,
-      "note": "Secret Rare (Ilustración alternativa especial)"
     }
   ]
 };
