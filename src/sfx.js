@@ -139,6 +139,28 @@
       
       osc.start(t);
       osc.stop(t + 0.15);
+    },
+
+    playHit(rarity = "SR") {
+      initAudio();
+      const t = ctx.currentTime;
+      const notes = rarity === "SEC" || rarity === "OUR" ? [523.25, 659.25, 783.99, 1046.5] : rarity === "UR" ? [440, 554.37, 659.25] : [392, 493.88, 587.33];
+
+      notes.forEach((frequency, index) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = index === notes.length - 1 ? "sine" : "triangle";
+        osc.connect(gain);
+        gain.connect(masterGain);
+        const start = t + index * 0.075;
+        osc.frequency.setValueAtTime(frequency, start);
+        osc.frequency.exponentialRampToValueAtTime(frequency * 1.5, start + 0.28);
+        gain.gain.setValueAtTime(0.001, start);
+        gain.gain.exponentialRampToValueAtTime(0.35, start + 0.025);
+        gain.gain.exponentialRampToValueAtTime(0.001, start + 0.38);
+        osc.start(start);
+        osc.stop(start + 0.4);
+      });
     }
   };
 })();

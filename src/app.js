@@ -2240,7 +2240,8 @@
 
   function openGachaPack(setId, amount = 1) {
     if (state.gacha.opening) return;
-    state.gacha.opening = true;
+    const packArt = setId === "hBP02" ? "assets/hbp02_pack.png" : "assets/hbp01_pack.jpg";
+    state.gacha.opening = { setId, amount, packArt };
     state.gacha.results = [];
     render();
 
@@ -2262,9 +2263,12 @@
         }
       }
       
-      // Add to collection
+      // Tag pulls before adding them to the collection so the reveal can celebrate new cards.
+      const newCards = new Set();
       results.forEach(pack => {
         pack.forEach(card => {
+          card.isNewPull = !state.collection[card.id] && !newCards.has(card.id);
+          if (card.isNewPull) newCards.add(card.id);
           if (!state.collection[card.id]) state.collection[card.id] = 0;
           state.collection[card.id]++;
         });
@@ -2274,7 +2278,18 @@
       state.gacha.opening = false;
       saveState();
       render();
-    }, 1500); // Simulando tiempo de apertura
+
+      const rarestPull = results.flat().reduce((best, card) => {
+        const order = { C: 0, U: 1, R: 2, RR: 3, SR: 4, OSR: 5, UR: 6, OUR: 7, SEC: 8 };
+        const current = order[card.pulledRarity || card.rarity] ?? 0;
+        const previous = order[best?.pulledRarity || best?.rarity] ?? -1;
+        return current > previous ? card : best;
+      }, null);
+      const rarestRarity = rarestPull?.pulledRarity || rarestPull?.rarity;
+      if (window.SFX?.playHit && ["SR", "OSR", "UR", "OUR", "SEC"].includes(rarestRarity)) {
+        setTimeout(() => window.SFX.playHit(rarestRarity), 320);
+      }
+    }, amount === 12 ? 2100 : 1650);
   }
 
   function renderAlbum() {
@@ -2353,14 +2368,42 @@
 
     let content = "";
     if (state.gacha.opening) {
+      const opening = state.gacha.opening;
+      const openingLabel = opening.amount === 12 ? "Abriendo la caja..." : "Rompiendo el sello...";
       content = `
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; gap: 20px;">
-          <div class="gacha-pack-opening"></div>
-          <h2 class="magical-text">Abriendo...</h2>
+        <div class="gacha-opening-scene ${opening.amount === 12 ? "is-box" : ""}">
+          <div class="gacha-opening-aura"></div>
+          <div class="gacha-opening-rays"></div>
+          <div class="gacha-opening-sparkles" aria-hidden="true">
+            ${Array.from({ length: 14 }, (_, i) => `<i style="--i:${i}"></i>`).join("")}
+          </div>
+          <div class="gacha-pack-opening" style="--pack-art: url('${opening.packArt}')"></div>
+          <div class="gacha-opening-copy">
+            <span class="gacha-opening-kicker">${opening.amount === 12 ? "12 SOBRES · CAJA COMPLETA" : "SOBRE ENCONTRADO"}</span>
+            <h2>${openingLabel}</h2>
+            <p>La suerte ya está echada...</p>
+          </div>
         </div>
       `;
     } else if (state.gacha.results.length > 0) {
+      const rarityOrder = { C: 0, U: 1, R: 2, RR: 3, SR: 4, OSR: 5, UR: 6, OUR: 7, SEC: 8 };
+      const flatResults = state.gacha.results.flat();
+      const rarestPull = flatResults.reduce((best, card) => {
+        const current = rarityOrder[card.pulledRarity || card.rarity] ?? 0;
+        const previous = rarityOrder[best?.pulledRarity || best?.rarity] ?? -1;
+        return current > previous ? card : best;
+      }, null);
+      const rarestRarity = rarestPull?.pulledRarity || rarestPull?.rarity || "R";
+      const newCount = flatResults.filter(card => card.isNewPull).length;
+      const hitLabel = ["UR", "OUR", "SEC"].includes(rarestRarity) ? "MEGA HIT" : ["SR", "OSR"].includes(rarestRarity) ? "HIT!" : "SOBRE ABIERTO";
       content = `
+        <div class="gacha-results-hero rarity-${rarityClass(rarestRarity)}">
+          <div>
+            <span class="gacha-hit-label">${hitLabel}</span>
+            <h2 class="magical-text">Nuevas cartas obtenidas</h2>
+            <p>${newCount ? `${newCount} carta${newCount === 1 ? "" : "s"} nueva${newCount === 1 ? "" : "s"} para tu colección · ` : ""}Mejor pull: <b>${escapeHtml(rarestRarity)}</b></p>
+          </div>
+        </div>
         <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
           <h2 class="magical-text">¡Nuevas Cartas Obtenidas!</h2>
           <button class="btn outline" onclick="document.querySelector('[data-action=clear-gacha]').click()">Volver a los sobres</button>
@@ -2371,17 +2414,18 @@
             <div class="gacha-pack-result" style="background: rgba(255,255,255,0.02); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05);">
               <h3 style="margin-top: 0; color: var(--hl-cyan); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">Sobre ${index + 1}</h3>
               <div class="gacha-grid">
-                ${pack.map(card => {
+                ${pack.map((card, cardIndex) => {
                   const displayRarity = card.pulledRarity || card.rarity;
                   const artIndex = card.pulledVariantIndex || 0;
                   const isHighRarity = ["SR", "UR", "SEC", "OUR", "OSR"].includes(displayRarity);
+                  const delay = Math.min((index * 42) + (cardIndex * 85), 1100);
                   return `
-                    <div class="card-item gacha-result-card" style="animation: magicalFloat 4s ease-in-out infinite; cursor: pointer;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
+                    <div class="card-item gacha-result-card ${isHighRarity ? "is-hit rarity-" + rarityClass(displayRarity) : ""}" style="--reveal-delay:${delay}ms;" onclick="document.querySelector('[data-action=open-card-modal][data-id=\\'${card.id}\\']')?.click()">
                       <button style="display:none;" data-action="open-card-modal" data-id="${card.id}" data-artidx="${artIndex}"></button>
                       ${renderCardFrame(card, artIndex, displayRarity, isHighRarity)}
                       <div class="card-info" style="margin-top: 16px; text-align: center;">
                         <div class="card-name">${escapeHtml(card.name)}</div>
-                        <div class="card-rarity">${displayRarity}</div>
+                        <div class="card-rarity">${card.isNewPull ? `<span class="gacha-new-badge">NUEVA</span>` : ""}${displayRarity}</div>
                       </div>
                     </div>
                   `;
