@@ -2553,18 +2553,22 @@
     } else if (state.gacha.currentHit) {
       const hit = state.gacha.currentHit;
       const hitRarity = hit.pulledRarity || hit.rarity;
-      const hitLabel = ["UR", "OUR", "SEC"].includes(hitRarity) ? "MEGA HIT!" : "HIT!";
       const hitArtIdx = hit.artIndex || 0;
       
       content = `
         <div class="gacha-hit-reveal-overlay rarity-${rarityClass(hitRarity)}" data-action="next-hit">
           <div class="hit-reveal-bg"></div>
           <div class="hit-reveal-rays"></div>
-          <div class="hit-reveal-text"><span>${hitLabel}</span></div>
+          
+          <div class="hit-reveal-text"><span>${escapeHtml(hitRarity)}</span></div>
+          
           <div class="hit-reveal-card-container">
             ${renderCardFrame(hit, hitArtIdx, hitRarity, true)}
             ${hit.isNewPull ? '<span class="hit-new-badge">NUEVA</span>' : ''}
           </div>
+          
+          <div class="hit-character-name">${escapeHtml(hit.name)}</div>
+          
           <p class="hit-continue-text">Toca para continuar</p>
         </div>
       `;
