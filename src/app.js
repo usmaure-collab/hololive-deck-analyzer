@@ -858,8 +858,9 @@
         gacha: {
           ...base.gacha,
           ...(parsed.gacha || {}), // Recupera configuraciones (sparkles, filtros)
-          opening: false, // FUERZA a que la animación esté apagada
-          results: []     // FUERZA a que el sobre esté vacío al recargar
+          view: "lobby",
+          opening: false,
+          results: []
         }
       };
     } catch (error) {
@@ -1087,7 +1088,11 @@
       });
 
     return [...bestByCard.values()]
-      .sort((a, b) => (rarityOrder[b.featuredRarity] ?? 0) - (rarityOrder[a.featuredRarity] ?? 0))
+      .sort((a, b) => {
+        const aBoost = a.type === "Oshi" ? 100 : 0;
+        const bBoost = b.type === "Oshi" ? 100 : 0;
+        return (rarityOrder[b.featuredRarity] ?? 0) + bBoost - ((rarityOrder[a.featuredRarity] ?? 0) + aBoost);
+      })
       .slice(0, limit);
   }
 
@@ -2176,18 +2181,21 @@
       }
     });
 
-    const getRandomCard = (rarity, excludeIds = []) => {
+    const getRandomCard = (rarity, excludeIds = [], excludeNames = []) => {
       let p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards.map(c => ({...c, pulledRarity: c.rarity, pulledVariantIndex: 0})));
-      const available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex));
+      let available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex) && !excludeNames.includes(c.name));
+      if (available.length === 0) available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex));
       if (available.length > 0) p = available;
       return p[Math.floor(Math.random() * p.length)];
     };
 
     const packIds = [];
+    const packNames = [];
     const addCard = (rarity) => {
-      const c = getRandomCard(rarity, packIds);
+      const c = getRandomCard(rarity, packIds, packNames);
       packCards.push(c);
       packIds.push(c.id + ":" + c.pulledVariantIndex);
+      packNames.push(c.name);
     };
 
     const rand = () => Math.random() * 100;
@@ -2227,9 +2235,10 @@
       }
     });
 
-    const getRandomCard = (rarity, excludeIds = []) => {
+    const getRandomCard = (rarity, excludeIds = [], excludeNames = []) => {
       let p = pool[rarity] && pool[rarity].length ? pool[rarity] : (pool["R"].length ? pool["R"] : setCards.map(c => ({...c, pulledRarity: c.rarity, pulledVariantIndex: 0})));
-      const available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex));
+      let available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex) && !excludeNames.includes(c.name));
+      if (available.length === 0) available = p.filter(c => !excludeIds.includes(c.id + ":" + c.pulledVariantIndex));
       if (available.length > 0) p = available;
       return p[Math.floor(Math.random() * p.length)];
     };
@@ -2260,11 +2269,13 @@
     for (let p = 0; p < 12; p++) {
       const packCards = [];
       const packIds = [];
+      const packNames = [];
       
       const addCard = (rarity) => {
-        const c = getRandomCard(rarity, packIds);
+        const c = getRandomCard(rarity, packIds, packNames);
         packCards.push(c);
         packIds.push(c.id + ":" + c.pulledVariantIndex);
+        packNames.push(c.name);
       };
 
       for (let i = 0; i < 4; i++) addCard("C");
