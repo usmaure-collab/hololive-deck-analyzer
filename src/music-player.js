@@ -145,8 +145,6 @@
       widget.style.left = savedLeft;
       widget.style.top = savedTop;
       widget.style.right = 'auto';
-      // Detect if it was docked
-      setTimeout(() => handleEdgeDetection(widget), 100);
     }
 
     widget.addEventListener('mousedown', (e) => {
@@ -170,10 +168,10 @@
 
       const rect = widget.getBoundingClientRect();
       const margin = 15;
-      const minLeft = margin - rect.width;
-      const maxLeft = window.innerWidth - margin;
-      const minTop = 0;
-      const maxTop = window.innerHeight - rect.height;
+      const minLeft = margin;
+      const maxLeft = window.innerWidth - rect.width - margin;
+      const minTop = margin;
+      const maxTop = window.innerHeight - rect.height - margin;
 
       newLeft = Math.max(minLeft, Math.min(newLeft, maxLeft));
       newTop = Math.max(minTop, Math.min(newTop, maxTop));
@@ -187,7 +185,8 @@
       if (!isDragging) return;
       isDragging = false;
       widget.style.transition = '';
-      handleEdgeDetection(widget);
+      localStorage.setItem('hocg_music_pos_left', widget.style.left);
+      localStorage.setItem('hocg_music_pos_top', widget.style.top);
     });
 
     // Touch
@@ -213,10 +212,10 @@
 
       const rect = widget.getBoundingClientRect();
       const margin = 15;
-      const minLeft = margin - rect.width;
-      const maxLeft = window.innerWidth - margin;
-      const minTop = 0;
-      const maxTop = window.innerHeight - rect.height;
+      const minLeft = margin;
+      const maxLeft = window.innerWidth - rect.width - margin;
+      const minTop = margin;
+      const maxTop = window.innerHeight - rect.height - margin;
 
       newLeft = Math.max(minLeft, Math.min(newLeft, maxLeft));
       newTop = Math.max(minTop, Math.min(newTop, maxTop));
@@ -230,29 +229,9 @@
       if (!isDragging) return;
       isDragging = false;
       widget.style.transition = '';
-      handleEdgeDetection(widget);
+      localStorage.setItem('hocg_music_pos_left', widget.style.left);
+      localStorage.setItem('hocg_music_pos_top', widget.style.top);
     });
-  }
-
-  function handleEdgeDetection(widget) {
-    const rect = widget.getBoundingClientRect();
-    const width = rect.width;
-    const left = rect.left;
-    const threshold = 30;
-
-    if (left < threshold) {
-      widget.classList.add('docked-left');
-      widget.classList.remove('docked-right');
-      widget.style.left = `-${width - 15}px`;
-    } else if (left + width > window.innerWidth - threshold) {
-      widget.classList.add('docked-right');
-      widget.classList.remove('docked-left');
-      widget.style.left = `${window.innerWidth - 15}px`;
-    } else {
-      widget.classList.remove('docked-left', 'docked-right');
-    }
-    localStorage.setItem('hocg_music_pos_left', widget.style.left);
-    localStorage.setItem('hocg_music_pos_top', widget.style.top);
   }
 
   if (document.readyState === 'loading') {
