@@ -21059,6 +21059,68 @@ window.HOCG_DATA = {
       ],
       "text": "Produce 1 Cheer amarillo.",
       "market": []
+    },
+    {
+      "id": "hBP01-006-SEC",
+      "number": "hBP01-006",
+      "name": "Takanashi Kiara",
+      "type": "Oshi",
+      "color": "Red",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "release": "2025-07-11 EN",
+      "life": 5,
+      "tags": [
+        "EN",
+        "Myth",
+        "Oshi"
+      ],
+      "bloom": "",
+      "hp": "",
+      "role": "Recursion desde Archive",
+      "text": "Oshi roja. Recupera holomems del archive y mitiga el dano a tu vida.",
+      "synergy": "Combina de forma excelente con Kiara y cartas de descarte.",
+      "market": [
+        {
+          "vendor": "TCGplayer",
+          "status": "Referencia",
+          "url": "https://www.tcgplayer.com/"
+        }
+      ],
+      "sourceId": "official-card-list-en",
+      "artIndex": 1,
+      "note": "Secret Rare (Full Art)"
+    },
+    {
+      "id": "hBP01-007-SEC",
+      "number": "hBP01-007",
+      "name": "Hoshimachi Suisei",
+      "type": "Oshi",
+      "color": "Blue",
+      "rarity": "SEC",
+      "set": "Booster Pack 1",
+      "release": "2025-07-11 EN",
+      "life": 5,
+      "tags": [
+        "JP",
+        "Gen 0",
+        "Oshi"
+      ],
+      "bloom": "",
+      "hp": "",
+      "role": "Oshi de Control",
+      "text": "Oshi azul. Presiona la retaguardia enemiga retirando Cheers o haciendo sniper.",
+      "synergy": "Perfecto para el arquetipo Suisei Sniper azul.",
+      "market": [
+        {
+          "vendor": "TCGplayer",
+          "status": "Referencia",
+          "url": "https://www.tcgplayer.com/"
+        }
+      ],
+      "sourceId": "official-card-list-en",
+      "artIndex": 1,
+      "note": "Secret Rare (Full Art)"
     }
   ]
 };
