@@ -1089,7 +1089,9 @@
 
     return [...bestByCard.values()]
       .sort((a, b) => {
-        return (rarityOrder[b.featuredRarity] ?? 0) - (rarityOrder[a.featuredRarity] ?? 0);
+        const aBoost = a.type === "Oshi" ? 100 : 0;
+        const bBoost = b.type === "Oshi" ? 100 : 0;
+        return (rarityOrder[b.featuredRarity] ?? 0) + bBoost - ((rarityOrder[a.featuredRarity] ?? 0) + aBoost);
       })
       .slice(0, limit);
   }
