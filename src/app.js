@@ -969,13 +969,14 @@
         type: "Unknown",
         color: "Neutral",
         rarity: "Unknown",
-        set: "No esta en la base local",
-        release: "",
-        tags: ["Importada"],
-        text: "Esta carta fue importada desde JSON, pero aun no esta en el catalogo local.",
+        set: "Custom",
+        tags: [],
+        bloom: "",
+        hp: "",
+        text: "Carta importada",
+        artIndex: 0,
         synergy: "Importa la base completa o agrega esta carta al catalogo para analizarla mejor.",
         market: [],
-        variants: [{ rarity: "Unknown", artIndex: 0, note: "Importada" }],
         sourceId: "manual-import",
         officialUrl: "https://en.hololive-official-cardgame.com/cardlist/",
       }
@@ -1023,9 +1024,6 @@
     }
     
     let declaredRarity = String(card.rarity || "C").split("/")[0].trim();
-    if (card.variants && card.variants[artIndex]) {
-      declaredRarity = String(card.variants[artIndex].rarity || declaredRarity).split("/")[0].trim();
-    }
     
     // Lista de sufijos comunes de rarezas para probar
     const suffixes = [declaredRarity, "C", "U", "R", "RR", "SR", "OSR", "OUR", "SEC", "P", ""];
@@ -1077,14 +1075,11 @@
     data.cards
       .filter((card) => card.number.startsWith(setId))
       .forEach((card) => {
-        const editions = [{ artIndex: 0, rarity: card.rarity }, ...(card.variants || [])];
-        editions.forEach((edition) => {
-          const candidate = { ...card, featuredArtIndex: edition.artIndex || 0, featuredRarity: edition.rarity || card.rarity };
-          const previous = bestByCard.get(card.id);
-          if (!previous || (rarityOrder[candidate.featuredRarity] ?? 0) > (rarityOrder[previous.featuredRarity] ?? 0)) {
-            bestByCard.set(card.id, candidate);
-          }
-        });
+        const candidate = { ...card, featuredArtIndex: card.artIndex || 0, featuredRarity: card.rarity };
+        const previous = bestByCard.get(card.number);
+        if (!previous || (rarityOrder[candidate.featuredRarity] ?? 0) > (rarityOrder[previous.featuredRarity] ?? 0)) {
+          bestByCard.set(card.number, candidate);
+        }
       });
 
     return [...bestByCard.values()]
@@ -1885,16 +1880,13 @@
     }
     
     const source = data.sources.find((item) => item.id === card.sourceId);
-    const artIndex = state.selectedArtIdx !== undefined ? state.selectedArtIdx : 0;
+    const artIndex = Number(card.artIndex || 0);
     const imgUrl = getCardImageUrl(card, artIndex);
     const fallbacks = getCardImageFallbacks(card, artIndex);
     if (fallbacks.length > 0) fallbacks.shift();
     const fallbacksJson = escapeAttr(JSON.stringify(fallbacks));
     
     let rClass = rarityClass(card.rarity);
-    if (card.variants && card.variants[artIndex]) {
-      rClass = rarityClass(card.variants[artIndex].rarity);
-    }
     
     return `
       <div class="section-title">
@@ -1926,31 +1918,23 @@
               <p style="margin:0;"><b>Sinergia:</b> ${escapeHtml(card.synergy)}</p>
               <p style="margin:0;"><b>Tags:</b> ${(card.tags || []).map(escapeHtml).join(", ") || "Sin tags"}</p>
             </div>
-          </div>
-          <div>
-            <h3>Artes y rarezas</h3>
+            <h3>Acciones</h3>
             <div class="source-list">
-              ${(card.variants || []).map((variant) => {
-                const isSelected = artIndex === Number(variant.artIndex || 0);
-                return `
-                  <div class="source-row" style="${isSelected ? 'border-left: 3px solid #6366f1; background: rgba(99, 102, 241, 0.1); padding-left: 8px;' : ''}">
-                    <div>
-                      <strong style="color: #fff; font-size: 13px;">${escapeHtml(variant.rarity)}</strong>
-                      <span style="font-size: 11px; color: #a1a1aa; margin-left: 6px;">Art #${Number(variant.artIndex || 0)}</span>
-                    </div>
-                    <p style="font-size: 12px; margin: 4px 0 8px 0;">${escapeHtml(variant.note || "")}</p>
-                    <div class="source-meta" style="display: flex; gap: 8px;">
-                      <button data-action="select-art" data-art="${Number(variant.artIndex || 0)}" class="${isSelected ? 'primary' : ''}">Ver Arte</button>
-                      ${card.type === "Oshi"
-                        ? `<button data-action="add-card" data-zone="oshi" data-id="${escapeAttr(card.id)}" data-art="${Number(variant.artIndex || 0)}">Usar esta arte</button>`
-                        : card.type === "Cheer"
-                          ? `<button data-action="add-card" data-zone="cheer" data-id="${escapeAttr(card.id)}" data-art="${Number(variant.artIndex || 0)}">+ Cheer</button>`
-                          : `<button data-action="add-card" data-zone="main" data-id="${escapeAttr(card.id)}" data-art="${Number(variant.artIndex || 0)}">+ Main</button>`
-                      }
-                    </div>
-                  </div>
-                `;
-              }).join("")}
+              <div class="source-row" style="border-left: 3px solid #6366f1; background: rgba(99, 102, 241, 0.1); padding-left: 8px;">
+                <div>
+                  <strong style="color: #fff; font-size: 13px;">${escapeHtml(card.rarity)}</strong>
+                  <span style="font-size: 11px; color: #a1a1aa; margin-left: 6px;">Art #${Number(card.artIndex || 0)}</span>
+                </div>
+                <p style="font-size: 12px; margin: 4px 0 8px 0;">${escapeHtml(card.note || "Carta oficial")}</p>
+                <div class="source-meta" style="display: flex; gap: 8px;">
+                  ${card.type === "Oshi"
+                    ? `<button data-action="add-card" data-zone="oshi" data-id="${escapeAttr(card.id)}" data-art="${Number(card.artIndex || 0)}">Usar esta carta</button>`
+                    : card.type === "Cheer"
+                      ? `<button data-action="add-card" data-zone="cheer" data-id="${escapeAttr(card.id)}" data-art="${Number(card.artIndex || 0)}">+ Cheer</button>`
+                      : `<button data-action="add-card" data-zone="main" data-id="${escapeAttr(card.id)}" data-art="${Number(card.artIndex || 0)}">+ Main</button>`
+                  }
+                </div>
+              </div>
             </div>
           </div>
           <div>
@@ -2249,13 +2233,7 @@
     const pool = { C: [], U: [], R: [], RR: [], SR: [], UR: [], SEC: [], OSR: [], OUR: [] };
     
     setCards.forEach(c => {
-      if (pool[c.rarity]) pool[c.rarity].push({ ...c, pulledRarity: c.rarity, pulledVariantIndex: 0 });
-      if (c.variants) {
-        c.variants.forEach(v => {
-          if (v.artIndex === 0 && v.rarity === c.rarity) return; // Fix for double-weighting Mumei
-          if (pool[v.rarity]) pool[v.rarity].push({ ...c, pulledRarity: v.rarity, pulledVariantIndex: v.artIndex });
-        });
-      }
+      if (pool[c.rarity]) pool[c.rarity].push({ ...c, pulledRarity: c.rarity, pulledVariantIndex: c.artIndex || 0 });
     });
 
     const getRandomCard = (rarity, excludeIds = [], excludeNames = []) => {
@@ -3089,7 +3067,7 @@ Text ...
         market: [
           { vendor: "TCGplayer", status: "Buscar por número " + number, url: "https://www.tcgplayer.com/search/hololive-official-card-game/product?q=" + number }
         ],
-        variants: [{ rarity: rarity, artIndex: 0, note: "Importada" }],
+        artIndex: 0,
         sourceId: "manual-import",
         officialUrl: "https://en.hololive-official-cardgame.com/cardlist/"
       });
